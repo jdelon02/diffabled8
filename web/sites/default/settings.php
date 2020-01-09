@@ -24,6 +24,11 @@ $config_directories = array(
 );
 
 /**
+ * Drupal 8.8 workaround
+ */
+$settings['config_sync_directory'] = dirname(DRUPAL_ROOT) . '/config';
+
+/**
  * If there is a local settings file, then include it
  */
 $local_settings = __DIR__ . "/settings.local.php";
