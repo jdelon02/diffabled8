@@ -23,3 +23,19 @@ dependencies:
   - dblog
   - module_filter
   - bootstrap_layouts
+  - context
+  - config_direct_save
+  - config_delete
+  - config_update
+  - devel
+  - crop
+  - focal_point
+  - menu_block
+  - paragraphs
+  - smart_trim
+  - token
+  - token_filter
+  - structure_sync
+  - views_infinite_scroll
+  - viewsreference
+  - metatag
