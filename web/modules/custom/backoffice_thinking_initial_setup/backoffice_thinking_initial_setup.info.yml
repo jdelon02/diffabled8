@@ -54,4 +54,5 @@ dependencies:
   - insert_view
   - libraries
   - telephone
-  
+  - google_analytics
+  - simple_sitemap
