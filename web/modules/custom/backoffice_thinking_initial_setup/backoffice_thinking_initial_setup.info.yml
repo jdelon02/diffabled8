@@ -1,0 +1,25 @@
+name: 'Initial Setup'
+description: 'Enabling all modules that are part of our normal install'
+type: module
+core: 8.x
+version: 8.x-1.0
+package: 'BackOffice Thinking'
+core_incompatible: false
+dependencies:
+  - ds
+  - eck
+  - field
+  - field_layout
+  - inline_entity_form
+  - layout_discovery
+  - menu_ui
+  - node
+  - path
+  - text
+  - user
+  - admin_toolbar
+  - admin_toolbar_tools
+  - adminimal_admin_toolbar
+  - dblog
+  - module_filter
+  - bootstrap_layouts
