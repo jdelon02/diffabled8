@@ -1,0 +1,10 @@
+uuid: 8c2300e0-598a-46f4-893c-6151e56cc9c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+id: components.token
+label: Token
+targetEntityType: components
+cache: true

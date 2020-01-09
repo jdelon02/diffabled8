@@ -1,0 +1,24 @@
+uuid: 2df79a48-99f8-4e05-bdd4-767b909cfec7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.landing.field_body
+    - node.type.landing
+  module:
+    - user
+_core:
+  default_config_hash: sc1T0B59z150-ku36iQLfGiSqvFoAJn0v4Q2Rzf2Wqo
+id: node.landing.teaser
+targetEntityType: node
+bundle: landing
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_body: true

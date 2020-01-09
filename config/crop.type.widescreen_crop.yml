@@ -1,0 +1,14 @@
+uuid: d3075f87-c566-4738-a06e-494d1207145e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: cbDOqvG_onmIkv1a_Zx9gSSwIO9Ggznn1DA5tQYOFCE
+id: widescreen_crop
+label: 'Widescreen Crop'
+description: 'Meant for images that should be cropped and rendered in 16:9 ratio.'
+aspect_ratio: '16:9'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: 1920
+hard_limit_height: 1080

@@ -1,0 +1,12 @@
+uuid: 2612c7c9-092a-4558-b7c5-b6391d42bc50
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: iVae6abp6IeSNo1YSzoI68udGvSSCBKAYg-5e5s3vBU
+id: media.cinemascope_21_9
+label: 'Cinemascope (21:9)'
+targetEntityType: media
+cache: true

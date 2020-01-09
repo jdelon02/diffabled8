@@ -1,0 +1,12 @@
+uuid: 74114c1b-8622-4815-9ba2-096e526bcdbb
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: LqyzVEqMs5YwdMJ8Dhu49VkHdOT3zJCgRJSpk7gO_es
+id: paragraph.image_25_left
+label: 'Image 25% Left'
+targetEntityType: paragraph
+cache: true

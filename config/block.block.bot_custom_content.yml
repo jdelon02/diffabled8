@@ -1,0 +1,22 @@
+uuid: bc786b08-6339-4c43-9053-96f2b2ba2950
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bot_custom
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: bot_custom_content
+theme: bot_custom
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

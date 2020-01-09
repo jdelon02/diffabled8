@@ -1,0 +1,12 @@
+uuid: 7fa48419-7784-48ea-bbfb-676a8cb0c86b
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: S_GajoKkOH1W0Rn4lPY4_4rZdQykrqDezxuHFiuiBZs
+id: media.widescreen_16_9
+label: 'Widescreen (16:9)'
+targetEntityType: media
+cache: true

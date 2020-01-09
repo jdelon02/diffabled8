@@ -1,0 +1,20 @@
+uuid: 8048e969-1823-451b-90f7-65aa4f608bfc
+langcode: en
+status: true
+dependencies:
+  theme:
+    - bot_custom
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: bot_custom_local_actions
+theme: bot_custom
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

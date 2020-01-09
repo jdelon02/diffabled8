@@ -1,0 +1,23 @@
+uuid: 31160a04-4703-4610-84cd-1b12ef60964c
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - bot_custom
+_core:
+  default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
+id: bot_custom_search
+theme: bot_custom
+region: sidebar_first
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+  page_id: ''
+visibility: {  }

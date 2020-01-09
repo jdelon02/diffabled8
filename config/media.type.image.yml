@@ -1,0 +1,16 @@
+uuid: c5bb56f8-0bfa-4411-a6e5-9fc11f14ad69
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 6Qope5wG7HUpV0tPOBMtDI_GZkHFcF1Xj4hgD9Cu_hM
+id: image
+label: Image
+description: 'Use local images for reusable media.'
+source: image
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: field_media_image
+field_map:
+  name: name
