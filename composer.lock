@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3f355f093a1baf091bef47776166e72b",
+    "content-hash": "bb4e9942d469df47504ff3aeea8a86a5",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -5084,6 +5084,58 @@
             "homepage": "https://www.drupal.org/project/paragraphs",
             "support": {
                 "source": "https://git.drupalcode.org/project/paragraphs"
+            }
+        },
+        {
+            "name": "drupal/paragraphs_viewmode",
+            "version": "1.0.0-alpha2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/paragraphs_viewmode.git",
+                "reference": "8.x-1.0-alpha2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/paragraphs_viewmode-8.x-1.0-alpha2.zip",
+                "reference": "8.x-1.0-alpha2",
+                "shasum": "ebbe064201dd208608149039ea61621aac441f68"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/paragraphs": "^1.2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha2",
+                    "datestamp": "1541184180",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "mikelutz",
+                    "homepage": "https://www.drupal.org/user/2972409"
+                }
+            ],
+            "description": "Allows you to select the paragraph view mode on a per paragraph basis",
+            "homepage": "https://www.drupal.org/project/paragraphs_viewmode",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/paragraphs_viewmode",
+                "issues": "https://www.drupal.org/project/issues/paragraphs_viewmode"
             }
         },
         {
@@ -12228,6 +12280,7 @@
     "aliases": [],
     "minimum-stability": "alpha",
     "stability-flags": {
+        "drupal/paragraphs_viewmode": 15,
         "drupal/simple_block": 10
     },
     "prefer-stable": true,
