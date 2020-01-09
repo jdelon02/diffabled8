@@ -39,3 +39,19 @@ dependencies:
   - views_infinite_scroll
   - viewsreference
   - metatag
+  - better_exposed_filters
+  - blazy_ui
+  - block_class
+  - button_link
+  - context_ui
+  - devel_generate
+  - ds_extras
+  - ds_switch_view_mode
+  - entity_browser
+  - entity_browser_entity_form
+  - entity_class_formatter
+  - inline_form_errors
+  - insert_view
+  - libraries
+  - telephone
+  
