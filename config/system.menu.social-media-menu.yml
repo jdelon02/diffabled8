@@ -1,0 +1,8 @@
+uuid: 261b1d4f-f6de-41cd-8a70-8cb8829de0fa
+langcode: en
+status: true
+dependencies: {  }
+id: social-media-menu
+label: 'Social Media Menu'
+description: 'Social Media Menu using Font Awesome'
+locked: false

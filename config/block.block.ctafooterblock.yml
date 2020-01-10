@@ -1,0 +1,25 @@
+uuid: 74092616-e53c-4863-ae00-ec7ce101d0d1
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:cta_block:8ba92a1f-2982-4d29-9f2d-453db4902523'
+  module:
+    - block_content
+  theme:
+    - bot_custom
+id: ctafooterblock
+theme: bot_custom
+region: footer
+weight: -7
+provider: null
+plugin: 'block_content:8ba92a1f-2982-4d29-9f2d-453db4902523'
+settings:
+  id: 'block_content:8ba92a1f-2982-4d29-9f2d-453db4902523'
+  label: 'CTA Footer Block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,82 @@
+uuid: 8cad8bfa-bcf0-492e-9545-58bbdbe06c46
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.button_block
+    - field.field.block_content.button_block.field_real_stories
+    - field.field.block_content.button_block.field_tell_your_story
+  module:
+    - button_link
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: bs_2col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          left:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
+          right:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      left:
+        - field_real_stories
+      right:
+        - field_tell_your_story
+id: block_content.button_block.default
+targetEntityType: block_content
+bundle: button_block
+mode: default
+content:
+  field_real_stories:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+      link_text: ''
+      btn_type: btn-default
+      btn_size: ''
+      icon_class: ''
+    third_party_settings: {  }
+    type: button_link
+    region: left
+  field_tell_your_story:
+    weight: 1
+    label: hidden
+    settings:
+      link_text: ''
+      btn_type: btn-default
+      btn_size: ''
+      icon_class: microphone
+      trim_length: '80'
+      url_only: false
+      url_plain: false
+      rel: 0
+      target: 0
+    third_party_settings: {  }
+    type: button_link
+    region: right
+hidden: {  }

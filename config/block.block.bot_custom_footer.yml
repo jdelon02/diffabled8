@@ -12,7 +12,7 @@ _core:
   default_config_hash: 8zRjTNbfNAJ94lQpZDu6MkyD87GYJ2zpH9VQPVmRbcM
 id: bot_custom_footer
 theme: bot_custom
-region: footer
+region: footer_four
 weight: -5
 provider: null
 plugin: 'system_menu_block:footer'

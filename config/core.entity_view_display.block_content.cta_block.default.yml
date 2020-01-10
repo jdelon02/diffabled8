@@ -1,0 +1,110 @@
+uuid: 7c905f15-3c18-4371-90b3-e56894da9f8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta_block
+    - field.field.block_content.cta_block.field_background_image
+    - field.field.block_content.cta_block.field_callout_cta_button
+    - field.field.block_content.cta_block.field_callout_sub_text
+    - field.field.block_content.cta_block.field_callout_top_title
+  module:
+    - button_link
+    - ds
+    - field_group
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - field_background_image
+        - group_cta_wrapper
+        - field_callout_top_title
+        - field_callout_sub_text
+        - field_callout_cta_button
+  field_group:
+    group_cta_wrapper:
+      children:
+        - field_callout_top_title
+        - field_callout_sub_text
+        - field_callout_cta_button
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      region: main
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'CTA Wrapper'
+id: block_content.cta_block.default
+targetEntityType: block_content
+bundle: cta_block
+mode: default
+content:
+  field_background_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: widescreen_16_9
+      link: false
+    third_party_settings: {  }
+    region: main
+  field_callout_cta_button:
+    weight: 4
+    label: hidden
+    settings:
+      link_text: ''
+      btn_type: btn-success
+      btn_size: btn-lg
+      icon_class: ''
+      trim_length: '80'
+      url_only: false
+      url_plain: false
+      rel: 0
+      target: 0
+    third_party_settings: {  }
+    type: button_link
+    region: main
+  field_callout_sub_text:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: main
+  field_callout_top_title:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: main
+hidden: {  }

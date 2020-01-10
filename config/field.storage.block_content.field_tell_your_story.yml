@@ -1,0 +1,19 @@
+uuid: b93636c3-5d27-4d3b-96f0-d80f7aa651e4
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - link
+id: block_content.field_tell_your_story
+field_name: field_tell_your_story
+entity_type: block_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

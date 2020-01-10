@@ -1,0 +1,23 @@
+uuid: b9ff17e6-d2cf-4fc6-9f25-9f01e26d428c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta_block
+    - field.storage.block_content.field_callout_cta_button
+  module:
+    - link
+id: block_content.cta_block.field_callout_cta_button
+field_name: field_callout_cta_button
+entity_type: block_content
+bundle: cta_block
+label: 'Callout CTA Button'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

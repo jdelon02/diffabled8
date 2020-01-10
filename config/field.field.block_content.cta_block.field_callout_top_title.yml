@@ -1,0 +1,21 @@
+uuid: dcb8e5e2-f25c-45c3-98f2-5dee153ce3b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta_block
+    - field.storage.block_content.field_callout_top_title
+  module:
+    - text
+id: block_content.cta_block.field_callout_top_title
+field_name: field_callout_top_title
+entity_type: block_content
+bundle: cta_block
+label: 'Callout Top Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

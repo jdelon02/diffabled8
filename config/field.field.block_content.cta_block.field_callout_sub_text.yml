@@ -1,0 +1,21 @@
+uuid: 48b140b0-815a-4854-b031-6aa2e4156967
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta_block
+    - field.storage.block_content.field_callout_sub_text
+  module:
+    - text
+id: block_content.cta_block.field_callout_sub_text
+field_name: field_callout_sub_text
+entity_type: block_content
+bundle: cta_block
+label: 'Callout Sub-text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

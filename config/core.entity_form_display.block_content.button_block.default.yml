@@ -1,0 +1,47 @@
+uuid: 1e14dc3e-12a4-42bb-a8ee-772487afd0f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.button_block
+    - field.field.block_content.button_block.field_real_stories
+    - field.field.block_content.button_block.field_tell_your_story
+  module:
+    - field_layout
+    - layout_discovery
+    - link
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: block_content.button_block.default
+targetEntityType: block_content
+bundle: button_block
+mode: default
+content:
+  field_real_stories:
+    weight: 27
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_tell_your_story:
+    weight: 28
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

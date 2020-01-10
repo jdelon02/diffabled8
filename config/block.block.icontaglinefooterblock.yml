@@ -1,0 +1,25 @@
+uuid: 0c718151-0b4a-4184-8b98-390acd0ccab9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:icon_and_tagline:ddbf6d2b-9ace-424f-a07a-34f29c291f64'
+  module:
+    - block_content
+  theme:
+    - bot_custom
+id: icontaglinefooterblock
+theme: bot_custom
+region: footer
+weight: -6
+provider: null
+plugin: 'block_content:ddbf6d2b-9ace-424f-a07a-34f29c291f64'
+settings:
+  id: 'block_content:ddbf6d2b-9ace-424f-a07a-34f29c291f64'
+  label: 'Icon Tagline Footer Block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

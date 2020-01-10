@@ -1,0 +1,28 @@
+uuid: 44eeecac-2ded-4870-9826-2c1587ee7768
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.button_block
+    - field.storage.block_content.field_tell_your_story
+  module:
+    - link
+id: block_content.button_block.field_tell_your_story
+field_name: field_tell_your_story
+entity_type: block_content
+bundle: button_block
+label: 'Tell Your Story'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    attributes: {  }
+    uri: 'internal:/'
+    title: 'Tell Your Story!'
+    options: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

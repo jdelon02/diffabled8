@@ -1,0 +1,28 @@
+uuid: 8a68f508-3aab-4686-8541-ca69d0ee8939
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.icon_and_tagline
+    - field.storage.block_content.field_icon
+    - media.type.image
+id: block_content.icon_and_tagline.field_icon
+field_name: field_icon
+entity_type: block_content
+bundle: icon_and_tagline
+label: 'Icon Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

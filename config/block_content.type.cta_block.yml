@@ -1,0 +1,8 @@
+uuid: a76a79eb-55f0-46fb-9302-75d6714c50c7
+langcode: en
+status: true
+dependencies: {  }
+id: cta_block
+label: 'CTA Block'
+revision: 0
+description: ''
