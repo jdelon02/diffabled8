@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit39cf50d049fb183b8e892dfc9478d2cb
+class ComposerStaticInit79c2dd6ddd73172ab3d08584e308f32c
 {
     public static $files = array (
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
@@ -63,6 +63,7 @@ class ComposerStaticInit39cf50d049fb183b8e892dfc9478d2cb
         array (
             'Webmozart\\PathUtil\\' => 19,
             'Webmozart\\Assert\\' => 17,
+            'WebSocket\\' => 10,
         ),
         'T' => 
         array (
@@ -134,6 +135,10 @@ class ComposerStaticInit39cf50d049fb183b8e892dfc9478d2cb
             'GuzzleHttp\\' => 11,
             'Goutte\\' => 7,
         ),
+        'F' => 
+        array (
+            'FailAid\\' => 8,
+        ),
         'E' => 
         array (
             'Egulias\\EmailValidator\\' => 23,
@@ -155,6 +160,8 @@ class ComposerStaticInit39cf50d049fb183b8e892dfc9478d2cb
             'Doctrine\\Common\\Annotations\\' => 28,
             'Doctrine\\Common\\' => 16,
             'Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\' => 55,
+            'DMore\\ChromeExtension\\' => 22,
+            'DMore\\ChromeDriver\\' => 19,
         ),
         'C' => 
         array (
@@ -229,6 +236,10 @@ class ComposerStaticInit39cf50d049fb183b8e892dfc9478d2cb
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
+        ),
+        'WebSocket\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/textalk/websocket/lib',
         ),
         'Twig\\' => 
         array (
@@ -414,6 +425,10 @@ class ComposerStaticInit39cf50d049fb183b8e892dfc9478d2cb
         array (
             0 => __DIR__ . '/..' . '/fabpot/goutte/Goutte',
         ),
+        'FailAid\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/genesis/behat-fail-aid/bootstrap',
+        ),
         'Egulias\\EmailValidator\\' => 
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator',
@@ -478,6 +493,14 @@ class ComposerStaticInit39cf50d049fb183b8e892dfc9478d2cb
         array (
             0 => __DIR__ . '/..' . '/dealerdirect/phpcodesniffer-composer-installer/src',
         ),
+        'DMore\\ChromeExtension\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dmore/behat-chrome-extension/src',
+        ),
+        'DMore\\ChromeDriver\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dmore/chrome-mink-driver/src',
+        ),
         'Consolidation\\OutputFormatters\\' => 
         array (
             0 => __DIR__ . '/..' . '/consolidation/output-formatters/src',
@@ -541,6 +564,13 @@ class ComposerStaticInit39cf50d049fb183b8e892dfc9478d2cb
             'Stack' => 
             array (
                 0 => __DIR__ . '/..' . '/stack/builder/src',
+            ),
+        ),
+        'P' => 
+        array (
+            'PEAR' => 
+            array (
+                0 => __DIR__ . '/..' . '/pear/pear_exception',
             ),
         ),
         'E' => 
@@ -1546,6 +1576,15 @@ class ComposerStaticInit39cf50d049fb183b8e892dfc9478d2cb
         'Consolidation\\OutputFormatters\\Validate\\ValidDataTypesInterface' => __DIR__ . '/..' . '/consolidation/output-formatters/src/Validate/ValidDataTypesInterface.php',
         'Consolidation\\OutputFormatters\\Validate\\ValidDataTypesTrait' => __DIR__ . '/..' . '/consolidation/output-formatters/src/Validate/ValidDataTypesTrait.php',
         'Consolidation\\OutputFormatters\\Validate\\ValidationInterface' => __DIR__ . '/..' . '/consolidation/output-formatters/src/Validate/ValidationInterface.php',
+        'DMore\\ChromeDriver\\ChromeBrowser' => __DIR__ . '/..' . '/dmore/chrome-mink-driver/src/ChromeBrowser.php',
+        'DMore\\ChromeDriver\\ChromeDriver' => __DIR__ . '/..' . '/dmore/chrome-mink-driver/src/ChromeDriver.php',
+        'DMore\\ChromeDriver\\ChromePage' => __DIR__ . '/..' . '/dmore/chrome-mink-driver/src/ChromePage.php',
+        'DMore\\ChromeDriver\\DevToolsConnection' => __DIR__ . '/..' . '/dmore/chrome-mink-driver/src/DevToolsConnection.php',
+        'DMore\\ChromeDriver\\HttpClient' => __DIR__ . '/..' . '/dmore/chrome-mink-driver/src/HttpClient.php',
+        'DMore\\ChromeDriver\\NoSuchFrameException' => __DIR__ . '/..' . '/dmore/chrome-mink-driver/src/NoSuchFrameException.php',
+        'DMore\\ChromeDriver\\StreamReadException' => __DIR__ . '/..' . '/dmore/chrome-mink-driver/src/StreamReadException.php',
+        'DMore\\ChromeExtension\\Behat\\ServiceContainer\\ChromeExtension' => __DIR__ . '/..' . '/dmore/behat-chrome-extension/src/Behat/ServiceContainer/ChromeExtension.php',
+        'DMore\\ChromeExtension\\Behat\\ServiceContainer\\Driver\\ChromeFactory' => __DIR__ . '/..' . '/dmore/behat-chrome-extension/src/Behat/ServiceContainer/Driver/ChromeFactory.php',
         'Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin' => __DIR__ . '/..' . '/dealerdirect/phpcodesniffer-composer-installer/src/Plugin.php',
         'Dflydev\\DotAccessConfiguration\\AbstractConfiguration' => __DIR__ . '/..' . '/dflydev/dot-access-configuration/src/Dflydev/DotAccessConfiguration/AbstractConfiguration.php',
         'Dflydev\\DotAccessConfiguration\\AbstractConfigurationBuilder' => __DIR__ . '/..' . '/dflydev/dot-access-configuration/src/Dflydev/DotAccessConfiguration/AbstractConfigurationBuilder.php',
@@ -4273,6 +4312,12 @@ class ComposerStaticInit39cf50d049fb183b8e892dfc9478d2cb
         'Egulias\\EmailValidator\\Warning\\TLD' => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator/Warning/TLD.php',
         'Egulias\\EmailValidator\\Warning\\Warning' => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator/Warning/Warning.php',
         'Error' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/Error.php',
+        'FailAid\\Context\\Contracts\\DebugBarInterface' => __DIR__ . '/..' . '/genesis/behat-fail-aid/bootstrap/Context/Contracts/DebugBarInterface.php',
+        'FailAid\\Context\\Contracts\\FailStateInterface' => __DIR__ . '/..' . '/genesis/behat-fail-aid/bootstrap/Context/Contracts/FailStateInterface.php',
+        'FailAid\\Context\\Contracts\\ScreenshotInterface' => __DIR__ . '/..' . '/genesis/behat-fail-aid/bootstrap/Context/Contracts/ScreenshotInterface.php',
+        'FailAid\\Context\\FailureContext' => __DIR__ . '/..' . '/genesis/behat-fail-aid/bootstrap/Context/FailureContext.php',
+        'FailAid\\Extension\\Initializer\\Initializer' => __DIR__ . '/..' . '/genesis/behat-fail-aid/bootstrap/Extension/Initializer/Initializer.php',
+        'FailAid\\Extension\\ServiceContainer\\Extension' => __DIR__ . '/..' . '/genesis/behat-fail-aid/bootstrap/Extension/ServiceContainer/Extension.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',
         'File_Iterator_Factory' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Factory.php',
@@ -4288,7 +4333,6 @@ class ComposerStaticInit39cf50d049fb183b8e892dfc9478d2cb
         'GuzzleHttp\\Exception\\ClientException' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Exception/ClientException.php',
         'GuzzleHttp\\Exception\\ConnectException' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Exception/ConnectException.php',
         'GuzzleHttp\\Exception\\GuzzleException' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Exception/GuzzleException.php',
-        'GuzzleHttp\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Exception/InvalidArgumentException.php',
         'GuzzleHttp\\Exception\\RequestException' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Exception/RequestException.php',
         'GuzzleHttp\\Exception\\SeekException' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Exception/SeekException.php',
         'GuzzleHttp\\Exception\\ServerException' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Exception/ServerException.php',
@@ -4381,6 +4425,7 @@ class ComposerStaticInit39cf50d049fb183b8e892dfc9478d2cb
         'PEAR_Error' => __DIR__ . '/..' . '/pear/pear-core-minimal/src/PEAR.php',
         'PEAR_ErrorStack' => __DIR__ . '/..' . '/pear/pear-core-minimal/src/PEAR/ErrorStack.php',
         'PEAR_Exception' => __DIR__ . '/..' . '/pear/pear_exception/PEAR/Exception.php',
+        'PEAR_ExceptionTest' => __DIR__ . '/..' . '/pear/pear_exception/tests/PEAR/ExceptionTest.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
         'PHPUnit\\Framework\\AssertionFailedError' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/AssertionFailedError.php',
         'PHPUnit\\Framework\\BaseTestListener' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/BaseTestListener.php',
@@ -6913,6 +6958,13 @@ class ComposerStaticInit39cf50d049fb183b8e892dfc9478d2cb
         'WebDriver\\WebDriver' => __DIR__ . '/..' . '/instaclick/php-webdriver/lib/WebDriver/WebDriver.php',
         'WebDriver\\WebDriverInterface' => __DIR__ . '/..' . '/instaclick/php-webdriver/lib/WebDriver/WebDriverInterface.php',
         'WebDriver\\Window' => __DIR__ . '/..' . '/instaclick/php-webdriver/lib/WebDriver/Window.php',
+        'WebSocket\\BadOpcodeException' => __DIR__ . '/..' . '/textalk/websocket/lib/BadOpcodeException.php',
+        'WebSocket\\BadUriException' => __DIR__ . '/..' . '/textalk/websocket/lib/BadUriException.php',
+        'WebSocket\\Base' => __DIR__ . '/..' . '/textalk/websocket/lib/Base.php',
+        'WebSocket\\Client' => __DIR__ . '/..' . '/textalk/websocket/lib/Client.php',
+        'WebSocket\\ConnectionException' => __DIR__ . '/..' . '/textalk/websocket/lib/ConnectionException.php',
+        'WebSocket\\Exception' => __DIR__ . '/..' . '/textalk/websocket/lib/Exception.php',
+        'WebSocket\\Server' => __DIR__ . '/..' . '/textalk/websocket/lib/Server.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'Webmozart\\PathUtil\\Path' => __DIR__ . '/..' . '/webmozart/path-util/src/Path.php',
         'Webmozart\\PathUtil\\Url' => __DIR__ . '/..' . '/webmozart/path-util/src/Url.php',
@@ -7264,11 +7316,11 @@ class ComposerStaticInit39cf50d049fb183b8e892dfc9478d2cb
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit39cf50d049fb183b8e892dfc9478d2cb::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit39cf50d049fb183b8e892dfc9478d2cb::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit39cf50d049fb183b8e892dfc9478d2cb::$prefixesPsr0;
-            $loader->fallbackDirsPsr0 = ComposerStaticInit39cf50d049fb183b8e892dfc9478d2cb::$fallbackDirsPsr0;
-            $loader->classMap = ComposerStaticInit39cf50d049fb183b8e892dfc9478d2cb::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit79c2dd6ddd73172ab3d08584e308f32c::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit79c2dd6ddd73172ab3d08584e308f32c::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit79c2dd6ddd73172ab3d08584e308f32c::$prefixesPsr0;
+            $loader->fallbackDirsPsr0 = ComposerStaticInit79c2dd6ddd73172ab3d08584e308f32c::$fallbackDirsPsr0;
+            $loader->classMap = ComposerStaticInit79c2dd6ddd73172ab3d08584e308f32c::$classMap;
 
         }, null, ClassLoader::class);
     }
