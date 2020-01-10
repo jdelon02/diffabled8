@@ -12,13 +12,11 @@ Feature: Content
     And "article" content:
     | title          |
     | First article  |
-    | Second article |
     And I am logged in as a user with the "administrator" role
     When I go to "admin/content"
     Then I should see "Page one"
     And I should see "Page two"
     And I should see "First article"
-    And I should see "Second article"
 
   @api
   Scenario: Create users
@@ -29,13 +27,13 @@ Feature: Content
     When I visit "admin/people"
     Then I should see the link "Joe User"
 
-  @api
-  Scenario: Login as a user created during this scenario
-    Given users:
-    | name      | status | mail             |
-    | Test user |      1 | test@example.com |
-    When I am logged in as "Test user"
-    Then I should see the link "Log out"
+#  @api
+#  Scenario: Login as a user created during this scenario
+#    Given users:
+#    | name      | status | mail             |
+#    | Test user |      1 | test@example.com |
+#    When I am logged in as "Test user"
+#    Then I should see the link "Log out"
 
   @api
   Scenario: Create many terms
