@@ -1,24 +1,23 @@
-uuid: 30dd6797-564d-4b29-849d-4377437f6cfb
+uuid: 6895dce5-8486-4e5f-bc97-e0d49736dd5b
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.article.body
-    - field.field.node.article.comment
-    - field.field.node.article.field_media_image
-    - field.field.node.article.field_paragraphs
-    - field.field.node.article.field_tags
-    - node.type.article
+    - field.field.node.resource.body
+    - field.field.node.resource.field_audio
+    - field.field.node.resource.field_category
+    - field.field.node.resource.field_downloads
+    - field.field.node.resource.field_links
+    - field.field.node.resource.field_media_image
+    - field.field.node.resource.field_paragraphs
+    - field.field.node.resource.field_video
+    - node.type.resource
   module:
     - ds
     - entity_reference_revisions
-    - field_layout
+    - link
     - user
 third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
   ds:
     layout:
       id: bs_1col_stacked
@@ -54,43 +53,64 @@ third_party_settings:
             attributes: ''
     regions:
       top:
-        - node_post_date
         - node_title
+        - field_category
       main:
-        - field_media_image
+        - field_video
+        - field_audio
         - field_paragraphs
+      bottom:
+        - field_links
+        - field_downloads
     fields:
-      node_post_date:
-        plugin_id: node_post_date
-        weight: 0
-        label: hidden
-        formatter: ds_post_date_medium
       node_title:
         plugin_id: node_title
-        weight: 1
+        weight: 0
         label: hidden
         formatter: default
-_core:
-  default_config_hash: ChmU3AVqDKU32A_fyChG0W9dTRKmVBR58B6OClCLvZI
-id: node.article.default
+id: node.resource.default
 targetEntityType: node
-bundle: article
+bundle: resource
 mode: default
 content:
-  addtoany:
-    weight: 5
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_media_image:
+  field_audio:
+    type: entity_reference_entity_view
     weight: 2
     label: hidden
     settings:
-      link: true
       view_mode: default
+      link: false
     third_party_settings: {  }
-    type: entity_reference_entity_view
     region: main
+  field_category:
+    weight: 6
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: top
+  field_downloads:
+    type: entity_reference_entity_view
+    weight: 5
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: bottom
+  field_links:
+    weight: 4
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: bottom
   field_paragraphs:
     weight: 3
     label: hidden
@@ -100,9 +120,17 @@ content:
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
     region: main
+  field_video:
+    type: entity_reference_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: main
 hidden:
   body: true
-  comment: true
-  field_tags: true
+  field_media_image: true
   links: true
   search_api_excerpt: true

@@ -6,12 +6,11 @@ dependencies:
     - core.entity_view_mode.node.search_result
     - field.field.node.article.body
     - field.field.node.article.comment
-    - field.field.node.article.field_image
+    - field.field.node.article.field_media_image
+    - field.field.node.article.field_paragraphs
     - field.field.node.article.field_tags
-    - image.style.thumbnail
     - node.type.article
   module:
-    - image
     - text
     - user
 _core:
@@ -29,15 +28,6 @@ content:
     third_party_settings: {  }
     label: hidden
     region: content
-  field_image:
-    type: image
-    weight: 0
-    settings:
-      image_style: thumbnail
-      image_link: content
-    third_party_settings: {  }
-    label: hidden
-    region: content
   links:
     weight: 2
     settings: {  }
@@ -45,5 +35,7 @@ content:
     region: content
 hidden:
   comment: true
+  field_media_image: true
+  field_paragraphs: true
   field_tags: true
   search_api_excerpt: true

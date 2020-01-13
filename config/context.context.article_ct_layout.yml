@@ -1,0 +1,58 @@
+uuid: 9f072403-4b39-460d-9338-ce3ec766c991
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+name: article_ct_layout
+label: 'Article Layout'
+group: 'Content Types'
+description: 'News CT Layout'
+requireAllConditions: false
+disabled: false
+conditions:
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+    negate: 0
+    uuid: 9bdb5115-1c1f-4d8f-9d4d-f8a313505bc0
+    context_mapping:
+      node: '@node.node_route_context:node'
+reactions:
+  blocks:
+    blocks:
+      1fd5d20b-9af0-47eb-b4cd-38b6f6efaf5c:
+        id: 'block_content:10068df4-07c8-4e98-9a46-438cc82aaa67'
+        label: 'Back to News Block'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: header
+        weight: '0'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: article_ct_layout
+        uuid: 1fd5d20b-9af0-47eb-b4cd-38b6f6efaf5c
+      263b2b9d-d2e1-4b6d-87b3-cc424c59ae2a:
+        id: addtoany_block
+        label: 'AddToAny buttons'
+        provider: addtoany
+        label_display: 0
+        region: header
+        weight: '1'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: article_ct_layout
+        uuid: 263b2b9d-d2e1-4b6d-87b3-cc424c59ae2a
+    id: blocks
+    saved: false
+    uuid: 86bfef1a-072b-48de-9d8f-0fc015cff3ea
+    include_default_blocks: 0
+weight: 0

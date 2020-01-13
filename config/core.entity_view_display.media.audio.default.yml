@@ -6,7 +6,33 @@ dependencies:
     - field.field.media.audio.field_media_audio_file
     - media.type.audio
   module:
+    - ds
     - file
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - field_media_audio_file
 _core:
   default_config_hash: SWf3MLdbEKvlx4Vs6iPwDHu5pr1aKT0SJmgp8no73-k
 id: media.audio.default
@@ -17,16 +43,17 @@ content:
   field_media_audio_file:
     type: file_audio
     weight: 0
-    label: visually_hidden
+    label: above
     settings:
       controls: true
       autoplay: false
       loop: false
       multiple_file_display_type: tags
     third_party_settings: {  }
-    region: content
+    region: main
 hidden:
   created: true
   name: true
+  search_api_excerpt: true
   thumbnail: true
   uid: true

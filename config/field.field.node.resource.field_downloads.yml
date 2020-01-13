@@ -1,0 +1,28 @@
+uuid: 89305826-68eb-4726-8709-cd9b3640f201
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_downloads
+    - media.type.document
+    - node.type.resource
+id: node.resource.field_downloads
+field_name: field_downloads
+entity_type: node
+bundle: resource
+label: Downloads
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
