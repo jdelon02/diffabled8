@@ -1,0 +1,18 @@
+uuid: c45c790f-a2ef-43a4-a0cd-83139d4cf71f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Story
+type: story
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,58 @@
+uuid: 43e18ccc-9bbd-4e9a-bdf6-c2b3907be3da
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+name: resource_layout
+label: 'Resource Layout'
+group: 'Content Types'
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  node_type:
+    id: node_type
+    bundles:
+      resource: resource
+    negate: 0
+    uuid: 94fac083-8239-4621-965c-a2c1c395b58b
+    context_mapping:
+      node: '@node.node_route_context:node'
+reactions:
+  blocks:
+    blocks:
+      41bb5aef-b7c1-4b7a-8bfd-aa56c8a4d74c:
+        id: addtoany_block
+        label: 'AddToAny buttons'
+        provider: addtoany
+        label_display: 0
+        region: header
+        weight: '1'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: resource_layout
+        uuid: 41bb5aef-b7c1-4b7a-8bfd-aa56c8a4d74c
+      f760f41d-53f2-4961-9408-64c9b8c6eaca:
+        id: 'block_content:07def205-6772-41f9-a08a-18f1907e2c83'
+        label: 'Back to Resources BLock'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: header
+        weight: '0'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: resource_layout
+        uuid: f760f41d-53f2-4961-9408-64c9b8c6eaca
+    id: blocks
+    saved: false
+    uuid: a09791c9-3f8c-42f0-a3df-fd4054e3da43
+    include_default_blocks: 1
+weight: 0
