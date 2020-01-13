@@ -1,0 +1,68 @@
+uuid: f29a9c79-a7ce-4911-8891-afb160efaaaa
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+name: basic_page_layout
+label: 'Basic Page Layout'
+group: 'Content Types'
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  node_type:
+    id: node_type
+    bundles:
+      page: page
+    negate: 0
+    uuid: 298ec94b-0ad3-4902-a360-c612050d13b1
+    context_mapping:
+      node: '@node.node_route_context:node'
+reactions:
+  blocks:
+    blocks:
+      744dd065-34f9-43da-bc03-0ceed0a2ea04:
+        id: addtoany_block
+        label: 'AddToAny buttons'
+        provider: addtoany
+        label_display: 0
+        region: header
+        weight: '1'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: col-sm-6
+        unique: 0
+        context_id: basic_page_layout
+        uuid: 744dd065-34f9-43da-bc03-0ceed0a2ea04
+      a9f351cc-d7c7-4d1f-980c-0f43476c3e3e:
+        id: system_breadcrumb_block
+        label: Breadcrumbs
+        provider: system
+        label_display: 0
+        region: header
+        weight: '0'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: col-sm-6
+        unique: 0
+        context_id: basic_page_layout
+        uuid: a9f351cc-d7c7-4d1f-980c-0f43476c3e3e
+      843ee532-fe34-4c4f-920d-d1ad7f2ee5ec:
+        id: page_title_block
+        label: 'Page title'
+        provider: core
+        label_display: 0
+        region: content_top
+        weight: '0'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: basic_page_layout
+        uuid: 843ee532-fe34-4c4f-920d-d1ad7f2ee5ec
+    id: blocks
+    saved: false
+    uuid: 52b50e0a-8bfc-4beb-ace7-6b8af46adbe1
+    include_default_blocks: 1
+weight: 0

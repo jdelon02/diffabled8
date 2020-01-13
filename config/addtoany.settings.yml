@@ -1,0 +1,28 @@
+buttons_size: 32
+additional_html: ''
+additional_css: ''
+additional_js: "var a2a_config = a2a_config || {};\r\na2a_config.prioritize = [\"wordpress\", \"facebook\", \"reddit\", \"slashdot\"];"
+universal_button: custom
+custom_universal_button: /sites/default/files/2020-01/share.png
+universal_button_placement: before
+no_3p: false
+entities:
+  media: 0
+  node: 0
+  comment: 0
+  block_content: 0
+  contact_message: 0
+  crop: 0
+  file: 0
+  paragraphs_library_item: 0
+  path_alias: 0
+  redirect: 0
+  search_api_task: 0
+  shortcut: 0
+  taxonomy_term: 0
+  user: 0
+  menu_link_content: 0
+  paragraph: 0
+  components: 0
+_core:
+  default_config_hash: 9YPlBuinIKLe5jVEf-aIhZvKFn77i18yD4CrNR0BbVQ

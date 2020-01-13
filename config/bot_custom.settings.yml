@@ -6,11 +6,6 @@ favicon:
   path: ''
   url: 'https://dev-diffabled8.pantheonsite.io/themes/custom/bot_custom/favicon.ico'
   use_default: true
-features:
-  comment_user_picture: true
-  comment_user_verification: true
-  favicon: true
-  node_user_picture: true
 logo:
   path: 'public://diffabledemologo_0.png'
   url: ''
@@ -27,7 +22,7 @@ region_wells:
   content_bottom: ''
   content_baseline: ''
   sidebar_first: ''
-  sidebar_second: well
+  sidebar_second: ''
   footer: ''
   footer_one: ''
   footer_two: ''
@@ -41,3 +36,9 @@ cdn_cache_ttl_assets: '0'
 cdn_cache_ttl_library: '0'
 reset_http_request_cache: ''
 table: ''
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+breadcrumb_home: 1
