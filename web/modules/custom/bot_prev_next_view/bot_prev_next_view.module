@@ -28,7 +28,6 @@ function bot_prev_next_view_help($route_name, RouteMatchInterface $route_match) 
 function bot_prev_next_view_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
   $node = \Drupal::routeMatch()->getParameter('node');
   if ($view->id() == 'previous_next' && $node) {
-    // vdpm($view->getDisplay()->display['id']);
     $operator = $view->getDisplay()->display['id'] == 'next_story_block' ? '>=' : '<=';
     foreach ($query->where as &$condition_group) {
       array_push($condition_group['conditions'], [
