@@ -1,0 +1,76 @@
+uuid: c44ab22e-2db9-43af-9c50-0dfb0c0112af
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.header_layout
+    - field.field.node.story.body
+    - field.field.node.story.field_media_image
+    - field.field.node.story.field_paragraphs
+    - node.type.story
+  module:
+    - ds
+    - field_group
+    - user
+third_party_settings:
+  field_group:
+    group_a_personal_story:
+      children:
+        - 'dynamic_block_field:node-ds_author_block'
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: main
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'A Personal Story'
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - group_a_personal_story
+        - 'dynamic_block_field:node-ds_author_block'
+    fields:
+      'dynamic_block_field:node-ds_author_block':
+        plugin_id: 'dynamic_block_field:node-ds_author_block'
+        weight: 1
+        label: hidden
+        formatter: default
+id: node.story.header_layout
+targetEntityType: node
+bundle: story
+mode: header_layout
+content: {  }
+hidden:
+  body: true
+  field_media_image: true
+  field_paragraphs: true
+  links: true
+  search_api_excerpt: true

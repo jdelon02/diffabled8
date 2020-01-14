@@ -7,15 +7,53 @@ dependencies:
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
+    - ds
     - field_layout
     - image
-    - layout_discovery
     - user
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings:
       label: ''
+  ds:
+    layout:
+      id: bs_2col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          left:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
+          right:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      left:
+        - user_picture
+      right:
+        - username
+    fields:
+      username:
+        plugin_id: username
+        weight: 1
+        label: hidden
+        formatter: default
 _core:
   default_config_hash: '-cLsS3M3JycipXQt9rEb81_HxKneReoGuRh8ijcOPXs'
 id: user.user.compact
@@ -26,7 +64,7 @@ content:
   user_picture:
     type: image
     weight: 0
-    region: content
+    region: left
     settings:
       image_style: thumbnail
       image_link: content
@@ -34,3 +72,4 @@ content:
     label: hidden
 hidden:
   member_for: true
+  search_api_excerpt: true

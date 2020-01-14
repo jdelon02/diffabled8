@@ -1,35 +1,31 @@
-uuid: d4b1b61b-6469-47e0-81b8-56f4a2e365a6
+uuid: a28a6bf5-1995-4bb3-8bad-8cfcc98adc18
 langcode: en
-status: true
+status: false
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.content_top
     - field.field.node.story.body
     - field.field.node.story.field_media_image
     - field.field.node.story.field_paragraphs
     - node.type.story
   module:
-    - text
     - user
-id: node.story.teaser
+id: node.story.content_top
 targetEntityType: node
 bundle: story
-mode: teaser
+mode: content_top
 content:
-  body:
+  field_media_image:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
     label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
     settings:
-      trim_length: 600
+      view_mode: default
+      link: false
     third_party_settings: {  }
-    region: content
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
 hidden:
-  field_media_image: true
+  body: true
   field_paragraphs: true
+  links: true
   search_api_excerpt: true

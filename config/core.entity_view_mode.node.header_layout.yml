@@ -1,0 +1,10 @@
+uuid: 27f3a1ba-5b58-4283-bd0d-bb75131e0aaf
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.header_layout
+label: 'Header Layout'
+targetEntityType: node
+cache: true
