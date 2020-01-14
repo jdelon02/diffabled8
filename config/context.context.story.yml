@@ -1,0 +1,73 @@
+uuid: d7d17613-ecdc-4c19-95ae-1808f7d0b61b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+name: story
+label: Story
+group: 'Content Types'
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  node_type:
+    id: node_type
+    bundles:
+      story: story
+    negate: 0
+    uuid: 1f0c2609-b2d3-416c-98d4-4596876e33ab
+    context_mapping:
+      node: '@node.node_route_context:node'
+reactions:
+  blocks:
+    blocks:
+      4f1caa0c-a022-48b7-a32b-ca569cb3d4f5:
+        id: addtoany_block
+        label: 'AddToAny buttons'
+        provider: addtoany
+        label_display: 0
+        region: header
+        weight: '-9'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: story
+        uuid: 4f1caa0c-a022-48b7-a32b-ca569cb3d4f5
+      f1665f1b-6f98-4be4-9e44-7e41e910ec3c:
+        id: 'views_block:header_view-block_1'
+        label: ''
+        provider: views
+        label_display: 0
+        views_label: ''
+        items_per_page: none
+        region: content_top
+        weight: '-2'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: story
+        uuid: f1665f1b-6f98-4be4-9e44-7e41e910ec3c
+      47380273-7121-4aa6-b7d9-a5f51f3ae2a1:
+        id: 'block_content:4ae10b22-bbe5-4aad-998c-5bc4715fe481'
+        label: 'Back to Stories Block'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: header
+        weight: '-10'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: story
+        uuid: 47380273-7121-4aa6-b7d9-a5f51f3ae2a1
+    id: blocks
+    saved: false
+    uuid: fa1e78af-b3f3-49c6-9cc3-ecae9e8e1660
+    include_default_blocks: 1
+weight: 0
