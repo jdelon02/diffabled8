@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * @file
+ * Contains bot_prev_next_view.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\views\ViewExecutable;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+
+/**
+ * Implements hook_help().
+ */
+function bot_prev_next_view_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the bot_prev_next_view module.
+    case 'help.page.bot_prev_next_view':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Creates ability to display &quot;next&quot; node.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function bot_prev_next_view_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($view->id() == 'previous_next' && $node) {
+    // vdpm($view->getDisplay()->display['id']);
+    $operator = $view->getDisplay()->display['id'] == 'next_story_block' ? '>=' : '<=';
+    foreach ($query->where as &$condition_group) {
+      array_push($condition_group['conditions'], [
+        'field' => 'node_field_data.created '.$operator.' ' . $node->getCreatedTime(),
+        'value' => [],
+        'operator' => 'formula',
+      ]);
+    }
+  }
+}

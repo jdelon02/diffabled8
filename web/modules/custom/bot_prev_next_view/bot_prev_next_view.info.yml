@@ -1,0 +1,5 @@
+name: 'BOT Prev Next View'
+type: module
+description: 'Creates ability to display "next" node.'
+core: 8.x
+package: 'BackOffice Thinking'

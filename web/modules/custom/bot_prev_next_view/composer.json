@@ -1,0 +1,13 @@
+{
+    "name": "bot_prev_next_view",
+    "type": "drupal-module",
+    "description": "Creates ability to display "next" node.",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/bot_prev_next_view",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/bot_prev_next_view",
+        "source": "http://cgit.drupalcode.org/bot_prev_next_view",
+    },
+}
