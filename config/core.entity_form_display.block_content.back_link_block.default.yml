@@ -1,0 +1,38 @@
+uuid: ec085fff-921b-4385-a835-25a58ea03ec7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.back_link_block
+    - field.field.block_content.back_link_block.field_back_link
+  module:
+    - field_layout
+    - layout_discovery
+    - link
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: block_content.back_link_block.default
+targetEntityType: block_content
+bundle: back_link_block
+mode: default
+content:
+  field_back_link:
+    weight: 26
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

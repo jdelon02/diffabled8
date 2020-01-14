@@ -1,0 +1,23 @@
+uuid: 5547a638-cd2d-47cc-904a-9085ccb12168
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.back_link_block
+    - field.storage.block_content.field_back_link
+  module:
+    - link
+id: block_content.back_link_block.field_back_link
+field_name: field_back_link
+entity_type: block_content
+bundle: back_link_block
+label: 'Back Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 1
+  title: 2
+field_type: link
