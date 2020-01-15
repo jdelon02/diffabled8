@@ -8,8 +8,54 @@ dependencies:
     - field.field.node.page.field_paragraphs
     - node.type.page
   module:
-    - text
+    - ds
+    - paragraphs
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: bs_2col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          left:
+            wrapper: div
+            classes:
+              col-sm-3: col-sm-3
+            add_region_classes: 1
+            attributes: ''
+          right:
+            wrapper: div
+            classes:
+              col-sm-9: col-sm-9
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      left:
+        - node_post_date
+      right:
+        - node_title
+        - field_paragraphs
+    fields:
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 0
+        label: hidden
+        formatter: ds_post_date_periods
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
 _core:
   default_config_hash: xBTs8g0qAlUrHQcyKIdGpebgUBgF-FOb_c0Lyu71hVc
 id: node.page.search_index
@@ -17,14 +63,14 @@ targetEntityType: node
 bundle: page
 mode: search_index
 content:
-  body:
-    type: text_default
-    weight: 0
+  field_paragraphs:
+    type: paragraph_summary
+    weight: 2
+    region: right
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    label: hidden
-    region: content
 hidden:
-  field_paragraphs: true
+  body: true
   links: true
   search_api_excerpt: true

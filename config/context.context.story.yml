@@ -66,6 +66,38 @@ reactions:
         unique: 0
         context_id: story
         uuid: 47380273-7121-4aa6-b7d9-a5f51f3ae2a1
+      20712393-99db-4541-b7a4-10d9d00aac69:
+        id: 'block_content:669d25f8-1b75-4ddb-89e2-95cf2ce1ca80'
+        label: 'Previous Next Container'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content_bottom
+        weight: '0'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: story
+        uuid: 20712393-99db-4541-b7a4-10d9d00aac69
+      4c90068d-429b-4c20-83d1-d4d2e94283e1:
+        id: 'block_content:78f6fc5d-8b39-4d77-ae9b-1cef6dd91e75'
+        label: 'Tell Your Story'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content
+        weight: '0'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: story
+        uuid: 4c90068d-429b-4c20-83d1-d4d2e94283e1
     id: blocks
     saved: false
     uuid: fa1e78af-b3f3-49c6-9cc3-ecae9e8e1660

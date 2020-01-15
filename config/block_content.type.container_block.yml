@@ -1,0 +1,8 @@
+uuid: 7505b020-2fcc-4171-87a7-be18cdee1ddb
+langcode: en
+status: true
+dependencies: {  }
+id: container_block
+label: 'Container Block'
+revision: 0
+description: 'A Block for rendering view blocks using display modes.  Should only have 2 view ref fields.'

@@ -5,8 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.node.content_top
     - field.field.node.story.body
+    - field.field.node.story.field_age
+    - field.field.node.story.field_category
     - field.field.node.story.field_media_image
     - field.field.node.story.field_paragraphs
+    - field.field.node.story.field_tags
     - node.type.story
   module:
     - user
@@ -26,6 +29,9 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  field_age: true
+  field_category: true
   field_paragraphs: true
+  field_tags: true
   links: true
   search_api_excerpt: true

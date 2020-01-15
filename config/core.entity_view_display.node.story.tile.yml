@@ -1,0 +1,114 @@
+uuid: 587425b9-7f6d-45fb-8676-f27ecb42cbf4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.tile
+    - field.field.node.story.body
+    - field.field.node.story.field_age
+    - field.field.node.story.field_category
+    - field.field.node.story.field_media_image
+    - field.field.node.story.field_paragraphs
+    - field.field.node.story.field_tags
+    - node.type.story
+  module:
+    - ds
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col_stacked
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          top:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+          bottom:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      top:
+        - 'bundle_field:node'
+        - field_media_image
+      main:
+        - field_category
+        - node_title
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 3
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h4
+          class: ''
+          link: false
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+      'bundle_field:node':
+        plugin_id: 'bundle_field:node'
+        weight: 0
+        label: hidden
+        formatter: default
+id: node.story.tile
+targetEntityType: node
+bundle: story
+mode: tile
+content:
+  field_category:
+    type: entity_reference_label
+    weight: 2
+    region: main
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_media_image:
+    type: entity_reference_entity_view
+    weight: 1
+    region: top
+    label: hidden
+    settings:
+      view_mode: square_1_1
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+hidden:
+  body: true
+  field_age: true
+  field_paragraphs: true
+  field_tags: true
+  links: true
+  search_api_excerpt: true

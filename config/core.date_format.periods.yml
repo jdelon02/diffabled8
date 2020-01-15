@@ -1,0 +1,8 @@
+uuid: 9e12add4-2744-49da-a03a-3ced9090212f
+langcode: en
+status: true
+dependencies: {  }
+id: periods
+label: Periods
+locked: false
+pattern: d.m.y

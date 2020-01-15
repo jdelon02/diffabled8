@@ -1,0 +1,12 @@
+uuid: 3b701fe1-0c11-4cdc-af6f-91d561f7f7c4
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__views_page__search_content__search_content
+name: 'search_api:views_page__search_content__search_content'
+filter_key: content
+url_processor: query_string
+breadcrumb:
+  active: false
+  before: true
+  group: false

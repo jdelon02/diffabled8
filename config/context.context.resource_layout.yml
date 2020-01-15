@@ -51,6 +51,21 @@ reactions:
         unique: 0
         context_id: resource_layout
         uuid: f760f41d-53f2-4961-9408-64c9b8c6eaca
+      8c757156-3bfb-49f3-8bd0-07cc438e8291:
+        id: 'views_block:related_views-related_resources_block'
+        label: ''
+        provider: views
+        label_display: 0
+        views_label: ''
+        items_per_page: none
+        region: content_bottom
+        weight: '0'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: resource_layout
+        uuid: 8c757156-3bfb-49f3-8bd0-07cc438e8291
     id: blocks
     saved: false
     uuid: a09791c9-3f8c-42f0-a3df-fd4054e3da43

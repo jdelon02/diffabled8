@@ -1,0 +1,51 @@
+uuid: bcf9f473-1346-451a-b36c-290d057aa528
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.container_block
+    - field.field.block_content.container_block.field_view_reference_1
+    - field.field.block_content.container_block.field_view_reference_2
+  module:
+    - field_layout
+    - layout_discovery
+    - viewsreference
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: block_content.container_block.default
+targetEntityType: block_content
+bundle: container_block
+mode: default
+content:
+  field_view_reference_1:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: viewsreference_autocomplete
+    region: content
+  field_view_reference_2:
+    weight: 27
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: viewsreference_autocomplete
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

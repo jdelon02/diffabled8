@@ -1,0 +1,80 @@
+uuid: af423854-9a8a-4d13-b4af-50bbfc291975
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+name: resources_search
+label: 'Resources Search'
+group: 'Search Pages Views'
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    pages: /search/resources
+    negate: 0
+    uuid: 43eb5af1-e4b7-4bb9-ba43-6b88f7bc7cbf
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      fb409d1d-dc57-4598-ae68-80b029774fdc:
+        id: 'views_exposed_filter_block:search_content-search_resources'
+        label: ''
+        provider: views
+        label_display: 0
+        views_label: ''
+        region: content_top
+        weight: '-1'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: resources_search
+        uuid: fb409d1d-dc57-4598-ae68-80b029774fdc
+      158556ca-a692-4786-beb0-306e6463284e:
+        id: 'facet_block:type'
+        label: 'Resources - Content Type'
+        provider: facets
+        label_display: 0
+        region: content_top
+        weight: '0'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: resources_search
+        uuid: 158556ca-a692-4786-beb0-306e6463284e
+      05f0c41b-83d7-4223-8507-42b96011d562:
+        id: 'facet_block:category'
+        label: 'Resources - Category'
+        provider: facets
+        label_display: 0
+        region: content_top
+        weight: '1'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: resources_search
+        uuid: 05f0c41b-83d7-4223-8507-42b96011d562
+      bd48c365-334b-4b10-b921-a741f45ae858:
+        id: 'facet_block:age'
+        label: 'Resources - Age'
+        provider: facets
+        label_display: 0
+        region: content_top
+        weight: '2'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: resources_search
+        uuid: bd48c365-334b-4b10-b921-a741f45ae858
+    id: blocks
+    saved: false
+    uuid: 9fb67fdf-56f0-4605-b7c2-3b1967500dcc
+    include_default_blocks: 1
+weight: 0

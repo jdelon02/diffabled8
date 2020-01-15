@@ -6,6 +6,8 @@ dependencies:
     - core.entity_view_mode.node.search_result
     - field.field.node.article.body
     - field.field.node.article.comment
+    - field.field.node.article.field_age
+    - field.field.node.article.field_category
     - field.field.node.article.field_media_image
     - field.field.node.article.field_paragraphs
     - field.field.node.article.field_tags
@@ -35,6 +37,8 @@ content:
     region: content
 hidden:
   comment: true
+  field_age: true
+  field_category: true
   field_media_image: true
   field_paragraphs: true
   field_tags: true
