@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.story_tile
     - node.type.story
   module:
     - node
@@ -54,7 +55,10 @@ display:
       style:
         type: default
       row:
-        type: fields
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: story_tile
       fields:
         title:
           id: title
@@ -213,28 +217,9 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  block_1:
+  next_story_block:
     display_plugin: block
-    id: block_1
-    display_title: 'Previous Block'
-    position: 1
-    display_options:
-      display_extenders:
-        metatag_display_extender: {  }
-      block_description: 'Previous Story Block'
-      display_description: ''
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  block_2:
-    display_plugin: block
-    id: block_2
+    id: next_story_block
     display_title: 'Next Block'
     position: 2
     display_options:
@@ -245,6 +230,25 @@ display:
       title: Next
       defaults:
         title: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  prev_story_block:
+    display_plugin: block
+    id: prev_story_block
+    display_title: 'Previous Block'
+    position: 1
+    display_options:
+      display_extenders:
+        metatag_display_extender: {  }
+      block_description: 'Previous Story Block'
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:

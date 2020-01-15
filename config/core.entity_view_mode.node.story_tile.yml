@@ -1,0 +1,10 @@
+uuid: 735c9567-eb54-4fdd-8321-ca41d43d47a5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.story_tile
+label: 'Story Tile'
+targetEntityType: node
+cache: true

@@ -1,0 +1,23 @@
+uuid: de40d1f9-a684-4378-9a59-7cf6bd930483
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.search_content
+  module:
+    - views
+  theme:
+    - bot_custom
+id: exposedformsearch_contentsearch_content
+theme: bot_custom
+region: navigation_collapsible
+weight: -6
+provider: null
+plugin: 'views_exposed_filter_block:search_content-search_content'
+settings:
+  id: 'views_exposed_filter_block:search_content-search_content'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility: {  }

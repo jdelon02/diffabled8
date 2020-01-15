@@ -1,0 +1,12 @@
+uuid: 24fd3bfa-f0c1-4e6b-b407-af8f6994dd1b
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__views_page__search_content__search_resources
+name: 'search_api:views_page__search_content__search_resources'
+filter_key: resources
+url_processor: query_string
+breadcrumb:
+  active: false
+  before: true
+  group: false

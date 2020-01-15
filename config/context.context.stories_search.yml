@@ -1,0 +1,54 @@
+uuid: 0d058838-aef8-4e24-8972-da8b610b656d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+name: stories_search
+label: 'Stories Search'
+group: 'Search Pages Views'
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    pages: /search/stories
+    negate: 0
+    uuid: 4e90ae65-adce-4803-91dd-bfb8fa18e839
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      c0ec13e0-ad5c-49a1-b067-ccfb2954e6ad:
+        id: 'views_exposed_filter_block:search_content-search_stories'
+        label: ''
+        provider: views
+        label_display: 0
+        views_label: ''
+        region: content_top
+        weight: '0'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: stories_search
+        uuid: c0ec13e0-ad5c-49a1-b067-ccfb2954e6ad
+      f71ac508-c328-4657-b88d-71e8ebbd3cdf:
+        id: 'facet_block:age_stories'
+        label: Age
+        provider: facets
+        label_display: 0
+        region: content_top
+        weight: '1'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: stories_search
+        uuid: f71ac508-c328-4657-b88d-71e8ebbd3cdf
+    id: blocks
+    saved: false
+    uuid: d96f22b3-c476-4e41-a227-b34b0d7cf7f8
+    include_default_blocks: 1
+weight: 0
