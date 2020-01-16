@@ -38,6 +38,7 @@
         "drupal/console": "^1",
         "drupal/context": "^4.0",
         "drupal/context_groups": "^1.0",
+        "drupal/context_layout": "^1.0",
         "drupal/core": "^8",
         "drupal/core-recommended": "^8.8",
         "drupal/custom_formatters": "^3.0",
