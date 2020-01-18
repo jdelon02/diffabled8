@@ -33,7 +33,7 @@ function bot_custom_preprocess_clickable_media(&$variables) {
 
 function bot_custom_preprocess_clickable_1col(&$variables) {
   // dump($variables);
-  $parentEntity = $variables['content']["#entity"];
+  $parentEntity = $variables['content']["#entity"]->_referringItem->getEntity();
   if($parentEntity) {
     $variables['parent_entity_url'] = \Drupal::service('path.alias_manager')->getAliasByPath($parentEntity->toUrl()->toString());
   }
@@ -41,7 +41,7 @@ function bot_custom_preprocess_clickable_1col(&$variables) {
 
 function bot_custom_preprocess_clickable_1col_stacked(&$variables) {
   // dump($variables);
-  $parentEntity = $variables['content']["#entity"];
+  $parentEntity = $variables['content']["#entity"]->_referringItem->getEntity();
   if($parentEntity) {
     $variables['parent_entity_url'] = \Drupal::service('path.alias_manager')->getAliasByPath($parentEntity->toUrl()->toString());
   }
@@ -49,7 +49,7 @@ function bot_custom_preprocess_clickable_1col_stacked(&$variables) {
 
 function bot_custom_preprocess_clickable_2col_stacked(&$variables) {
   // dump($variables);
-  $parentEntity = $variables['content']["#entity"];
+  $parentEntity = $variables['content']["#entity"]->_referringItem->getEntity();
   if($parentEntity) {
     $variables['parent_entity_url'] = \Drupal::service('path.alias_manager')->getAliasByPath($parentEntity->toUrl()->toString());
   }
@@ -57,7 +57,7 @@ function bot_custom_preprocess_clickable_2col_stacked(&$variables) {
 
 function bot_custom_preprocess_clickable_3col(&$variables) {
   // dump($variables);
-  $parentEntity = $variables['content']["#entity"];
+  $parentEntity = $variables['content']["#entity"]->_referringItem->getEntity();
   if($parentEntity) {
     $variables['parent_entity_url'] = \Drupal::service('path.alias_manager')->getAliasByPath($parentEntity->toUrl()->toString());
   }
