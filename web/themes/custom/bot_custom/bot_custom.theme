@@ -26,38 +26,38 @@ function bot_custom_preprocess_block(&$variables) {
 // Custom Layouts in template folder.
 // Needed to make whole areas clickable.
 
-function bot_custom_preprocess_clickable_media(&$variables) {
+function bot_custom_preprocess_botclickable_media(&$variables) {
 	$parentEntity = $variables['content']['field_media_image']['#object']->_referringItem->getEntity();
 	$variables['parent_entity_url'] = \Drupal::service('path.alias_manager')->getAliasByPath($parentEntity->toUrl()->toString());
 }
 
-function bot_custom_preprocess_clickable_1col(&$variables) {
+function bot_custom_preprocess_botclickable_1col(&$variables) {
   // dump($variables);
-  $parentEntity = $variables['content']["#entity"]->_referringItem->getEntity();
+  $parentEntity = $variables['content']["#entity"];
   if($parentEntity) {
     $variables['parent_entity_url'] = \Drupal::service('path.alias_manager')->getAliasByPath($parentEntity->toUrl()->toString());
   }
 }
 
-function bot_custom_preprocess_clickable_1col_stacked(&$variables) {
+function bot_custom_preprocess_botclickable_1col_stacked(&$variables) {
   // dump($variables);
-  $parentEntity = $variables['content']["#entity"]->_referringItem->getEntity();
+  $parentEntity = $variables['content']["#entity"];
   if($parentEntity) {
     $variables['parent_entity_url'] = \Drupal::service('path.alias_manager')->getAliasByPath($parentEntity->toUrl()->toString());
   }
 }
 
-function bot_custom_preprocess_clickable_2col_stacked(&$variables) {
+function bot_custom_preprocess_botclickable_2col_stacked(&$variables) {
   // dump($variables);
-  $parentEntity = $variables['content']["#entity"]->_referringItem->getEntity();
+  $parentEntity = $variables['content']["#entity"];
   if($parentEntity) {
     $variables['parent_entity_url'] = \Drupal::service('path.alias_manager')->getAliasByPath($parentEntity->toUrl()->toString());
   }
 }
 
-function bot_custom_preprocess_clickable_3col(&$variables) {
+function bot_custom_preprocess_botclickable_3col(&$variables) {
   // dump($variables);
-  $parentEntity = $variables['content']["#entity"]->_referringItem->getEntity();
+  $parentEntity = $variables['content']["#entity"];
   if($parentEntity) {
     $variables['parent_entity_url'] = \Drupal::service('path.alias_manager')->getAliasByPath($parentEntity->toUrl()->toString());
   }
