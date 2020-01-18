@@ -1,0 +1,19 @@
+uuid: 778a9439-1efb-401c-9938-73e3bb5ca604
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+    - link
+id: components.field_single_button
+field_name: field_single_button
+entity_type: components
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

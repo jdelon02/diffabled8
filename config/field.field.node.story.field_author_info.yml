@@ -1,0 +1,28 @@
+uuid: f55f39ad-6c00-47b1-8081-99a0cb64d0ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.author_info.author
+    - field.storage.node.field_author_info
+    - node.type.story
+id: node.story.field_author_info
+field_name: field_author_info
+entity_type: node
+bundle: story
+label: 'Author Info'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:author_info'
+  handler_settings:
+    target_bundles:
+      author: author
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

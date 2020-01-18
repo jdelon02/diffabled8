@@ -4,60 +4,214 @@
  */
 
 /**********footer********/
-footer.footer {
-    margin: 5em auto 0;
-    text-align: center;
-    background:url(../images/footer-pattern.png) repeat;
-    width: 100% !important;
-    border: none;
-    padding: 5em 0;
+
+
+/*join community footer*/
+.block-content--type-cta-block .bs-region {
+    padding: 0;
 }
-footer.region-footer {
-    max-width: 95%;
-}
-.region-footer nav {
-    margin-bottom: 20px;
-}
-footer.footer nav ul {
+.block-content--type-cta-block {
+    position: relative;
+    color: #fff;
+    overflow:hidden;
     display: flex;
+    align-items: center;
+    justify-content: start;
+    min-height: 400px;
+}
+.join-community-cta {
+    padding: 50px 30px;
+    position: relative;
+    z-index: 200;
+    text-align: center;
+    margin: 5% auto;
+    max-width: 500px;
+    background: rgba(45,128,219,0.85);
+}
+.block-content--type-cta-block .field--name-field-background-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+.block-content--type-cta-block .bs-region {
+    width: 100%;
+}
+.join-community-cta .field--name-field-callout-top-title {
+    font-family: essonnes-display, serif;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    font-size: 54px;
+}
+.join-community-cta .field--name-field-callout-sub-text {
+    font-family: essonnes-display, serif;
+    font-size: 18px;
+    padding: 30px 0;
+}
+.join-community-cta .btn {
+    padding: 20px;
+    background-color: #fff;
+    border-color:#fff;
+    color: #000;
+}
+.join-community-cta .btn:hover {
+    background-color:transparent;
+    color: #fff;
+}
+
+/*footer cta*/
+.block-content--type-icon-and-tagline h3 {
+    font-size: 34px;
+}
+.block-content--type-icon-and-tagline .bs-region {
+    display: flex;
+    align-items: center;
+}
+.block-content--type-button-block .bs-region {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
 }
-footer.footer .logo {
-    float:none !important;
+@media screen and (min-width:1300px) {
+    .block-content--type-icon-and-tagline .bs-region,
+    .block-content--type-button-block .bs-region {
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+}
+.block-content--type-icon-and-tagline .field--name-body {
+    padding: 0 15px;
+}
+.region-footer {
+    display: flex;
+}
+.block-content--type-button-block .field--name-field-real-stories .btn {
+    background:#4b91e3;
+    border-color:#4b91e3;
+    color: #fff;
+    padding: 25px 30px;
+}
+.block-content--type-button-block .field--name-field-tell-your-story .btn {
+    color: #000;
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    border-radius: 0;
+}
+.block-content--type-button-block .field--name-field-tell-your-story .btn:after {
+    width: 65%;
+    height: 2px;
+    content: '';
     display: block;
-}
-footer .menu--social-media li {
-    margin: 0 5px;
-}
-footer .menu--social-media li a {
-    font-size: 0;
-    border: 2px solid #000;
-    border-radius: 50px;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    padding: 0;
-    position: relative;
-    color:#fff;
-}
-footer .menu--social-media li a svg {
-    font-size: 25px;
+    background: #4b91e3;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color:#000;
+    bottom: 15px;
+    left: 25%;
 }
-footer .menu--social-media li a:hover {
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d85fa2+0,fe5c8b+100 */
-background: rgb(216,95,162); /* Old browsers */
-background: -moz-linear-gradient(-45deg,  rgba(216,95,162,1) 0%, rgba(254,92,139,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(-45deg,  rgba(216,95,162,1) 0%,rgba(254,92,139,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(135deg,  rgba(216,95,162,1) 0%,rgba(254,92,139,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d85fa2', endColorstr='#fe5c8b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-border-color:#fff;
-        color:#fff;
+.block-content--type-button-block .field--name-field-tell-your-story  svg {
+    font-size: 50px;
+    color:#4b91e3;
+    padding-right: 10px;
 }
-footer .menu--social-media li a:hover svg {
-    color:#fff;
+.region-footer section {
+    width: 100%;
+}
+@media screen and (min-width:768px) {
+    .region-footer section:nth-child(1) {
+        width: 75%;
+    }
+    .region-footer section:nth-child(2) {
+        width: 25%;
+    }
+}
+@media screen and (max-width:768px) {
+    .region-footer {
+        flex-wrap: wrap;
+    }
+    .block-content--type-icon-and-tagline .bs-region {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width:590px) {
+    .block-content--type-button-block .bs-region {
+        flex-direction: column;
+    }
+    .block-content--type-button-block .btn {
+        margin-bottom: 20px;
+    }
+}
+
+/*footer*/
+.footcolumns {
+    border-top: 10px solid #f5efe8;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 50px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footcolumns .footsy {
+    padding-left: 0;
+    padding-right: 0;
+}
+.footcolumns nav .visually-hidden {
+    display: none;
+}
+.footcolumns nav .menu {
+    display: flex;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.footcolumns .footsy:nth-child(2) nav .menu {
+    justify-content: flex-end;
+    font-size: 12px;
+    font-weight: 500;
+}
+.footcolumns .menu--social-media-menu {
+    font-size: 0;
+}
+.footcolumns .menu--social-media-menu svg {
+    font-size: 18px !important;
+    color: #4b91e3;
+}
+@media screen and (max-width:590px) {
+    .footcolumns {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .footcolumns nav .menu  {
+        justify-content: center !important;
+    }
+    .footcolumns .footsy:nth-child(1) {
+        order: 2;
+    }
+    .footcolumns .footsy:nth-child(2) {
+        order: 1;
+    }
+}
+
+/*footer copyright*/
+.footer_abs_bottom {
+    font-family: essonnes-display, serif;
+    text-transform: uppercase;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+@media screen and (max-width:590px) {
+    .footer_abs_bottom {
+        text-align: center;
+    }
 }

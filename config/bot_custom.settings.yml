@@ -2,12 +2,12 @@ schemas:
   bootstrap: 8000
   bot_custom: 8000
 favicon:
-  mimetype: image/vnd.microsoft.icon
-  path: ''
-  url: 'https://dev-diffabled8.pantheonsite.io/themes/custom/bot_custom/favicon.ico'
-  use_default: true
+  mimetype: image/png
+  path: 'public://favicon-da.png'
+  url: 'https://dev-diffabled8.pantheonsite.io/sites/default/files/favicon-da.png'
+  use_default: false
 logo:
-  path: 'public://diffabledemologo_0.png'
+  path: 'public://logo-full.png'
   url: ''
   use_default: false
 table_responsive: '-1'
@@ -37,9 +37,9 @@ cdn_cache_ttl_library: '0'
 reset_http_request_cache: ''
 table: ''
 breadcrumb_home: 1
-fluid_container: 0
 features:
   comment_user_picture: true
   comment_user_verification: true
   favicon: true
   node_user_picture: true
+fluid_container: 1

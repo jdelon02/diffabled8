@@ -1,0 +1,9 @@
+uuid: ea144f33-2b76-4173-955a-12b50d9e45a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.author_info
+name: Author
+type: author
+description: ''

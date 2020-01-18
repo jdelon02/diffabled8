@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_age
     - field.field.node.article.field_category
+    - field.field.node.article.field_featured_item
     - field.field.node.article.field_media_image
     - field.field.node.article.field_paragraphs
     - field.field.node.article.field_tags
@@ -112,6 +113,7 @@ hidden:
   body: true
   comment: true
   field_age: true
+  field_featured_item: true
   field_paragraphs: true
   field_tags: true
   links: true

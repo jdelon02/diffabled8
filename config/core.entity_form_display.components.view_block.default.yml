@@ -1,0 +1,52 @@
+uuid: 2544a206-bfab-474b-925c-94fd33b981be
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.components.view_block
+    - field.field.components.view_block.field_single_button
+    - field.field.components.view_block.field_view_to_render
+  module:
+    - field_layout
+    - layout_discovery
+    - link
+    - viewsreference
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: components.view_block.default
+targetEntityType: components
+bundle: view_block
+mode: default
+content:
+  field_single_button:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_view_to_render:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: viewsreference_autocomplete
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true

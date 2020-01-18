@@ -4,10 +4,12 @@ status: true
 dependencies:
   config:
     - search_api.index.default_index
+    - system.menu.main
   module:
     - better_exposed_filters
     - blazy
     - search_api
+    - views_infinite_scroll
 _core:
   default_config_hash: EeNNkLARDmftWehrk-ew_OW8srW2RgDKI1mZrWxZ-ao
 id: search_content
@@ -61,9 +63,9 @@ display:
                   filter_rewrite_values: ''
           text_input_required_format: basic_html
       pager:
-        type: mini
+        type: infinite_scroll
         options:
-          items_per_page: 10
+          items_per_page: 9
           offset: 0
           id: 0
           total_pages: null
@@ -78,6 +80,9 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          views_infinite_scroll:
+            button_text: 'Load More'
+            automatically_load_content: true
       style:
         type: default
       row:
@@ -162,6 +167,94 @@ display:
       cacheable: false
       max-age: -1
       tags: {  }
+  news_page:
+    display_plugin: page
+    id: news_page
+    display_title: Page
+    position: 4
+    display_options:
+      display_extenders:
+        metatag_display_extender: {  }
+      path: news
+      menu:
+        type: normal
+        title: News
+        description: ''
+        expanded: false
+        parent: 'menu_link_content:1e547910-7837-4721-bbab-366e94d4200b'
+        weight: 0
+        context: '0'
+        menu_name: main
+      style:
+        type: default
+        options: {  }
+      defaults:
+        style: false
+        row: false
+        filters: false
+        filter_groups: false
+      row:
+        type: search_api
+        options:
+          view_modes:
+            'entity:node':
+              article: search_index
+              landing: default
+              page: default
+              resource: tile
+              story: tile
+      filters:
+        type:
+          id: type
+          table: search_api_index_default_index
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            article: article
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: search_api_options
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url.query_args
+      tags: {  }
   search_content:
     display_plugin: page
     id: search_content
@@ -173,6 +266,58 @@ display:
       path: search/content
       exposed_block: true
       display_description: ''
+      filters:
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_default_index
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: and
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: search_op
+            label: Search
+            description: ''
+            use_operator: false
+            operator: search_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: keys
+            required: true
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            placeholder: 'Start typing to search...'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          parse_mode: terms
+          min_length: 3
+          fields: {  }
+          plugin_id: search_api_fulltext
+      defaults:
+        filters: false
+        filter_groups: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       contexts:
         - 'languages:language_interface'
@@ -417,6 +562,7 @@ display:
         filter_groups: false
         style: false
         row: false
+        cache: false
       filter_groups:
         operator: AND
         groups:
@@ -439,6 +585,8 @@ display:
               page: default
               resource: default
               story: story_tile
+      cache:
+        type: none
     cache_metadata:
       max-age: -1
       contexts:

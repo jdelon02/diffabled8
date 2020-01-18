@@ -3,7 +3,11 @@ langcode: en
 status: true
 dependencies:
   module:
+    - context_layout
     - system
+third_party_settings:
+  context_layout:
+    layout: null
 name: stories_search
 label: 'Stories Search'
 group: 'Search Pages Views'
@@ -47,6 +51,35 @@ reactions:
         unique: 0
         context_id: stories_search
         uuid: f71ac508-c328-4657-b88d-71e8ebbd3cdf
+      ee2f8469-35a5-41a7-a8bb-d703647b1b49:
+        id: 'views_block:featured_content-featured_story_block'
+        label: ''
+        provider: views
+        label_display: 0
+        views_label: ''
+        items_per_page: none
+        region: content
+        weight: '-5'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: stories_search
+        uuid: ee2f8469-35a5-41a7-a8bb-d703647b1b49
+        override: {  }
+      d94859fa-217a-4469-ae5d-3fc42a630ca8:
+        id: 'facet_block:stories_category_facet'
+        label: 'Stories Category Facet'
+        provider: facets
+        label_display: 0
+        region: content_top
+        weight: '0'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: stories_search
+        uuid: d94859fa-217a-4469-ae5d-3fc42a630ca8
     id: blocks
     saved: false
     uuid: d96f22b3-c476-4e41-a227-b34b0d7cf7f8

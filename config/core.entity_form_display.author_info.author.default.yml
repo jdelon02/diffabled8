@@ -1,0 +1,58 @@
+uuid: 7d918b42-eccf-4521-83a7-c75eae00ebfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.author_info.author
+    - field.field.author_info.author.field_author_link
+    - field.field.author_info.author.field_author_pic
+    - field.field.author_info.author.field_full_name
+  module:
+    - field_layout
+    - layout_discovery
+    - link
+    - media_library
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: author_info.author.default
+targetEntityType: author_info
+bundle: author
+mode: default
+content:
+  field_author_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_author_pic:
+    type: media_library_widget
+    weight: 2
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_full_name:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true

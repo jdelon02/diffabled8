@@ -1,0 +1,141 @@
+uuid: ed858bea-705c-45a8-beba-b938ecaa6431
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.author_info.author
+    - field.field.author_info.author.field_author_link
+    - field.field.author_info.author.field_author_pic
+    - field.field.author_info.author.field_full_name
+    - image.style.thumbnail
+  module:
+    - blazy
+    - ds
+    - link
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - field_author_pic
+        - field_full_name
+        - field_author_link
+id: author_info.author.default
+targetEntityType: author_info
+bundle: author
+mode: default
+content:
+  field_author_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link_separate
+    region: main
+  field_author_pic:
+    type: blazy_media
+    weight: 0
+    label: hidden
+    settings:
+      image_style: thumbnail
+      responsive_image_style: ''
+      media_switch: ''
+      thumbnail_style: ''
+      ratio: ''
+      view_mode: default
+      sizes: ''
+      breakpoints:
+        xs:
+          image_style: ''
+          width: ''
+        sm:
+          image_style: ''
+          width: ''
+        md:
+          image_style: ''
+          width: ''
+        lg:
+          image_style: ''
+          width: ''
+        xl:
+          image_style: ''
+          width: ''
+      current_view_mode: default
+      background: false
+      caption:
+        field_media_image: '0'
+      class: ''
+      id: ''
+      image: ''
+      link: ''
+      overlay: ''
+      title: ''
+      vanilla: false
+      icon: ''
+      layout: ''
+      cache: 0
+      optionset: default
+      skin: ''
+      style: ''
+      box_caption: ''
+      box_caption_custom: ''
+      box_style: ''
+      box_media_style: ''
+      grid: 0
+      grid_header: ''
+      grid_medium: 0
+      grid_small: 0
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    region: main
+  field_full_name:
+    weight: 1
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: By
+            lb-col: false
+            classes: {  }
+    type: string
+    region: main
+hidden:
+  changed: true
+  created: true
+  search_api_excerpt: true
+  title: true
+  uid: true

@@ -1,0 +1,28 @@
+uuid: 17591494-4ff5-47a4-a251-d3f544cfa180
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.author_info.author
+    - field.storage.author_info.field_author_pic
+    - media.type.image
+id: author_info.author.field_author_pic
+field_name: field_author_pic
+entity_type: author_info
+bundle: author
+label: 'Author Pic'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

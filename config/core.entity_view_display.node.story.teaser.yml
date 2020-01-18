@@ -1,12 +1,14 @@
 uuid: d4b1b61b-6469-47e0-81b8-56f4a2e365a6
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.story.body
     - field.field.node.story.field_age
+    - field.field.node.story.field_author_info
     - field.field.node.story.field_category
+    - field.field.node.story.field_featured_item
     - field.field.node.story.field_media_image
     - field.field.node.story.field_paragraphs
     - field.field.node.story.field_tags
@@ -34,7 +36,9 @@ content:
     region: content
 hidden:
   field_age: true
+  field_author_info: true
   field_category: true
+  field_featured_item: true
   field_media_image: true
   field_paragraphs: true
   field_tags: true

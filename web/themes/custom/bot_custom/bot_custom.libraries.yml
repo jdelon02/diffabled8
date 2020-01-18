@@ -8,6 +8,12 @@ framework:
       css/style.css: {}
   js:
     '//kit.fontawesome.com/a8f06ff502.js': { type: external, minified: true }
+search-popup:
+  js:
+    'js/search-popup.js': {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
 # Uncomment for LESS source JavaScript files.
 #  js:
 #    bootstrap/js/affix.js: {}

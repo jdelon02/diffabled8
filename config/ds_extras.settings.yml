@@ -1,4 +1,4 @@
-fields_extra: false
+fields_extra: true
 fields_extra_list: {  }
 field_permissions: false
 hidden_region: false

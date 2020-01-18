@@ -1,6 +1,6 @@
 uuid: 73ca422b-3c8a-4064-b8b8-717115772583
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_age
     - field.field.node.article.field_category
+    - field.field.node.article.field_featured_item
     - field.field.node.article.field_media_image
     - field.field.node.article.field_paragraphs
     - field.field.node.article.field_tags
@@ -56,6 +57,7 @@ hidden:
   comment: true
   field_age: true
   field_category: true
+  field_featured_item: true
   field_media_image: true
   field_paragraphs: true
   field_tags: true

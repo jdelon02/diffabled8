@@ -1,0 +1,102 @@
+uuid: bdc9d8c2-b3bb-40d4-93ed-95bb3de51d35
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.components.view_block
+    - field.field.components.view_block.field_single_button
+    - field.field.components.view_block.field_view_to_render
+  module:
+    - button_link
+    - ds
+    - viewsreference
+third_party_settings:
+  ds:
+    layout:
+      id: bs_2col_stacked
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          top:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+          left:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
+          right:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
+          bottom:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      left:
+        - title
+      right:
+        - field_single_button
+      bottom:
+        - field_view_to_render
+id: components.view_block.default
+targetEntityType: components
+bundle: view_block
+mode: default
+content:
+  field_single_button:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+      link_text: ''
+      btn_type: btn-default
+      btn_size: ''
+      icon_class: ''
+    third_party_settings: {  }
+    type: button_link
+    region: right
+  field_view_to_render:
+    weight: 2
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    type: viewsreference_formatter
+    region: bottom
+  title:
+    label: hidden
+    type: string
+    weight: 0
+    region: left
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  changed: true
+  created: true
+  search_api_excerpt: true
+  uid: true
