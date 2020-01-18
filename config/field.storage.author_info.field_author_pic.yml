@@ -1,0 +1,20 @@
+uuid: aeaae61d-9a8a-413a-8845-6ee7001a549c
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+    - media
+id: author_info.field_author_pic
+field_name: field_author_pic
+entity_type: author_info
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

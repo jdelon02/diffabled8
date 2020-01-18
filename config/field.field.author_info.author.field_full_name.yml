@@ -1,0 +1,19 @@
+uuid: 5617e64c-d126-46b0-bd61-d59123ba961f
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.author_info.author
+    - field.storage.author_info.field_full_name
+id: author_info.author.field_full_name
+field_name: field_full_name
+entity_type: author_info
+bundle: author
+label: 'Full Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

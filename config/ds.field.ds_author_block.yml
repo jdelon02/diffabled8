@@ -1,6 +1,6 @@
 id: ds_author_block
 label: 'DS Author Block'
-ui_limit: story|header_layout
+ui_limit: "story|header_layout\r\nstory|featured"
 properties:
   block: 'views_block:story_author-block_1'
   use_block_title: true

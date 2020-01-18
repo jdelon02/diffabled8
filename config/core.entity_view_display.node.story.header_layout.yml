@@ -6,7 +6,9 @@ dependencies:
     - core.entity_view_mode.node.header_layout
     - field.field.node.story.body
     - field.field.node.story.field_age
+    - field.field.node.story.field_author_info
     - field.field.node.story.field_category
+    - field.field.node.story.field_featured_item
     - field.field.node.story.field_media_image
     - field.field.node.story.field_paragraphs
     - field.field.node.story.field_tags
@@ -74,7 +76,9 @@ content: {  }
 hidden:
   body: true
   field_age: true
+  field_author_info: true
   field_category: true
+  field_featured_item: true
   field_media_image: true
   field_paragraphs: true
   field_tags: true

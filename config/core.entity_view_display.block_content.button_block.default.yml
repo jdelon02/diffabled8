@@ -12,7 +12,7 @@ dependencies:
 third_party_settings:
   ds:
     layout:
-      id: bs_2col
+      id: bs_1col
       library: null
       disable_css: false
       entity_classes: all_classes
@@ -25,22 +25,15 @@ third_party_settings:
           add_layout_class: 1
           attributes: ''
         regions:
-          left:
+          main:
             wrapper: div
             classes:
-              col-sm-6: col-sm-6
-            add_region_classes: 1
-            attributes: ''
-          right:
-            wrapper: div
-            classes:
-              col-sm-6: col-sm-6
+              col-sm-12: col-sm-12
             add_region_classes: 1
             attributes: ''
     regions:
-      left:
+      main:
         - field_real_stories
-      right:
         - field_tell_your_story
 id: block_content.button_block.default
 targetEntityType: block_content
@@ -62,7 +55,7 @@ content:
       icon_class: ''
     third_party_settings: {  }
     type: button_link
-    region: left
+    region: main
   field_tell_your_story:
     weight: 1
     label: hidden
@@ -70,13 +63,21 @@ content:
       link_text: ''
       btn_type: btn-default
       btn_size: ''
-      icon_class: microphone
+      icon_class: 'fas fa-microphone-alt'
       trim_length: '80'
       url_only: false
       url_plain: false
       rel: 0
       target: 0
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     type: button_link
-    region: right
-hidden: {  }
+    region: main
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,23 @@
+uuid: cd3df322-23c0-4aeb-8569-e7d5e3fe7232
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.components.view_block
+    - field.storage.components.field_single_button
+  module:
+    - link
+id: components.view_block.field_single_button
+field_name: field_single_button
+entity_type: components
+bundle: view_block
+label: 'Single Button'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

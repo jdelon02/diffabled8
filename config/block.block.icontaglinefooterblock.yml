@@ -11,7 +11,7 @@ dependencies:
 id: icontaglinefooterblock
 theme: bot_custom
 region: footer
-weight: -6
+weight: -7
 provider: null
 plugin: 'block_content:ddbf6d2b-9ace-424f-a07a-34f29c291f64'
 settings:

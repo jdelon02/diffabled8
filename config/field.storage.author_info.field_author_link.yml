@@ -1,0 +1,19 @@
+uuid: d9b4a20a-ffe8-415c-9ec8-f7759d199197
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+    - link
+id: author_info.field_author_link
+field_name: field_author_link
+entity_type: author_info
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,10 @@
+uuid: f5c9bdc6-eed1-47c1-9ce9-7c588b5ac67a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.home_featured
+label: 'Home Featured'
+targetEntityType: node
+cache: true

@@ -1,0 +1,20 @@
+uuid: a903518d-63ff-437c-a63a-9b656c1c4d86
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+    - node
+id: node.field_author_info
+field_name: field_author_info
+entity_type: node
+type: entity_reference
+settings:
+  target_type: author_info
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

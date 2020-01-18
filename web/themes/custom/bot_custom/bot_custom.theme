@@ -18,6 +18,12 @@ function bot_custom_theme_suggestions_page_alter(array &$suggestions, array $var
 
 
 function bot_custom_preprocess_clickable_media(&$variables) {
-$parentEntity = $variables['content']['field_media_image']['#object']->_referringItem->getEntity();
-$variables['parent_entity_url'] = \Drupal::service('path.alias_manager')->getAliasByPath($parentEntity->toUrl()->toString());
+	$parentEntity = $variables['content']['field_media_image']['#object']->_referringItem->getEntity();
+	$variables['parent_entity_url'] = \Drupal::service('path.alias_manager')->getAliasByPath($parentEntity->toUrl()->toString());
+}
+
+function bot_custom_preprocess_block(&$variables) {
+  if ($variables['plugin_id'] === 'views_exposed_filter_block:search_content-search_content') {
+    $variables['#attached']['library'][] = 'bot_custom/search-popup';
+  }
 }

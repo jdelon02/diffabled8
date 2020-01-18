@@ -3,10 +3,14 @@ langcode: en
 status: true
 dependencies:
   module:
+    - context_layout
     - system
+third_party_settings:
+  context_layout:
+    layout: null
 name: news
-label: News
-group: 'Views Page'
+label: 'News Search'
+group: 'Search Pages Views'
 description: ''
 requireAllConditions: false
 disabled: false
@@ -20,21 +24,6 @@ conditions:
 reactions:
   blocks:
     blocks:
-      4f437d0c-6479-4a84-8906-d53ba7a28e1b:
-        id: 'views_block:news-featured_news_block'
-        label: ''
-        provider: views
-        label_display: 0
-        views_label: ''
-        items_per_page: none
-        region: content_top
-        weight: '1'
-        context_mapping: {  }
-        theme: bot_custom
-        css_class: ''
-        unique: 0
-        context_id: news
-        uuid: 4f437d0c-6479-4a84-8906-d53ba7a28e1b
       2c38c11c-e9c9-48e9-b1fd-c5c429b54072:
         id: page_title_block
         label: 'Page title'
@@ -48,6 +37,22 @@ reactions:
         unique: 0
         context_id: news
         uuid: 2c38c11c-e9c9-48e9-b1fd-c5c429b54072
+      fc0fb014-0baf-4e42-b43a-612a08229910:
+        id: 'views_block:featured_content-featured_news_block'
+        label: ''
+        provider: views
+        label_display: 0
+        views_label: ''
+        items_per_page: none
+        region: content_top
+        weight: '0'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: news
+        uuid: fc0fb014-0baf-4e42-b43a-612a08229910
+        override: {  }
     id: blocks
     saved: false
     uuid: a1dddef7-3e1c-4fe1-97d9-f581e7fb4dc5

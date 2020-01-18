@@ -7,6 +7,8 @@ dependencies:
     - image.style.fp_square_256
     - image.style.fp_square_512
     - image.style.fp_square_768
+  theme:
+    - bot_custom
 _core:
   default_config_hash: n6L3nRv2bUG1ndyqRTfEYMwEnyliFmMoO31W1LwukV4
 id: square_1_1
@@ -19,6 +21,11 @@ image_style_mappings:
     image_mapping: fp_square_1024
   -
     breakpoint_id: bot_custom.screen-md-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: fp_square_768
+  -
+    breakpoint_id: bot_custom.screen-md-max
     multiplier: 2x
     image_mapping_type: image_style
     image_mapping: fp_square_768
@@ -27,6 +34,11 @@ image_style_mappings:
     multiplier: 1x
     image_mapping_type: image_style
     image_mapping: fp_square_512
+  -
+    breakpoint_id: bot_custom.screen-sm-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: fp_square_256
   -
     breakpoint_id: bot_custom.screen-xs-max
     multiplier: 1x

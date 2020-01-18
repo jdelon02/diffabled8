@@ -12,7 +12,7 @@ dependencies:
 third_party_settings:
   ds:
     layout:
-      id: bs_2col
+      id: bs_1col
       library: null
       disable_css: false
       entity_classes: all_classes
@@ -25,22 +25,15 @@ third_party_settings:
           add_layout_class: 1
           attributes: ''
         regions:
-          left:
+          main:
             wrapper: div
             classes:
-              col-sm-3: col-sm-3
-            add_region_classes: 1
-            attributes: ''
-          right:
-            wrapper: div
-            classes:
-              col-sm-9: col-sm-9
+              col-sm-12: col-sm-12
             add_region_classes: 1
             attributes: ''
     regions:
-      left:
+      main:
         - field_icon
-      right:
         - body
 id: block_content.icon_and_tagline.default
 targetEntityType: block_content
@@ -53,7 +46,7 @@ content:
     weight: 1
     settings: {  }
     third_party_settings: {  }
-    region: right
+    region: main
   field_icon:
     type: entity_reference_entity_view
     weight: 0
@@ -62,5 +55,6 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
-    region: left
-hidden: {  }
+    region: main
+hidden:
+  search_api_excerpt: true

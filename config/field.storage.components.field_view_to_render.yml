@@ -1,0 +1,21 @@
+uuid: d076971f-43fe-4dde-8c4d-1ab2f92b9763
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+    - views
+    - viewsreference
+id: components.field_view_to_render
+field_name: field_view_to_render
+entity_type: components
+type: viewsreference
+settings:
+  target_type: view
+module: viewsreference
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

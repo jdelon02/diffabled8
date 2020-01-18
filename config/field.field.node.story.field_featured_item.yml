@@ -1,0 +1,23 @@
+uuid: a570fd50-0385-462d-9d4d-8a4ff798ae14
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured_item
+    - node.type.story
+id: node.story.field_featured_item
+field_name: field_featured_item
+entity_type: node
+bundle: story
+label: 'Featured Story'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

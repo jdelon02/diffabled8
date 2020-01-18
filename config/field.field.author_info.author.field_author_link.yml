@@ -1,0 +1,23 @@
+uuid: 9068cd93-6d69-4b5d-992a-a6d20da0c55d
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.author_info.author
+    - field.storage.author_info.field_author_link
+  module:
+    - link
+id: author_info.author.field_author_link
+field_name: field_author_link
+entity_type: author_info
+bundle: author
+label: 'Author Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

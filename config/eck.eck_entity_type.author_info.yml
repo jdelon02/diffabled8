@@ -1,0 +1,10 @@
+uuid: f00e883d-c936-47de-938a-7f1cd3105402
+langcode: en
+status: true
+dependencies: {  }
+id: author_info
+label: 'Author Info'
+created: true
+changed: true
+uid: true
+title: true

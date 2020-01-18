@@ -1,0 +1,9 @@
+uuid: 3cb2d7c4-ffc4-4f3f-9384-26bb88abfd01
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.components
+name: 'View Block'
+type: view_block
+description: ''

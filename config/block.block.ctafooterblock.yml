@@ -10,7 +10,7 @@ dependencies:
     - bot_custom
 id: ctafooterblock
 theme: bot_custom
-region: footer
+region: content_baseline
 weight: -7
 provider: null
 plugin: 'block_content:8ba92a1f-2982-4d29-9f2d-453db4902523'
