@@ -1,0 +1,28 @@
+uuid: 3f0b1b94-5670-48a9-9ec1-d1b45b749c57
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.title_block
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: block_content.title_block.default
+targetEntityType: block_content
+bundle: title_block
+mode: default
+content:
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

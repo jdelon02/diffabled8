@@ -306,6 +306,8 @@ display:
         title: false
         filters: false
         filter_groups: false
+        style: false
+        row: false
       block_description: 'Featured Story Block'
       filters:
         status:
@@ -405,6 +407,49 @@ display:
         operator: AND
         groups:
           1: AND
+      style:
+        type: slick
+        options:
+          vanilla: true
+          optionset: stories_slider
+          skin: ''
+          layout: ''
+          caption:
+            title: '0'
+          optionset_thumbnail: ''
+          skin_thumbnail: ''
+          thumbnail_position: ''
+          thumbnail_caption: ''
+          grid: null
+          grid_medium: null
+          grid_small: null
+          visible_items: null
+          preserve_keys: false
+          image: ''
+          thumbnail: ''
+          overlay: ''
+          title: ''
+          link: ''
+          class: ''
+          id: ''
+          override: false
+          overridables:
+            arrows: '0'
+            autoplay: '0'
+            dots: '0'
+            draggable: '0'
+            infinite: '0'
+            mouseWheel: '0'
+            randomize: '0'
+            variableWidth: '0'
+          cache: 0
+          current_view_mode: featured_story_block
+          thumbnail_effect: ''
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: featured
     cache_metadata:
       max-age: -1
       contexts:
@@ -425,7 +470,7 @@ display:
         type: slick
         options:
           vanilla: true
-          optionset: default
+          optionset: widescreen
           skin: ''
           layout: ''
           caption:

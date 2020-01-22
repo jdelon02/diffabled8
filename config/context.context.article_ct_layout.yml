@@ -3,7 +3,11 @@ langcode: en
 status: true
 dependencies:
   module:
+    - context_layout
     - node
+third_party_settings:
+  context_layout:
+    layout: null
 name: article_ct_layout
 label: 'Article Layout'
 group: 'Content Types'
@@ -54,5 +58,5 @@ reactions:
     id: blocks
     saved: false
     uuid: 86bfef1a-072b-48de-9d8f-0fc015cff3ea
-    include_default_blocks: 0
+    include_default_blocks: 1
 weight: 0

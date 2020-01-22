@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: search_api__views_page__search_content__search_resources
 name: 'search_api:views_page__search_content__search_resources'
-filter_key: resources
+filter_key: /search/resources
 url_processor: query_string
 breadcrumb:
   active: false

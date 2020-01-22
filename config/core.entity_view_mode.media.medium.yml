@@ -1,0 +1,10 @@
+uuid: cabe4905-4c20-441f-a6a1-cd4767436782
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.medium
+label: Medium
+targetEntityType: media
+cache: true

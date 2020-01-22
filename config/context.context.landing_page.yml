@@ -1,0 +1,13 @@
+uuid: cc411765-4a35-4eb7-9605-f901deb2aa38
+langcode: en
+status: true
+dependencies: {  }
+name: landing_page
+label: 'Landing Page'
+group: 'Content Types'
+description: ''
+requireAllConditions: false
+disabled: false
+conditions: {  }
+reactions: {  }
+weight: 0

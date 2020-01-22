@@ -16,11 +16,12 @@ dependencies:
   module:
     - ds
     - entity_class_formatter
+    - field_group
     - user
 third_party_settings:
   ds:
     layout:
-      id: bs_1col
+      id: bot_clickable_1col
       library: null
       disable_css: false
       entity_classes: all_classes
@@ -42,15 +43,37 @@ third_party_settings:
     regions:
       main:
         - field_media_image
+        - group_text_wrapper
         - field_author_info
         - node_title
         - field_featured_item
     fields:
       node_title:
         plugin_id: node_title
-        weight: 2
+        weight: 3
         label: hidden
         formatter: default
+  field_group:
+    group_text_wrapper:
+      children:
+        - field_author_info
+        - node_title
+        - field_featured_item
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      region: main
+      format_settings:
+        id: ''
+        classes: text-wrapper-slider
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Text Wrapper'
 id: node.story.featured
 targetEntityType: node
 bundle: story
@@ -58,7 +81,7 @@ mode: featured
 content:
   field_author_info:
     type: entity_reference_entity_view
-    weight: 1
+    weight: 2
     region: main
     label: hidden
     settings:
@@ -67,7 +90,7 @@ content:
     third_party_settings: {  }
   field_featured_item:
     type: entity_class_formatter
-    weight: 3
+    weight: 4
     region: main
     label: inline
     settings:

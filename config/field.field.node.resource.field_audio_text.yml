@@ -1,0 +1,19 @@
+uuid: 5ca8afa7-8481-4688-aa4c-00ced7e14745
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_audio_text
+    - node.type.resource
+id: node.resource.field_audio_text
+field_name: field_audio_text
+entity_type: node
+bundle: resource
+label: 'Audio Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,11 @@
+id: ds_previous
+label: 'ds previous'
+ui_limit: story|previous
+properties:
+  content:
+    value: Previous
+    format: plain_text
+type: token
+type_label: 'Token field'
+entities:
+  node: node

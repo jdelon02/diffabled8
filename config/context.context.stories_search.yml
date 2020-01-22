@@ -31,7 +31,7 @@ reactions:
         label_display: 0
         views_label: ''
         region: content_top
-        weight: '0'
+        weight: '-9'
         context_mapping: {  }
         theme: bot_custom
         css_class: ''
@@ -44,7 +44,7 @@ reactions:
         provider: facets
         label_display: 0
         region: content_top
-        weight: '1'
+        weight: '-7'
         context_mapping: {  }
         theme: bot_custom
         css_class: ''
@@ -59,7 +59,7 @@ reactions:
         views_label: ''
         items_per_page: none
         region: content
-        weight: '-5'
+        weight: '-9'
         context_mapping: {  }
         theme: bot_custom
         css_class: ''
@@ -73,13 +73,42 @@ reactions:
         provider: facets
         label_display: 0
         region: content_top
-        weight: '0'
+        weight: '-8'
         context_mapping: {  }
         theme: bot_custom
         css_class: ''
         unique: 0
         context_id: stories_search
         uuid: d94859fa-217a-4469-ae5d-3fc42a630ca8
+      29047798-4eb2-4034-9067-a0936f7b5e01:
+        id: 'facets_summary_block:stories_facet_summary'
+        label: 'Stories Facet Summary'
+        provider: facets_summary
+        label_display: 0
+        region: content_top
+        weight: '-6'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: stories_search
+        uuid: 29047798-4eb2-4034-9067-a0936f7b5e01
+      6b2581f3-334e-494e-8749-2893fb85c60c:
+        id: 'block_content:6f00522a-ad2d-4761-8488-afb50d498625'
+        label: Stories
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: header
+        weight: '-2'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: stories_search
+        uuid: 6b2581f3-334e-494e-8749-2893fb85c60c
     id: blocks
     saved: false
     uuid: d96f22b3-c476-4e41-a227-b34b0d7cf7f8

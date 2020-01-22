@@ -2,12 +2,13 @@
 
 /**********global********/
 body{
-    font-family: niveau-grotesk, sans-serif;
+    font-family: expo-serif-pro, serif;
     font-weight: 300;
     font-style: normal;
     margin-top: 0;
-    border-top:5px solid #4b91e3;
+    border-top:5px solid #277cde;
 }
+
 * {
     transition: all .25s ease-in-out;
     -moz-transition: all .25s ease-in-out;
@@ -15,6 +16,11 @@ body{
 }
 a {
     color: #000;
+    font-family: niveau-grotesk, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-style: normal;
 }
 .page-header {
     border: none;
@@ -51,14 +57,17 @@ a:focus, a:hover {
     -webkit-transition-property: color, background-color;
     transition-property: color, background-color;
     color: #fff;
+    font-family: niveau-grotesk, sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 .btn:hover {
-    background-color: #4b91e3;
-    border-color:#4b91e3
+    background-color: #277cde;
+    border-color:#277cde
 }
 .btn-success {
-    background-color:#4b91e3;
-    border-color: #4b91e3;
+    background-color:#277cde;
+    border-color: #277cde;
 }
 .btn-success:hover {
     background:#fff;
@@ -68,7 +77,8 @@ a:focus, a:hover {
 
 
 h1, h2, h3 {
-    font-family: essonnes-display, serif;
-    font-weight: 500;
+    font-family: essonnes-headline, serif;
+    font-weight: 400;
+    font-style: normal;
 }
 /**********end global********/

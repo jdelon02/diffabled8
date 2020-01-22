@@ -7,7 +7,7 @@
 /**********header********/
 /*region navigation*/
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
-    color:#4b91e3
+    color:#277cde
 }
 .region-navigation-collapsible {
     display: flex;
@@ -96,7 +96,7 @@ header * {
         left: 0;
         right: 0;
         bottom: 0;
-        background: #4b91e3;
+        background: #277cde;
         height: 2px;
         -webkit-transform: translateY(4px);
         transform: translateY(4px);
@@ -110,6 +110,10 @@ header * {
     header nav a:hover:before {
         -webkit-transform: translateY(0);
         transform: translateY(0);
+    }
+    header nav .active > a:after {
+        background: #277cde;
+        height: 2px;
     }
     /*search trigger*/
     .search-trigger a {
@@ -161,6 +165,7 @@ header * {
         content: "\e014";
         position: relative;
         top: 10px;
+        color:#277cde;
         right: 10px;
         font-size: 20px;
         display: inline-block;
@@ -254,11 +259,17 @@ header * {
     margin-bottom: 25px;
 }
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #4b91e3;
+    background-color: #277cde;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background:none;
+    color: #000;
+}
+@media screen and (max-width:768px) {
+    .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
     background-color:#f5efe8;
     color: #000;
+    }
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus,
 .navbar-default .navbar-toggle {

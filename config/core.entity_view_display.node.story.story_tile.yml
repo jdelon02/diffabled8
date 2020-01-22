@@ -19,7 +19,7 @@ dependencies:
 third_party_settings:
   ds:
     layout:
-      id: bs_1col
+      id: bot_clickable_1col
       library: null
       disable_css: false
       entity_classes: all_classes
@@ -49,7 +49,7 @@ third_party_settings:
         label: hidden
         formatter: default
         settings:
-          wrapper: h4
+          wrapper: h2
           class: ''
           link: false
         ft:

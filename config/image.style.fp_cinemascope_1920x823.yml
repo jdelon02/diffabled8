@@ -9,11 +9,11 @@ _core:
 name: fp_cinemascope_1920x823
 label: 'FP Cinemascope (1920x823)'
 effects:
-  1f0c2f1c-18e2-4e0b-8ea6-f98b23f6f75d:
-    uuid: 1f0c2f1c-18e2-4e0b-8ea6-f98b23f6f75d
-    id: focal_point_crop
-    weight: 1
+  d5f3060b-c686-43a3-b3f6-35e664fe52d2:
+    uuid: d5f3060b-c686-43a3-b3f6-35e664fe52d2
+    id: focal_point_scale_and_crop
+    weight: 2
     data:
       width: 1920
       height: 823
-      crop_type: cinemascope_crop
+      crop_type: focal_point

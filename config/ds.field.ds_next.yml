@@ -1,0 +1,11 @@
+id: ds_next
+label: 'ds next'
+ui_limit: story|next
+properties:
+  content:
+    value: Next
+    format: plain_text
+type: token
+type_label: 'Token field'
+entities:
+  node: node

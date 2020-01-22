@@ -1,0 +1,55 @@
+uuid: f8db8aab-8ec1-4f06-a09d-ba9a051fe978
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.title_block
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - block_description
+    fields:
+      block_description:
+        plugin_id: block_description
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+id: block_content.title_block.default
+targetEntityType: block_content
+bundle: title_block
+mode: default
+content: {  }
+hidden:
+  search_api_excerpt: true

@@ -20,13 +20,13 @@
     min-height: 400px;
 }
 .join-community-cta {
-    padding: 50px 30px;
+    padding: 80px 100px;
     position: relative;
     z-index: 200;
     text-align: center;
     margin: 5% auto;
-    max-width: 500px;
-    background: rgba(45,128,219,0.85);
+    max-width: 600px;
+    background: rgba(39,124,222,0.92);
 }
 .block-content--type-cta-block .field--name-field-background-image img {
     position: absolute;
@@ -43,19 +43,19 @@
     width: 100%;
 }
 .join-community-cta .field--name-field-callout-top-title {
-    font-family: essonnes-display, serif;
-    font-weight: bold;
+    font-family: essonnes-headline, serif;
+    font-weight: 400;
     line-height: 1;
     color: #fff;
-    font-size: 54px;
+    font-size: 45px;
 }
 .join-community-cta .field--name-field-callout-sub-text {
-    font-family: essonnes-display, serif;
+    font-family: essonnes-headline, serif;
     font-size: 18px;
     padding: 30px 0;
 }
 .join-community-cta .btn {
-    padding: 20px;
+    padding: 25px 30px;
     background-color: #fff;
     border-color:#fff;
     color: #000;
@@ -93,8 +93,8 @@
     display: flex;
 }
 .block-content--type-button-block .field--name-field-real-stories .btn {
-    background:#4b91e3;
-    border-color:#4b91e3;
+    background:#277cde;
+    border-color:#277cde;
     color: #fff;
     padding: 25px 30px;
 }
@@ -111,14 +111,14 @@
     height: 2px;
     content: '';
     display: block;
-    background: #4b91e3;
+    background: #277cde;
     position: absolute;
     bottom: 15px;
     left: 25%;
 }
 .block-content--type-button-block .field--name-field-tell-your-story  svg {
     font-size: 50px;
-    color:#4b91e3;
+    color:#277cde;
     padding-right: 10px;
 }
 .region-footer section {
@@ -180,12 +180,20 @@
     font-size: 12px;
     font-weight: 500;
 }
+@media screen and (min-width:768px) {
+    .footcolumns .footsy:nth-child(2) nav .menu {
+        margin-right: -15px;
+    }
+}
 .footcolumns .menu--social-media-menu {
     font-size: 0;
 }
+.footcolumns .menu--social-media-menu li > a {
+    padding: 10px 20px 0 0;
+}
 .footcolumns .menu--social-media-menu svg {
-    font-size: 18px !important;
-    color: #4b91e3;
+    font-size: 22px !important;
+    color: #277cde;
 }
 @media screen and (max-width:590px) {
     .footcolumns {
@@ -205,13 +213,19 @@
 
 /*footer copyright*/
 .footer_abs_bottom {
-    font-family: essonnes-display, serif;
+    font-family: niveau-grotesk, sans-serif;
     text-transform: uppercase;
     margin-top: 50px;
     margin-bottom: 50px;
+    padding: 0;
 }
 @media screen and (max-width:590px) {
     .footer_abs_bottom {
         text-align: center;
     }
+}
+
+/*logged in override*/
+.region-content-baseline .contextual-region {
+    position: unset;
 }

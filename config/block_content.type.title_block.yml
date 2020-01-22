@@ -1,0 +1,8 @@
+uuid: 6e665730-3f5a-4713-8334-3bb7c91bc161
+langcode: en
+status: true
+dependencies: {  }
+id: title_block
+label: 'Title Block'
+revision: 0
+description: ''
