@@ -9,11 +9,11 @@ _core:
 name: fp_landscape_1920x1440
 label: 'FP Landscape (1920x1440)'
 effects:
-  68af5ac7-8123-4a01-9bbd-ff092f4d4afc:
-    uuid: 68af5ac7-8123-4a01-9bbd-ff092f4d4afc
-    id: focal_point_crop
-    weight: 1
+  d2e84e18-1441-49ac-9415-71660659fa67:
+    uuid: d2e84e18-1441-49ac-9415-71660659fa67
+    id: focal_point_scale_and_crop
+    weight: 2
     data:
       width: 1920
       height: 1440
-      crop_type: landscape_crop
+      crop_type: focal_point

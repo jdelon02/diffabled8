@@ -1,0 +1,10 @@
+uuid: a849db6c-23bc-4a65-a958-990b57d9a767
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.next
+label: Next
+targetEntityType: node
+cache: true

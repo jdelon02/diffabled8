@@ -1,0 +1,12 @@
+uuid: c93b7c33-aca8-4b83-af80-9f908cd72726
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__views_page__search_content__news_page
+name: 'search_api:views_page__search_content__news_page'
+filter_key: news
+url_processor: query_string
+breadcrumb:
+  active: false
+  before: true
+  group: false

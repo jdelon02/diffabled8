@@ -1,0 +1,55 @@
+uuid: b99d09e5-8e0f-47bc-ac37-da5d4b66eab1
+langcode: en
+status: true
+dependencies:
+  module:
+    - context_layout
+    - ctools
+    - system
+third_party_settings:
+  context_layout:
+    layout: null
+name: home_layout
+label: 'Home Layout'
+group: 'Single Page Overrides'
+description: ''
+requireAllConditions: true
+disabled: false
+conditions:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles: {  }
+    negate: 0
+    uuid: 647753b7-af57-46c3-bb4f-3eb69fc3f728
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: 0
+    uuid: e3f3f21a-bb39-446f-b896-94ecff5d87b0
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      9fd40697-cc22-44d9-b8b9-8c1d84b88cf3:
+        id: 'views_block:featured_content-home_slider_block'
+        label: Stories
+        provider: views
+        label_display: visible
+        views_label: Stories
+        items_per_page: none
+        region: header
+        weight: '0'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: home_layout
+        uuid: 9fd40697-cc22-44d9-b8b9-8c1d84b88cf3
+        override: {  }
+    id: blocks
+    saved: false
+    uuid: bf674621-6a9b-4289-bc14-77d547d10bd6
+    include_default_blocks: 1
+weight: 0

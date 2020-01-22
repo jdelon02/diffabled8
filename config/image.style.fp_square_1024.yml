@@ -9,11 +9,11 @@ _core:
 name: fp_square_1024
 label: 'FP Square (1024)'
 effects:
-  417959cd-f3ff-43d5-9368-9bdea7b7adc2:
-    uuid: 417959cd-f3ff-43d5-9368-9bdea7b7adc2
-    id: focal_point_crop
-    weight: 1
+  e990c31d-0b96-40e0-b80e-d1b888fda21e:
+    uuid: e990c31d-0b96-40e0-b80e-d1b888fda21e
+    id: focal_point_scale_and_crop
+    weight: 2
     data:
       width: 1024
       height: 1024
-      crop_type: square_crop
+      crop_type: focal_point

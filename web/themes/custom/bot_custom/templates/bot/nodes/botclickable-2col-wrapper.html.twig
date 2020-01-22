@@ -30,6 +30,7 @@
 %}
 
 <{{ wrapper }}{{ attributes.addClass(classes) }}>
+<a href="{{ parent_entity_url }}" class="link-whole-area">
   {{ title_suffix.contextual_links }}
 <div class="max-wrapper">
   {% if left.content %}
@@ -43,12 +44,13 @@
     {{ right.content }}
   </{{ right.wrapper }}>
   {% endif %}
-  
+
    {% if bottom.content %}
   <{{ bottom.wrapper }}{{ bottom.attributes }}>
     {{ bottom.content }}
   </{{ bottom.wrapper }}>
   {% endif %}
-  
+
 </div>
+</a>
 </{{ wrapper }}>

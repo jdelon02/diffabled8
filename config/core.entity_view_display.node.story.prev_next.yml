@@ -1,0 +1,87 @@
+uuid: 0c0d9393-b00d-42bf-a535-1cf9ed460132
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.prev_next
+    - field.field.node.story.body
+    - field.field.node.story.field_age
+    - field.field.node.story.field_author_info
+    - field.field.node.story.field_category
+    - field.field.node.story.field_featured_item
+    - field.field.node.story.field_media_image
+    - field.field.node.story.field_paragraphs
+    - field.field.node.story.field_tags
+    - node.type.story
+  module:
+    - ds
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: bot_clickable_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - field_media_image
+        - node_title
+        - 'bundle_field:node'
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+      'bundle_field:node':
+        plugin_id: 'bundle_field:node'
+        weight: 2
+        label: hidden
+        formatter: default
+id: node.story.prev_next
+targetEntityType: node
+bundle: story
+mode: prev_next
+content:
+  field_media_image:
+    type: entity_reference_entity_view
+    weight: 0
+    region: main
+    label: hidden
+    settings:
+      view_mode: square_1_1
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+hidden:
+  body: true
+  field_age: true
+  field_author_info: true
+  field_category: true
+  field_featured_item: true
+  field_paragraphs: true
+  field_tags: true
+  links: true
+  search_api_excerpt: true

@@ -3,7 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.story_tile
+    - core.entity_view_mode.node.next
+    - core.entity_view_mode.node.prev_next
+    - core.entity_view_mode.node.previous
     - node.type.story
   module:
     - node
@@ -58,7 +60,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: story_tile
+          view_mode: prev_next
       fields:
         title:
           id: title
@@ -230,6 +232,16 @@ display:
       title: Next
       defaults:
         title: false
+        style: false
+        row: false
+      style:
+        type: default
+        options: {  }
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: next
     cache_metadata:
       max-age: -1
       contexts:
@@ -249,6 +261,17 @@ display:
         metatag_display_extender: {  }
       block_description: 'Previous Story Block'
       display_description: ''
+      style:
+        type: default
+        options: {  }
+      defaults:
+        style: false
+        row: false
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: previous
     cache_metadata:
       max-age: -1
       contexts:

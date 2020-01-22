@@ -1,0 +1,10 @@
+uuid: 93365deb-4ceb-4712-aee5-63f213d7787c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.previous
+label: Previous
+targetEntityType: node
+cache: true

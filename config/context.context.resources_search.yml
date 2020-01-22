@@ -3,7 +3,11 @@ langcode: en
 status: true
 dependencies:
   module:
+    - context_layout
     - system
+third_party_settings:
+  context_layout:
+    layout: null
 name: resources_search
 label: 'Resources Search'
 group: 'Search Pages Views'
@@ -27,10 +31,10 @@ reactions:
         label_display: 0
         views_label: ''
         region: content_top
-        weight: '-1'
+        weight: '-9'
         context_mapping: {  }
         theme: bot_custom
-        css_class: ''
+        css_class: resource-filters
         unique: 0
         context_id: resources_search
         uuid: fb409d1d-dc57-4598-ae68-80b029774fdc
@@ -40,7 +44,7 @@ reactions:
         provider: facets
         label_display: 0
         region: content_top
-        weight: '0'
+        weight: '-8'
         context_mapping: {  }
         theme: bot_custom
         css_class: ''
@@ -53,7 +57,7 @@ reactions:
         provider: facets
         label_display: 0
         region: content_top
-        weight: '1'
+        weight: '-7'
         context_mapping: {  }
         theme: bot_custom
         css_class: ''
@@ -66,13 +70,42 @@ reactions:
         provider: facets
         label_display: 0
         region: content_top
-        weight: '2'
+        weight: '-6'
         context_mapping: {  }
         theme: bot_custom
         css_class: ''
         unique: 0
         context_id: resources_search
         uuid: bd48c365-334b-4b10-b921-a741f45ae858
+      6f7c137a-e53a-4f8a-be9d-2f77a31bc0b4:
+        id: 'facets_summary_block:resources_facet_summary'
+        label: 'Resources Facet Summary'
+        provider: facets_summary
+        label_display: 0
+        region: content_top
+        weight: '-5'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: resources_search
+        uuid: 6f7c137a-e53a-4f8a-be9d-2f77a31bc0b4
+      c96303e8-5734-4741-ab76-d2d2e5b65802:
+        id: 'block_content:86e50369-fd5e-40e7-aaa1-ce1b40a4a464'
+        label: 'Resources for Ability'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: header
+        weight: '-2'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: resources_search
+        uuid: c96303e8-5734-4741-ab76-d2d2e5b65802
     id: blocks
     saved: false
     uuid: 9fb67fdf-56f0-4605-b7c2-3b1967500dcc

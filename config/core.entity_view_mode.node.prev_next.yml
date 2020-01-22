@@ -1,0 +1,10 @@
+uuid: 716be43f-1f92-4208-87cf-3de68f6e7fca
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.prev_next
+label: prev_next
+targetEntityType: node
+cache: true

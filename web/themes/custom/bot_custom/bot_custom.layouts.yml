@@ -1,4 +1,4 @@
-# One column.
+# One column MEDIA.
 bot_1col:
   label: 'One Col Clickable Media'
   category: 'BOT Custom Media'
@@ -26,52 +26,9 @@ bot_clickable_1col:
       classes:
         - col-sm-12
 
-# One column.
-bot_clickable_3col:
-  label: 'Three Col Clickable'
-  category: 'BOT Custom Node'
-  class: '\Drupal\bootstrap_layouts\Plugin\Layout\BootstrapLayoutsBase'
-  type: partial
-  icon: images/3col.png
-  template: templates/bot/nodes/botclickable-3col
-  regions:
-    left:
-      label: 'Left'
-      classes:
-        - col-sm-3
-    right:
-      label: 'Right'
-      classes:
-        - col-sm-3
-    middle:
-      label: 'Middle'
-      classes:
-        - col-sm-6
-
-# Two column with wrapper.
-bot_2col:
-  label: 'Two column Clickable With Wrapper'
-  category: 'BOT Custom Node'
-  class: '\Drupal\bootstrap_layouts\Plugin\Layout\BootstrapLayoutsBase'
-  type: partial
-  icon: images/2col.png
-  template: templates/bot/nodes/botclickable-2col-wrapper
-  regions:
-    left:
-      label: 'Left'
-      classes:
-        - col-sm-6
-    right:
-      label: 'Right'
-      classes:
-        - col-sm-6
-    bottom:
-      label: 'Bottom'
-      classes:
-       - col-sm-12
 
 # One column stacked.
-bs_1col_stacked:
+bot_clickable_1col_stacked:
   label: 'One column Clickable stacked'
   category: 'BOT Custom Node'
   class: '\Drupal\bootstrap_layouts\Plugin\Layout\BootstrapLayoutsBase'
@@ -93,9 +50,9 @@ bs_1col_stacked:
         - col-sm-12
 
 # Two column stacked.
-bs_2col_stacked:
-  label: 'Two column stacked'
-  category: 'Bootstrap'
+bot_clickable_2col_stacked:
+  label: 'Two column Clickable stacked'
+  category: 'BOT Custom Node'
   class: '\Drupal\bootstrap_layouts\Plugin\Layout\BootstrapLayoutsBase'
   type: partial
   icon: images/2col-stacked.png
@@ -117,3 +74,70 @@ bs_2col_stacked:
       label: 'Bottom'
       classes:
         - col-sm-12
+
+# Two column with wrapper.
+bot_clickable_2col:
+  label: 'Two column Clickable With Wrapper'
+  category: 'BOT Custom Node'
+  class: '\Drupal\bootstrap_layouts\Plugin\Layout\BootstrapLayoutsBase'
+  type: partial
+  icon: images/2col.png
+  template: templates/bot/nodes/botclickable-2col-wrapper
+  regions:
+    left:
+      label: 'Left'
+      classes:
+        - col-sm-6
+    right:
+      label: 'Right'
+      classes:
+        - col-sm-6
+    bottom:
+      label: 'Bottom'
+      classes:
+       - col-sm-12
+
+# Two column stacked.
+bot_2col_stacked:
+  label: 'Two column Clickable'
+  category: 'BOT Custom Node'
+  class: '\Drupal\bootstrap_layouts\Plugin\Layout\BootstrapLayoutsBase'
+  type: partial
+  icon: images/2col.png
+  template: templates/bot/nodes/botclickable-2col
+  regions:
+    left:
+      label: 'Left'
+      classes:
+        - col-sm-6
+    right:
+      label: 'Right'
+      classes:
+        - col-sm-6
+    bottom:
+      label: 'Bottom'
+      classes:
+        - col-sm-12
+
+
+# Three column.
+bot_clickable_3col:
+  label: 'Three Col Clickable'
+  category: 'BOT Custom Node'
+  class: '\Drupal\bootstrap_layouts\Plugin\Layout\BootstrapLayoutsBase'
+  type: partial
+  icon: images/3col.png
+  template: templates/bot/nodes/botclickable-3col
+  regions:
+    left:
+      label: 'Left'
+      classes:
+        - col-sm-3
+    right:
+      label: 'Right'
+      classes:
+        - col-sm-3
+    middle:
+      label: 'Middle'
+      classes:
+        - col-sm-6

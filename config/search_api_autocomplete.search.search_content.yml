@@ -22,10 +22,11 @@ search_settings:
     displays:
       default: true
       selected:
+        - default
         - search_content
 options:
   limit: 10
-  min_length: 1
+  min_length: 5
   show_count: false
   autosubmit: true
   submit_button_selector: ':submit'
