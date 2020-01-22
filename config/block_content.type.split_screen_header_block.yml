@@ -1,0 +1,8 @@
+uuid: 1c0260df-e257-4fd6-8c68-93e951d67b0a
+langcode: en
+status: true
+dependencies: {  }
+id: split_screen_header_block
+label: 'Split screen header block'
+revision: 0
+description: ''

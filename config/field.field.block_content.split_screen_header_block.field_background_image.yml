@@ -1,0 +1,28 @@
+uuid: b5518f67-8313-4763-b489-8ed862090f53
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.split_screen_header_block
+    - field.storage.block_content.field_background_image
+    - media.type.image
+id: block_content.split_screen_header_block.field_background_image
+field_name: field_background_image
+entity_type: block_content
+bundle: split_screen_header_block
+label: 'Background Image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

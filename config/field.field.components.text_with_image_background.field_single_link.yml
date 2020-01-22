@@ -1,0 +1,23 @@
+uuid: f914915b-42da-4beb-8229-c7032772f4f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.components.text_with_image_background
+    - field.storage.components.field_single_link
+  module:
+    - link
+id: components.text_with_image_background.field_single_link
+field_name: field_single_link
+entity_type: components
+bundle: text_with_image_background
+label: 'Single Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

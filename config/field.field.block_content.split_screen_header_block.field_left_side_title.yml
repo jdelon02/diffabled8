@@ -1,0 +1,19 @@
+uuid: 65e501b4-e2e4-42c8-ab07-222707adb838
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.split_screen_header_block
+    - field.storage.block_content.field_left_side_title
+id: block_content.split_screen_header_block.field_left_side_title
+field_name: field_left_side_title
+entity_type: block_content
+bundle: split_screen_header_block
+label: 'Left Side Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

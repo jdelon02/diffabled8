@@ -1,0 +1,21 @@
+uuid: f895bf82-e4d2-476c-8aff-2c30636fcc51
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.split_screen_header_block
+    - field.storage.block_content.field_right_side_body
+  module:
+    - text
+id: block_content.split_screen_header_block.field_right_side_body
+field_name: field_right_side_body
+entity_type: block_content
+bundle: split_screen_header_block
+label: 'Right Side Body'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

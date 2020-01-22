@@ -6,4 +6,4 @@ dependencies:
     - eck.eck_entity_type.components
 name: 'View Block'
 type: view_block
-description: ''
+description: 'Title, link, and embedded view selection'

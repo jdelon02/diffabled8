@@ -1,0 +1,10 @@
+uuid: 2303804b-5cd8-4051-80c9-1f7bcd42f36e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.text_tile
+label: 'Text Tile'
+targetEntityType: node
+cache: true

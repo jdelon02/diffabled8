@@ -1,0 +1,21 @@
+uuid: 245cd8a8-7b39-47c8-a347-145196fcf356
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.components.text_with_image_background
+    - field.storage.components.field_sub_title
+  module:
+    - text
+id: components.text_with_image_background.field_sub_title
+field_name: field_sub_title
+entity_type: components
+bundle: text_with_image_background
+label: 'Sub Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text
