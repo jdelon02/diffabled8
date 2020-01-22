@@ -1,0 +1,103 @@
+uuid: e7ced565-4ff4-4273-aca5-42e6ea1dd31b
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.components.text_with_image_background
+    - field.field.components.text_with_image_background.field_background_image
+    - field.field.components.text_with_image_background.field_body
+    - field.field.components.text_with_image_background.field_single_link
+    - field.field.components.text_with_image_background.field_sub_title
+  module:
+    - ds
+    - link
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - field_background_image
+        - title
+        - field_sub_title
+        - field_body
+        - field_single_link
+id: components.text_with_image_background.default
+targetEntityType: components
+bundle: text_with_image_background
+mode: default
+content:
+  field_background_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    region: main
+  field_body:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: main
+  field_single_link:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: main
+  field_sub_title:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: main
+  title:
+    label: hidden
+    type: string
+    weight: 1
+    region: main
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  changed: true
+  created: true
+  search_api_excerpt: true
+  uid: true

@@ -1,0 +1,106 @@
+uuid: 57c7d6df-90fc-48ec-ba76-bbc3bd154a53
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.split_screen_header_block
+    - field.field.block_content.split_screen_header_block.field_background_image
+    - field.field.block_content.split_screen_header_block.field_left_side_title
+    - field.field.block_content.split_screen_header_block.field_right_side_body
+    - field.field.block_content.split_screen_header_block.field_right_side_link
+  module:
+    - ds
+    - link
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: bs_2col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          left:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
+          right:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      left:
+        - field_background_image
+        - field_left_side_title
+        - 'dynamic_block_field:block_content-ds_facet_dropdown'
+      right:
+        - field_right_side_body
+        - field_right_side_link
+    fields:
+      'dynamic_block_field:block_content-ds_facet_dropdown':
+        plugin_id: 'dynamic_block_field:block_content-ds_facet_dropdown'
+        weight: 2
+        label: hidden
+        formatter: default
+id: block_content.split_screen_header_block.default
+targetEntityType: block_content
+bundle: split_screen_header_block
+mode: default
+content:
+  field_background_image:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: square_1_1
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: entity_reference_entity_view
+    region: left
+  field_left_side_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: left
+  field_right_side_body:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: right
+  field_right_side_link:
+    type: link
+    weight: 4
+    region: right
+    label: hidden
+    settings:
+      trim_length: 80
+      rel: ''
+      target: ''
+      url_only: false
+      url_plain: false
+    third_party_settings: {  }
+hidden:
+  search_api_excerpt: true

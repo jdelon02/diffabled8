@@ -1,0 +1,23 @@
+uuid: 1bccd791-5e22-494e-92e9-0d1cd30f3322
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.split_screen_header_block
+    - field.storage.block_content.field_right_side_link
+  module:
+    - link
+id: block_content.split_screen_header_block.field_right_side_link
+field_name: field_right_side_link
+entity_type: block_content
+bundle: split_screen_header_block
+label: 'Right Side Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

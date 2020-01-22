@@ -1,0 +1,28 @@
+uuid: 079a0b48-a230-411a-aba6-18b4c61b5167
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.components.text_with_image_background
+    - field.storage.components.field_background_image
+    - media.type.image
+id: components.text_with_image_background.field_background_image
+field_name: field_background_image
+entity_type: components
+bundle: text_with_image_background
+label: 'Background Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

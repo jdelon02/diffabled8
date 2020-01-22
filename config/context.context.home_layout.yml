@@ -48,6 +48,22 @@ reactions:
         context_id: home_layout
         uuid: 9fd40697-cc22-44d9-b8b9-8c1d84b88cf3
         override: {  }
+      aad7c569-f150-44bd-8de5-66f57b922847:
+        id: 'block_content:a6a903fa-dcec-48a7-bcd7-baba8a41a82c'
+        label: 'Home Page Header Stuff'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: header
+        weight: '0'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: home_layout
+        uuid: aad7c569-f150-44bd-8de5-66f57b922847
     id: blocks
     saved: false
     uuid: bf674621-6a9b-4289-bc14-77d547d10bd6

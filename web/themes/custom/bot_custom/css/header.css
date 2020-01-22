@@ -249,7 +249,15 @@ header * {
             line-height: 1;
             -webkit-font-smoothing: antialiased;
     }
+    .toolbar-tray-open.toolbar-horizontal #block-exposedformsearch-contentsearch-content:target {
+        top:81px;
+    }
+     .toolbar-tray-open.toolbar-vertical #block-exposedformsearch-contentsearch-content:target,
+    .toolbar-horizontal #block-exposedformsearch-contentsearch-content:target {
+        top:42px;
+    }
 }
+
 
 
 /*mobile*/

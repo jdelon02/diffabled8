@@ -1,0 +1,9 @@
+uuid: 8cdca4b0-7261-4436-a75f-81e1b22070da
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.components
+name: 'Text with Image Background'
+type: text_with_image_background
+description: 'Title, body, link with a background image behind.'

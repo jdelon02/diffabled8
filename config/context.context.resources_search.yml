@@ -31,7 +31,7 @@ reactions:
         label_display: 0
         views_label: ''
         region: content_top
-        weight: '-9'
+        weight: '-3'
         context_mapping: {  }
         theme: bot_custom
         css_class: resource-filters
@@ -44,7 +44,7 @@ reactions:
         provider: facets
         label_display: 0
         region: content_top
-        weight: '-8'
+        weight: '-2'
         context_mapping: {  }
         theme: bot_custom
         css_class: ''
@@ -57,7 +57,7 @@ reactions:
         provider: facets
         label_display: 0
         region: content_top
-        weight: '-7'
+        weight: '-1'
         context_mapping: {  }
         theme: bot_custom
         css_class: ''
@@ -70,7 +70,7 @@ reactions:
         provider: facets
         label_display: 0
         region: content_top
-        weight: '-6'
+        weight: '0'
         context_mapping: {  }
         theme: bot_custom
         css_class: ''
@@ -83,7 +83,7 @@ reactions:
         provider: facets_summary
         label_display: 0
         region: content_top
-        weight: '-5'
+        weight: '2'
         context_mapping: {  }
         theme: bot_custom
         css_class: ''
@@ -106,6 +106,22 @@ reactions:
         unique: 0
         context_id: resources_search
         uuid: c96303e8-5734-4741-ab76-d2d2e5b65802
+      f28088a2-d3a2-4481-90ac-8720f3051468:
+        id: 'block_content:e31a4682-a4fb-474d-a81b-2ec40ec98386'
+        label: reset
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content_top
+        weight: '1'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: reset
+        unique: 0
+        context_id: resources_search
+        uuid: f28088a2-d3a2-4481-90ac-8720f3051468
     id: blocks
     saved: false
     uuid: 9fb67fdf-56f0-4605-b7c2-3b1967500dcc

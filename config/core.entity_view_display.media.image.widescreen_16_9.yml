@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.widescreen_16_9
+    - field.field.media.image.field_caption
     - field.field.media.image.field_media_image
     - media.type.image
     - responsive_image.styles.widescreen_16_9
@@ -72,6 +73,8 @@ content:
     region: content
 hidden:
   created: true
+  field_caption: true
   name: true
+  search_api_excerpt: true
   thumbnail: true
   uid: true

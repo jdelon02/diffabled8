@@ -1,0 +1,11 @@
+id: ds_facet_dropdown
+label: 'DS Facet Dropdown'
+ui_limit: split_screen_header_block|default
+properties:
+  block: 'facet_block:category'
+  use_block_title: false
+  add_block_wrappers: false
+type: block
+type_label: 'Block field'
+entities:
+  block_content: block_content

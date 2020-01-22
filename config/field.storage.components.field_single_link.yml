@@ -1,0 +1,19 @@
+uuid: 5382ad1f-722e-4a13-aaff-49587a014132
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+    - link
+id: components.field_single_link
+field_name: field_single_link
+entity_type: components
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
