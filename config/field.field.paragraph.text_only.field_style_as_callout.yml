@@ -1,0 +1,23 @@
+uuid: aae83739-5f07-4f08-8f57-642120ac986b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_style_as_callout
+    - paragraphs.paragraphs_type.text_only
+id: paragraph.text_only.field_style_as_callout
+field_name: field_style_as_callout
+entity_type: paragraph
+bundle: text_only
+label: 'Style as callout'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: callout
+  off_label: nocallout
+field_type: boolean

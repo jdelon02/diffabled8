@@ -305,4 +305,46 @@ header * {
         display: none;
     }
 }
-
+.path-node .region-header {
+    display: flex;
+    justify-content: space-between;
+}
+.region-header .field--name-field-back-link a,
+.region-header .btn {
+    background: none;
+    border: none;
+    color: #000;
+}
+.region-header .field--name-field-back-link a:before {
+    font-family: fontAwesome;
+    content: '\f104';
+    display: inline-block;   
+}
+.region-header .addtoany_list.a2a_kit_size_32 > a img {
+    display: none;
+}
+.region-header .addtoany_list.a2a_kit_size_32 > a {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    overflow: hidden;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: color, background-color;
+    transition-property: color, background-color;
+    color: #000;
+    font-weight: 500;
+}
+.region-header .addtoany_list.a2a_kit_size_32 > a:before {
+    content: 'SHARE';
+}
+.region-header .addtoany_list.a2a_kit_size_32 > a:after {
+    font-family: fontAwesome;
+    content: '\f064';
+    display: inline-block;
+}

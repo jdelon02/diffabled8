@@ -19,12 +19,10 @@ behavior_plugins:
     enabled: true
     override_mode: default
     override_available:
+      default: default
       image_25_left: image_25_left
       image_25_right: image_25_right
       image_50_left: image_50_left
       image_50_right: image_50_right
-      default: '0'
-      centered_content_width: '0'
-      full_content_width: '0'
       preview: '0'
     override_default: image_50_left

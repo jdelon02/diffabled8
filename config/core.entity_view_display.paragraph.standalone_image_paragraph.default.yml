@@ -3,11 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.standalone_image_paragraph.field_caption
     - field.field.paragraph.standalone_image_paragraph.field_media
     - field.field.paragraph.standalone_image_paragraph.field_media_view_mode
+    - field.field.paragraph.standalone_image_paragraph.field_style
     - paragraphs.paragraphs_type.standalone_image_paragraph
   module:
+    - entity_class_formatter
     - options
+    - text
 _core:
   default_config_hash: RyoG8qh_USeqnDKsPqY7uyz3lEltG3KCK7iFvZtSpYo
 id: paragraph.standalone_image_paragraph.default
@@ -15,19 +19,38 @@ targetEntityType: paragraph
 bundle: standalone_image_paragraph
 mode: default
 content:
+  field_caption:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   field_media:
     weight: 0
-    label: above
+    label: hidden
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   field_media_view_mode:
-    weight: 1
-    label: above
+    weight: 2
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
-hidden: {  }
+  field_style:
+    weight: 3
+    label: hidden
+    settings:
+      prefix: ''
+      suffix: ''
+      attr: ''
+    third_party_settings: {  }
+    type: entity_class_formatter
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -15,11 +15,12 @@ dependencies:
     - node.type.story
   module:
     - ds
+    - field_group
     - user
 third_party_settings:
   ds:
     layout:
-      id: bs_1col
+      id: bot_clickable_1col
       library: null
       disable_css: false
       entity_classes: all_classes
@@ -41,24 +42,49 @@ third_party_settings:
     regions:
       main:
         - field_media_image
-        - 'bundle_field:node'
-        - node_post_date
+        - group_text_wra
+        - field_author_info
+        - node_title
     fields:
-      node_post_date:
-        plugin_id: node_post_date
-        weight: 2
-        label: hidden
-        formatter: ds_post_date_periods
-      'bundle_field:node':
-        plugin_id: 'bundle_field:node'
-        weight: 1
+      node_title:
+        plugin_id: node_title
+        weight: 4
         label: hidden
         formatter: default
+  field_group:
+    group_text_wra:
+      children:
+        - field_author_info
+        - node_title
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      region: main
+      format_settings:
+        id: ''
+        classes: text-wrapper-slider
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Text Wrapper'
 id: node.story.home_featured
 targetEntityType: node
 bundle: story
 mode: home_featured
 content:
+  field_author_info:
+    type: entity_reference_entity_view
+    weight: 3
+    region: main
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
   field_media_image:
     type: entity_reference_entity_view
     weight: 0
@@ -78,7 +104,6 @@ content:
 hidden:
   body: true
   field_age: true
-  field_author_info: true
   field_category: true
   field_featured_item: true
   field_paragraphs: true

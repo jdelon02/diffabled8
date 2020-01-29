@@ -1,0 +1,21 @@
+uuid: f56234dd-a424-4e04-8e0a-e8af523437be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_style
+    - paragraphs.paragraphs_type.wysiwyg_layouts
+  module:
+    - options
+id: paragraph.wysiwyg_layouts.field_style
+field_name: field_style
+entity_type: paragraph
+bundle: wysiwyg_layouts
+label: 'Paragraph Style'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

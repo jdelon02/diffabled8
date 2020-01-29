@@ -1,0 +1,20 @@
+uuid: 17c0d49f-089f-44ca-8b7b-593a56eb9206
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+    - text
+id: components.field_display_title
+field_name: field_display_title
+entity_type: components
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

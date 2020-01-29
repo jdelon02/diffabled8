@@ -10,6 +10,7 @@ dependencies:
     - field.field.block_content.split_screen_header_block.field_right_side_link
   module:
     - ds
+    - field_group
     - link
     - text
 third_party_settings:
@@ -31,18 +32,19 @@ third_party_settings:
           left:
             wrapper: div
             classes:
-              col-sm-6: col-sm-6
+              col-sm-5: col-sm-5
             add_region_classes: 1
             attributes: ''
           right:
             wrapper: div
             classes:
-              col-sm-6: col-sm-6
+              col-sm-7: col-sm-7
             add_region_classes: 1
             attributes: ''
     regions:
       left:
         - field_background_image
+        - group_text
         - field_left_side_title
         - 'dynamic_block_field:block_content-ds_facet_dropdown'
       right:
@@ -51,9 +53,29 @@ third_party_settings:
     fields:
       'dynamic_block_field:block_content-ds_facet_dropdown':
         plugin_id: 'dynamic_block_field:block_content-ds_facet_dropdown'
-        weight: 2
+        weight: 3
         label: hidden
         formatter: default
+  field_group:
+    group_text:
+      children:
+        - field_left_side_title
+        - 'dynamic_block_field:block_content-ds_facet_dropdown'
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      region: left
+      format_settings:
+        id: ''
+        classes: text-wrapper
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'text container'
 id: block_content.split_screen_header_block.default
 targetEntityType: block_content
 bundle: split_screen_header_block
@@ -76,15 +98,43 @@ content:
     type: entity_reference_entity_view
     region: left
   field_left_side_title:
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h1
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
     type: string
     region: left
   field_right_side_body:
-    weight: 3
+    weight: 4
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -92,7 +142,7 @@ content:
     region: right
   field_right_side_link:
     type: link
-    weight: 4
+    weight: 5
     region: right
     label: hidden
     settings:

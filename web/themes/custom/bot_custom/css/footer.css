@@ -226,6 +226,7 @@
 }
 
 /*logged in override*/
-.region-content-baseline .contextual-region {
+.region-content-baseline .contextual-region,
+.block-content--type-cta-block .media {
     position: unset;
 }

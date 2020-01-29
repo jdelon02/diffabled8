@@ -5,11 +5,66 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.image_25_left
     - field.field.paragraph.wysiwyg_layouts.field_body
+    - field.field.paragraph.wysiwyg_layouts.field_caption
     - field.field.paragraph.wysiwyg_layouts.field_media
     - field.field.paragraph.wysiwyg_layouts.field_media_view_mode
+    - field.field.paragraph.wysiwyg_layouts.field_style
     - paragraphs.paragraphs_type.wysiwyg_layouts
   module:
-    - options
+    - ds
+    - entity_class_formatter
+    - entity_reference_display
+    - field_group
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - group_image_w
+        - field_media
+        - field_caption
+        - field_body
+        - field_style
+  field_group:
+    group_image_w:
+      children:
+        - field_media
+        - field_caption
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: main
+      format_settings:
+        id: ''
+        classes: image-with-caption
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: image-with-caption
 _core:
   default_config_hash: GDqolX3JdCh5WLB9yECJan5Ldkr85dwjO04Np7S7gZk
 id: paragraph.wysiwyg_layouts.image_25_left
@@ -17,21 +72,40 @@ targetEntityType: paragraph
 bundle: wysiwyg_layouts
 mode: image_25_left
 content:
+  field_body:
+    type: text_default
+    weight: 3
+    region: main
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_caption:
+    type: text_default
+    weight: 2
+    region: main
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_media:
-    type: entity_reference_entity_view
-    weight: 0
-    label: above
+    type: entity_reference_display_default
+    weight: 1
+    label: hidden
     settings:
       view_mode: default
       link: false
+      display_field: null
     third_party_settings: {  }
-    region: content
-  field_media_view_mode:
-    weight: 2
-    label: above
-    settings: {  }
+    region: main
+  field_style:
+    type: entity_class_formatter
+    weight: 4
+    region: main
+    label: hidden
+    settings:
+      prefix: ''
+      suffix: ''
+      attr: ''
     third_party_settings: {  }
-    type: list_default
-    region: content
 hidden:
-  field_body: true
+  field_media_view_mode: true
+  search_api_excerpt: true
