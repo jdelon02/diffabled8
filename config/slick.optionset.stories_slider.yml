@@ -28,8 +28,8 @@ options:
     pauseOnDotsHover: false
     pauseOnFocus: true
     arrows: true
-    prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0">Previous</button>'
-    nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0">Next</button>'
+    prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0"><div><em class="fas fa-arrow-alt-circle-left"></em></div></button>'
+    nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0"><div><em class="fas fa-arrow-alt-circle-right"></em></div></button>'
     downArrow: false
     downArrowTarget: ''
     downArrowOffset: 0

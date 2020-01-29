@@ -1,0 +1,178 @@
+uuid: 7a497839-a82c-46f5-95db-8be08c426295
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: submit_your_story
+title: 'Submit Your Story'
+description: ''
+category: ''
+elements: "left_container:\n  '#type': container\n  name:\n    '#type': webform_name\n    '#title': Name\n    '#description_display': invisible\n    '#title__title_display': inline\n    '#first__title_display': inline\n    '#middle__title_display': inline\n    '#last__title_display': inline\n    '#suffix__title_display': inline\n    '#degree__access': false\n    '#flexbox': '1'\n  title_of_your_story:\n    '#type': textfield\n    '#title': 'Title of your story'\n  your_photo_:\n    '#type': webform_image_file\n    '#title': 'Your photo?'\n    '#description': 'Max file size 10MB'\n    '#help_title': 'Max file size 10MB'\n    '#title_display': before\n    '#description_display': invisible\n    '#file_help': help\n    '#max_filesize': '10'\n    '#sanitize': true\n    '#button': true\n    '#button__title': 'Upload File'\n    '#button__attributes':\n      class:\n        - 'upload btn button'\n  quote_or_caption_to_accompany_the_story:\n    '#type': textarea\n    '#title': 'Quote or caption to accompany the story'\n  what_parts_of_your_life_have_been_affected_by_your_diff:\n    '#type': textarea\n    '#title': 'What ​parts of your life​ have been affected by your difference? i.e. schooling, social life, work life, recreational and/or sports life'\n  helpful_resources_in_your_journey:\n    '#type': textarea\n    '#title': 'What were the most helpful resources in your journey towards your goals in life and expressing your able-ness? i.e. types of therapy, accommodations, education and legal support, etc.'\n  beneficial_strategies_treatment_or_advice:\n    '#type': textarea\n    '#title': 'What were the most beneficial strategies, treatment, or advice?'\n  struggled_failed_and_lost_hope:\n    '#type': textarea\n    '#title': 'Were there ​times you struggled, failed and lost hope​?'\n  experiences_of_ups_downs:\n    '#type': textarea\n    '#title': 'What did you learn about yourself through the experiences of ups and downs, failures and successes?'\n  arrive_at_acceptance:\n    '#type': textarea\n    '#title': 'Some people feel that people who are different eventually arrive at a stage of “acceptance”​. What is your opinion on this?'\n  place_of_acceptance_get_there:\n    '#type': textarea\n    '#title': 'If you have arrived at a place of “acceptance”, what helped you get there?'\nright_container:\n  '#type': container\n  email_address:\n    '#type': email\n    '#title': 'Email Address'\n  instagram_handle:\n    '#type': textfield\n    '#title': 'Instagram Handle'\n  additional_photo_if_you_wish_:\n    '#type': webform_image_file\n    '#title': 'Additional photo if you wish!'\n    '#description': 'Max file size 10MB.'\n    '#help_title': 'Max file size 10MB'\n    '#title_display': before\n    '#description_display': invisible\n    '#file_help': help\n    '#max_filesize': '10'\n    '#sanitize': true\n    '#button': true\n    '#button__title': 'Upload File'\n    '#button__attributes':\n      class:\n        - 'upload btn button'\n  what_is_your_difference_your_diagnosis:\n    '#type': textarea\n    '#title': 'What is your ​difference​? Your “diagnosis” if you have one, and the specific areas of difference; i.e. physical issues, social issues, behavior issues and/or emotional issues'\n  what_specific_obstacles:\n    '#type': textarea\n    '#title': 'What​ ​specific obstacles​ have you faced due to your difference?'\n  was_the_support_helpful_to_you_:\n    '#type': textarea\n    '#title': 'Was the support helpful to you?'\n  specific_people_family_educator_professional:\n    '#type': textarea\n    '#title': 'Were there specific people (family, educator, professional) who made a difference for you?'\n  push_forward_persevere:\n    '#type': textarea\n    '#title': 'What helped you push forward, persevere and keep your head-up?'\n  greatest_success_so_far:\n    '#type': textarea\n    '#title': 'What do you consider to be your greatest success so far?'\n  do_you_accept_your_difference:\n    '#type': textarea\n    '#title': 'Do you “accept” your difference?'"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_admin_theme: false
+  form_title: both
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_remote_addr: true
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_view: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }

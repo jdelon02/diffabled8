@@ -3,12 +3,28 @@
 /**********global********/
 body{
     font-family: expo-serif-pro, serif;
-    font-weight: 300;
+    font-weight: 500;
     font-style: normal;
     margin-top: 0;
     border-top:5px solid #277cde;
+    overflow-x: hidden;
+    color: #000;
+    font-size: 16px;
 }
-
+ol.breadcrumb {
+    background: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 11px;
+    padding: 0;
+}
+ol.breadcrumb * {
+    font-family: niveau-grotesk, sans-serif;
+}
+ol.breadcrumb ~ .block span {
+    float: right;
+    line-height: normal;
+}
 * {
     transition: all .25s ease-in-out;
     -moz-transition: all .25s ease-in-out;
@@ -26,7 +42,7 @@ a {
     border: none;
 }
 a:focus, a:hover {
-    color: #52b3a6;
+    color: #277cde;
     text-decoration: none;
 }
 /*nav*/

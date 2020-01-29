@@ -5,9 +5,9 @@ dependencies:
   config:
     - field.storage.node.field_paragraphs
     - node.type.resource
-    - paragraphs.paragraphs_type.from_library
     - paragraphs.paragraphs_type.image_grid
     - paragraphs.paragraphs_type.standalone_image_paragraph
+    - paragraphs.paragraphs_type.text_only
     - paragraphs.paragraphs_type.wysiwyg_layouts
   module:
     - entity_reference_revisions
@@ -26,14 +26,17 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      from_library: from_library
+      text_only: text_only
       image_grid: image_grid
       standalone_image_paragraph: standalone_image_paragraph
       wysiwyg_layouts: wysiwyg_layouts
     target_bundles_drag_drop:
       from_library:
-        enabled: true
         weight: 5
+        enabled: false
+      text_only:
+        enabled: true
+        weight: 6
       image_grid:
         enabled: true
         weight: 6

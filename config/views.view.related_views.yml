@@ -296,12 +296,11 @@ display:
       title: 'Latest News'
       block_description: 'Latest News Block'
       style:
-        type: blazy
+        type: default
         options:
-          style: grid
-          grid: 3
-          grid_medium: 1
-          grid_small: 1
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
       row:
         type: 'entity:node'
         options:
@@ -327,7 +326,20 @@ display:
       title: 'Latest Resources'
       defaults:
         title: false
+        style: false
+        row: false
       block_description: 'Latest Resources Block'
+      style:
+        type: default
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: tile
     cache_metadata:
       max-age: -1
       contexts:
@@ -346,6 +358,35 @@ display:
         metatag_display_extender: {  }
       display_description: ''
       block_description: 'Related Resources Block'
+      style:
+        type: default
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+      defaults:
+        style: false
+        row: false
+        header: false
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: tile
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: '<h2>You may also like these resources</h2>'
+            format: basic_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:

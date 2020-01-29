@@ -1,0 +1,81 @@
+uuid: 244a8aca-466a-49f4-b694-ecbbce0294ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_only.field_body
+    - field.field.paragraph.text_only.field_style
+    - field.field.paragraph.text_only.field_style_as_callout
+    - paragraphs.paragraphs_type.text_only
+  module:
+    - ds
+    - entity_class_formatter
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - field_body
+        - field_style
+        - field_style_as_callout
+id: paragraph.text_only.default
+targetEntityType: paragraph
+bundle: text_only
+mode: default
+content:
+  field_body:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: main
+  field_style:
+    weight: 1
+    label: hidden
+    settings:
+      prefix: ''
+      suffix: ''
+      attr: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: entity_class_formatter
+    region: main
+  field_style_as_callout:
+    weight: 2
+    label: hidden
+    settings:
+      prefix: ''
+      suffix: ''
+      attr: ''
+    third_party_settings: {  }
+    type: entity_class_formatter
+    region: main
+hidden:
+  search_api_excerpt: true

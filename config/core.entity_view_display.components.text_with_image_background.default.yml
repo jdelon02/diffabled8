@@ -6,10 +6,12 @@ dependencies:
     - eck.eck_type.components.text_with_image_background
     - field.field.components.text_with_image_background.field_background_image
     - field.field.components.text_with_image_background.field_body
+    - field.field.components.text_with_image_background.field_display_title
     - field.field.components.text_with_image_background.field_single_link
     - field.field.components.text_with_image_background.field_sub_title
   module:
     - ds
+    - field_group
     - link
     - text
 third_party_settings:
@@ -37,10 +39,33 @@ third_party_settings:
     regions:
       main:
         - field_background_image
-        - title
+        - group_text_wrapper
+        - field_display_title
         - field_sub_title
         - field_body
         - field_single_link
+  field_group:
+    group_text_wrapper:
+      children:
+        - field_display_title
+        - field_sub_title
+        - field_body
+        - field_single_link
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      region: main
+      format_settings:
+        id: ''
+        classes: text-wrapper-mission
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'text wrapper'
 id: components.text_with_image_background.default
 targetEntityType: components
 bundle: text_with_image_background
@@ -63,14 +88,21 @@ content:
             classes: {  }
     region: main
   field_body:
-    weight: 3
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: main
+  field_display_title:
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: main
   field_single_link:
-    weight: 4
+    weight: 5
     label: hidden
     settings:
       trim_length: 80
@@ -82,22 +114,15 @@ content:
     type: link
     region: main
   field_sub_title:
-    weight: 2
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: main
-  title:
-    label: hidden
-    type: string
-    weight: 1
-    region: main
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
 hidden:
   changed: true
   created: true
   search_api_excerpt: true
+  title: true
   uid: true

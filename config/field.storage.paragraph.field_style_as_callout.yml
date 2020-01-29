@@ -1,0 +1,18 @@
+uuid: 3ea4581c-4dac-41bd-a08d-c1a0e170b791
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_style_as_callout
+field_name: field_style_as_callout
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

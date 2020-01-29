@@ -1,0 +1,21 @@
+uuid: 1dd4978a-8ec3-4dcc-8dba-7272f1c42963
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.components.text_with_image_background
+    - field.storage.components.field_display_title
+  module:
+    - text
+id: components.text_with_image_background.field_display_title
+field_name: field_display_title
+entity_type: components
+bundle: text_with_image_background
+label: 'Display Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

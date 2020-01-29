@@ -3,12 +3,17 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.standalone_image_paragraph.field_caption
     - field.field.paragraph.standalone_image_paragraph.field_media
     - field.field.paragraph.standalone_image_paragraph.field_media_view_mode
+    - field.field.paragraph.standalone_image_paragraph.field_style
     - paragraphs.paragraphs_type.standalone_image_paragraph
   module:
     - field_layout
     - layout_discovery
+    - media_library
+    - media_library_edit
+    - text
 third_party_settings:
   field_layout:
     id: layout_onecol
@@ -21,18 +26,33 @@ targetEntityType: paragraph
 bundle: standalone_image_paragraph
 mode: default
 content:
-  field_media:
-    weight: 0
+  field_caption:
+    weight: 2
     settings:
-      match_operator: CONTAINS
-      size: 60
+      rows: 5
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: text_textarea
+    region: content
+  field_media:
+    weight: 1
+    settings:
+      media_types:
+        - image
+        - remote_video
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+    type: media_library_widget
     region: content
   field_media_view_mode:
-    weight: 1
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_style:
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
