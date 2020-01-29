@@ -21,7 +21,8 @@
 <{{ wrapper }}{{ attributes }}>
   {{ title_suffix.contextual_links }}
   <{{ main.wrapper }}{{ main.attributes }}>
-    <a href="{{ parent_entity_url }}" class="link-whole-area">
+  {# Generates URL from route 'entity.node.canonical'. #}
+  <a href="{{ path('entity.node.canonical', {'node': node.id}) }}" class="link-whole-area">
       {{ main.content }}
     </a>
   </{{ main.wrapper }}>

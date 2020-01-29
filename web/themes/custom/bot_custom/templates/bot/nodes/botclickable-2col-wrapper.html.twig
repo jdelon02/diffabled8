@@ -30,7 +30,8 @@
 %}
 
 <{{ wrapper }}{{ attributes.addClass(classes) }}>
-<a href="{{ parent_entity_url }}" class="link-whole-area">
+{# Generates URL from route 'entity.node.canonical'. #}
+<a href="{{ path('entity.node.canonical', {'node': node.id}) }}" class="link-whole-area">
   {{ title_suffix.contextual_links }}
 <div class="max-wrapper">
   {% if left.content %}
