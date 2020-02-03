@@ -30,13 +30,39 @@ ol.breadcrumb ~ .block span {
     -moz-transition: all .25s ease-in-out;
     -webkit-transition: all .25s
 }
-a {
+header a,
+footer a,
+.main-container a {
     color: #000;
     font-family: niveau-grotesk, sans-serif;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-style: normal;
+}
+.main-container p a {
+    font-family: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    font-weight: inherit;
+    position: relative;
+    transition: all .25s ease;
+}
+.main-container p a:after {
+    content: "";
+    background: 
+    #2d80db;
+    left: 0;
+    right: 0;
+    height: 2px;
+    position: absolute;
+    bottom: -4px;
+    width: 100%;
+    margin: 0 auto;
+    transition: all .25s ease;
+}
+.main-container p a:hover:after {
+    width: 80%;
 }
 .page-header {
     border: none;
@@ -56,10 +82,16 @@ a:focus, a:hover {
     background-color:transparent;
     background:none;
 }
+.block-views-blockfeatured-content-home-slider-block .contextual-region,
+.slide .contextual-region,
+.view-search-content .contextual-region {
+    position: unset;
+}
 
 
 .btn {
     text-transform: uppercase;
+    background: #277cde;
     font-size: 12px;
     letter-spacing: 2px;
     display: inline-block;
@@ -76,6 +108,8 @@ a:focus, a:hover {
     font-family: niveau-grotesk, sans-serif;
     font-weight: 500;
     font-style: normal;
+    padding: 15px;
+    
 }
 .btn:hover {
     background-color: #277cde;
