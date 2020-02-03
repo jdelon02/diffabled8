@@ -4,7 +4,10 @@
  */
 
 /**********footer********/
-
+.footer {
+    padding-right: 20px;
+    padding-left: 20px;
+}
 
 /*join community footer*/
 .block-content--type-cta-block .bs-region {
@@ -92,12 +95,7 @@
 .region-footer {
     display: flex;
 }
-.block-content--type-button-block .field--name-field-real-stories .btn {
-    background:#277cde;
-    border-color:#277cde;
-    color: #fff;
-    padding: 25px 30px;
-}
+
 .block-content--type-button-block .field--name-field-tell-your-story .btn {
     color: #000;
     border: none;

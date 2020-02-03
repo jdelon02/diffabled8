@@ -6,6 +6,7 @@
 
 /**********header********/
 /*region navigation*/
+
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
     color:#277cde
 }
@@ -28,7 +29,10 @@ header {
 header * {
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-weight: 500;
+    font-weight: 400;
+}
+.page-node-type-landing .navbar {
+    margin: 0;
 }
 .navbar-nav {
     margin: 0;
@@ -40,16 +44,30 @@ header * {
     border-bottom: 1px solid #f5efe8;
 }
 @media screen and (min-width:768px) {
+    .navbar-header {
+        padding-left: 20px;
+    }
+    #navbar-collapse {
+        padding-right: 20px;
+    }
     header .logo img {
         margin: 20px 0;
     }
-    a.donate {
-        background:#2d80db;
+    a.donate,
+    a.donate:hover {
+        background: #2d80db !important;
         border-radius: 5px;
         color: #fff !important;
         padding-left: 20px !important;
         padding-right: 20px !important;
     }
+    a.donate:before{
+    	display: none;
+    }
+    a.donate:hover{
+    	background: #0d60bb !important
+    }
+
     .navbar-nav > li > a {
         line-height: 40px;
     }
@@ -125,6 +143,12 @@ header * {
         align-items: center;
         justify-content: center;
         color: #000;
+    }
+    .search-trigger a:hover{
+    	color: #2d80db;
+    }
+    .search-trigger a:before{
+    	display: none;
     }
     .search-trigger a svg {
         margin-right: 5px;
@@ -258,6 +282,17 @@ header * {
     }
 }
 
+@media screen and (max-width:1023px){
+	.navbar-nav > li {
+		margin: 0 10px;
+		font-size: 13px;
+	}
+	a.donate, a.donate:hover {
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+	}
+}
+
 
 
 /*mobile*/
@@ -272,12 +307,26 @@ header * {
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
     background:none;
     color: #000;
+    color: #2d80db;
+}
+.form-control{
+	text-transform: initial !important;
+	letter-spacing: 0;
 }
 @media screen and (max-width:768px) {
     .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
     background-color:#f5efe8;
     color: #000;
     }
+}
+@media screen and (max-width: 767px){
+	.close-btn,
+	#views-exposed-form-search-content-search-content label {
+		display: none;
+	}
+	#views-exposed-form-search-content-search-content .form-group{
+		margin-bottom: 10px;
+	}
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus,
 .navbar-default .navbar-toggle {
