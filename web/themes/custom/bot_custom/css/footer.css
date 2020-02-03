@@ -4,7 +4,10 @@
  */
 
 /**********footer********/
-
+.footer {
+    padding-right: 20px;
+    padding-left: 20px;
+}
 
 /*join community footer*/
 .block-content--type-cta-block .bs-region {

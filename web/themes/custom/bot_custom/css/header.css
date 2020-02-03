@@ -6,6 +6,7 @@
 
 /**********header********/
 /*region navigation*/
+
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
     color:#277cde
 }
@@ -40,16 +41,24 @@ header * {
     border-bottom: 1px solid #f5efe8;
 }
 @media screen and (min-width:768px) {
+    .navbar-header {
+        padding-left: 20px;
+    }
+    #navbar-collapse {
+        padding-right: 20px;
+    }
     header .logo img {
         margin: 20px 0;
     }
-    a.donate {
-        background:#2d80db;
+    a.donate,
+    a.donate:hover {
+        background:#2d80db !important;
         border-radius: 5px;
         color: #fff !important;
         padding-left: 20px !important;
         padding-right: 20px !important;
     }
+
     .navbar-nav > li > a {
         line-height: 40px;
     }
