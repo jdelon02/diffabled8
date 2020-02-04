@@ -1,9 +1,52 @@
-@import url("https://use.typekit.net/jpa7awo.css");
+/* @import url("https://use.typekit.net/jpa7awo.css"); */
+@import url("https://use.typekit.net/chm4nch.css"); /* BRENT'S */
+
+/* FONTS */ 
+/*
+font-family: expo-serif-pro, serif; 
+400 normal, 400 italic, 700 normal, 700 italic
+
+font-family: niveau-grotesk, sans-serif; 
+500 normal
+
+font-family: essonnes-text, serif; 
+400 normal
+*/
+
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-weight: 400;
+}
+
+.messages__wrapper {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    top: 50%;
+    width: 50%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+}
+.messages__wrapper > div {
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+.close{font-size: 50px;}
+.alert-dismissable .close, .alert-dismissible .close {
+    position: relative;
+    top: -13px;
+    right: -15px;
+    color: inherit;
+}
+.alert{padding: 25px}
 
 /**********global********/
 body{
     font-family: expo-serif-pro, serif;
-    font-weight: 500;
+    font-weight: 400;
     font-style: normal;
     margin-top: 0;
     border-top:5px solid #277cde;
@@ -20,6 +63,7 @@ ol.breadcrumb {
 }
 ol.breadcrumb * {
     font-family: niveau-grotesk, sans-serif;
+    font-weight: 500;
 }
 ol.breadcrumb ~ .block span {
     float: right;
@@ -30,13 +74,41 @@ ol.breadcrumb ~ .block span {
     -moz-transition: all .25s ease-in-out;
     -webkit-transition: all .25s
 }
-a {
+p{
+	margin: 0 0 1.5em;
+}
+header a,
+footer a{
     color: #000;
     font-family: niveau-grotesk, sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-style: normal;
+}
+.main-container p a {
+    font-family: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    font-weight: inherit;
+    position: relative;
+    transition: all .25s ease;
+}
+.main-container p a:after {
+    content: "";
+    background: 
+    #2d80db;
+    left: 0;
+    right: 0;
+    height: 2px;
+    position: absolute;
+    bottom: -4px;
+    width: 100%;
+    margin: 0 auto;
+    transition: all .25s ease;
+}
+.main-container p a:hover:after {
+    width: 80%;
 }
 .page-header {
     border: none;
@@ -56,10 +128,16 @@ a:focus, a:hover {
     background-color:transparent;
     background:none;
 }
+.block-views-blockfeatured-content-home-slider-block .contextual-region,
+.slide .contextual-region,
+.view-search-content .contextual-region {
+    position: unset;
+}
 
 
 .btn {
     text-transform: uppercase;
+    background: #277cde;
     font-size: 12px;
     letter-spacing: 2px;
     display: inline-block;
@@ -76,6 +154,8 @@ a:focus, a:hover {
     font-family: niveau-grotesk, sans-serif;
     font-weight: 500;
     font-style: normal;
+    padding: 15px;
+    
 }
 .btn:hover {
     background-color: #277cde;
@@ -93,8 +173,37 @@ a:focus, a:hover {
 
 
 h1, h2, h3 {
-    font-family: essonnes-headline, serif;
+    font-family: essonnes-text, serif;
     font-weight: 400;
     font-style: normal;
+    letter-spacing: 0;
 }
+
+/* SIDE MARGINS */
+.footer,
+.main-container,
+.navbar,
+.components.components--type-view-block {
+    border: none;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+.page-node-type-landing .main-container {
+    padding: 0;
+}
+.region-content .node--type-story > .bs-region--main {
+    padding: 0;
+        padding-right: 0px;
+        padding-left: 0px;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+/* FULL WIDTH ITEMS */
+#block-ctafooterblock {
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    left: 50%;
+}
+
 /**********end global********/
