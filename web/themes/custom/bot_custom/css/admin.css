@@ -1,0 +1,52 @@
+/* ADMIN STYLES */
+
+#user-login-form,
+#user-register-form,
+#user-pass,
+nav.tabs {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+nav.tabs {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #2d2d2d;
+    z-index: 100000;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    max-width: initial;
+}
+nav.tabs ul {
+    border-top: solid 1px #2d2d2d;
+    padding-left:50px;
+}
+nav.tabs li a {
+    padding: 5px 10px;
+    margin: 0;
+    color: #fff;
+    font-family: 'open sans';
+    font-size: 13px;
+}
+
+nav.tabs ul:before {
+  background-image: url('/core/misc/icons/bebebe/pencil.svg');
+    position: absolute;
+    top: 0;
+    left: 0.6667em;
+    display: block;
+    width: 20px;
+    height: 100%;
+    content: "";
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: 100% auto;
+}
+.main-container .tabs a {
+    text-transform: unset;
+    letter-spacing: 0;
+}
