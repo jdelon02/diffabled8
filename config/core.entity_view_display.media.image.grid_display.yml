@@ -1,0 +1,68 @@
+uuid: f7bf5d69-1117-4325-86ad-1e075db2c9b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.grid_display
+    - field.field.media.image.field_caption
+    - field.field.media.image.field_image_title_for_grid
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_subheading_for_grid
+    - media.type.image
+    - responsive_image.styles.square_1_1
+  module:
+    - ds
+    - responsive_image
+_core:
+  default_config_hash: B1a2aBHmUulUZN6HrxITEH1tSResuVjXMBEv1lUBtOo
+id: media.image.grid_display
+targetEntityType: media
+bundle: image
+mode: grid_display
+content:
+  field_caption:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_image_title_for_grid:
+    type: string
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_media_image:
+    label: visually_hidden
+    settings:
+      responsive_image_style: square_1_1
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: responsive_image
+    weight: 0
+    region: content
+  field_subheading_for_grid:
+    type: string
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  created: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

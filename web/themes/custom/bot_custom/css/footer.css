@@ -43,14 +43,15 @@
     width: 100%;
 }
 .join-community-cta .field--name-field-callout-top-title {
-    font-family: essonnes-headline, serif;
+    font-family: essonnes-text, serif;
     font-weight: 400;
     line-height: 1;
     color: #fff;
     font-size: 45px;
 }
 .join-community-cta .field--name-field-callout-sub-text {
-    font-family: essonnes-headline, serif;
+    font-family: expo-serif-pro, serif; 
+    font-weight: 400;
     font-size: 18px;
     padding: 30px 0;
 }
@@ -68,6 +69,8 @@
 /*footer cta*/
 .block-content--type-icon-and-tagline h3 {
     font-size: 34px;
+    margin: 0;
+    max-width: 740px;
 }
 .block-content--type-icon-and-tagline .bs-region {
     display: flex;
@@ -83,7 +86,6 @@
     .block-content--type-icon-and-tagline .bs-region,
     .block-content--type-button-block .bs-region {
         flex-wrap: nowrap;
-        justify-content: space-around;
     }
 }
 .block-content--type-icon-and-tagline .field--name-body {
@@ -92,12 +94,7 @@
 .region-footer {
     display: flex;
 }
-.block-content--type-button-block .field--name-field-real-stories .btn {
-    background:#277cde;
-    border-color:#277cde;
-    color: #fff;
-    padding: 25px 30px;
-}
+
 .block-content--type-button-block .field--name-field-tell-your-story .btn {
     color: #000;
     border: none;
@@ -132,7 +129,7 @@
         width: 25%;
     }
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width:767px) {
     .region-footer {
         flex-wrap: wrap;
     }
@@ -142,6 +139,9 @@
         text-align: center;
         margin-bottom: 20px;
     }
+    .join-community-cta {
+		padding: 40px 50px;
+	}
 }
 @media screen and (max-width:590px) {
     .block-content--type-button-block .bs-region {
@@ -199,7 +199,15 @@
     .footcolumns {
         flex-wrap: wrap;
         justify-content: center;
+        display: block;
+        text-align: center;
     }
+    .footcolumns nav .menu--footer{
+    	display: block;
+    }
+    .footcolumns .menu--social-media-menu li > a {
+		padding: 10px;
+	}
     .footcolumns nav .menu  {
         justify-content: center !important;
     }
@@ -214,10 +222,16 @@
 /*footer copyright*/
 .footer_abs_bottom {
     font-family: niveau-grotesk, sans-serif;
+    font-weight: 500;
     text-transform: uppercase;
     margin-top: 50px;
     margin-bottom: 50px;
     padding: 0;
+}
+#block-footerbottom {
+    opacity: .6;
+    font-size: 14px;
+    max-width: 1024px;
 }
 @media screen and (max-width:590px) {
     .footer_abs_bottom {
