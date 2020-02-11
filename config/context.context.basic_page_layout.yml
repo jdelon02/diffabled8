@@ -3,7 +3,11 @@ langcode: en
 status: true
 dependencies:
   module:
+    - context_layout
     - node
+third_party_settings:
+  context_layout:
+    layout: null
 name: basic_page_layout
 label: 'Basic Page Layout'
 group: 'Content Types'
@@ -61,6 +65,26 @@ reactions:
         unique: 0
         context_id: basic_page_layout
         uuid: 843ee532-fe34-4c4f-920d-d1ad7f2ee5ec
+      cdd0c7ce-5132-4a19-bb33-cbb214094cb9:
+        id: 'menu_block:main'
+        label: 'secondary navigation'
+        provider: menu_block
+        label_display: 0
+        follow: 1
+        follow_parent: child
+        level: '1'
+        depth: '0'
+        expand: 0
+        parent: 'main:'
+        suggestion: main
+        region: content_top
+        weight: '0'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: basic_page_layout
+        uuid: cdd0c7ce-5132-4a19-bb33-cbb214094cb9
     id: blocks
     saved: false
     uuid: 52b50e0a-8bfc-4beb-ace7-6b8af46adbe1
