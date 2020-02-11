@@ -24,19 +24,6 @@ conditions:
 reactions:
   blocks:
     blocks:
-      2c38c11c-e9c9-48e9-b1fd-c5c429b54072:
-        id: page_title_block
-        label: 'Page title'
-        provider: core
-        label_display: 0
-        region: content_top
-        weight: '0'
-        context_mapping: {  }
-        theme: bot_custom
-        css_class: ''
-        unique: 0
-        context_id: news
-        uuid: 2c38c11c-e9c9-48e9-b1fd-c5c429b54072
       fc0fb014-0baf-4e42-b43a-612a08229910:
         id: 'views_block:featured_content-featured_news_block'
         label: ''
@@ -53,6 +40,22 @@ reactions:
         context_id: news
         uuid: fc0fb014-0baf-4e42-b43a-612a08229910
         override: {  }
+      802184e5-8196-4d87-8b88-67894381e477:
+        id: 'block_content:250531ff-6357-44a7-8d33-d1e82726b9a7'
+        label: News
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: header
+        weight: '0'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: news
+        uuid: 802184e5-8196-4d87-8b88-67894381e477
     id: blocks
     saved: false
     uuid: a1dddef7-3e1c-4fe1-97d9-f581e7fb4dc5

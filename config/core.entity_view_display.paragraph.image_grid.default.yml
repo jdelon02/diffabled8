@@ -15,6 +15,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
+        label: ''
         layout:
           wrapper: div
           classes:
@@ -43,10 +44,17 @@ content:
     weight: 0
     label: hidden
     settings:
-      view_mode: landscape_4_3
+      view_mode: grid_display
       link: false
     third_party_settings:
       ds:
         ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     region: main
-hidden: {  }
+hidden:
+  search_api_excerpt: true

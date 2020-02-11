@@ -62,3 +62,19 @@ function bot_custom_preprocess_botclickable_media(&$variables) {
 //     $variables['parent_entity_url'] = \Drupal::service('path.alias_manager')->getAliasByPath($parentEntity->toUrl()->toString());
 //   }
 // }
+
+
+
+/**
+ * Implements hook_element_info_alter().
+ */
+function bot_custom_element_info_alter(array &$info) {
+  if (isset($info['select2'])) {
+    array_unshift($info["select2"]["#pre_render"], 'bot_custom_select2_pre_render_merge_settings');
+  }
+}
+
+function bot_custom_select2_pre_render_merge_settings($element) {
+  $element['#select2']['placeholder'] = $element['#title'];
+  return $element;
+}
