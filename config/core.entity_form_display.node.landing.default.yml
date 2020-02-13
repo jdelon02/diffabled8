@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.landing.field_body
+    - field.field.node.landing.field_meta_tags
     - node.type.landing
   module:
     - field_layout
     - inline_entity_form
     - layout_discovery
+    - metatag
     - path
 third_party_settings:
   field_layout:
@@ -37,6 +39,12 @@ content:
       allow_duplicate: false
     third_party_settings: {  }
     type: inline_entity_form_complex
+    region: content
+  field_meta_tags:
+    weight: 51
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   path:
     type: path
@@ -73,6 +81,11 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
   created: true
   uid: true

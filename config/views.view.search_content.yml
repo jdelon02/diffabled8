@@ -193,6 +193,7 @@ display:
         row: false
         filters: false
         filter_groups: false
+        title: false
       row:
         type: search_api
         options:
@@ -250,6 +251,7 @@ display:
         groups:
           1: AND
       display_description: ''
+      title: News
     cache_metadata:
       max-age: -1
       contexts:

@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.media.image.field_caption
+    - field.field.media.image.field_image_title_for_grid
     - field.field.media.image.field_media_image
+    - field.field.media.image.field_subheading_for_grid
     - image.style.thumbnail
     - media.type.image
   module:
@@ -38,6 +40,14 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_image_title_for_grid:
+    weight: 102
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_media_image:
     settings:
       progress_indicator: throbber
@@ -45,6 +55,14 @@ content:
     third_party_settings: {  }
     type: image_image
     weight: 0
+    region: content
+  field_subheading_for_grid:
+    weight: 103
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   path:
     type: path
