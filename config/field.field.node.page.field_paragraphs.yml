@@ -8,7 +8,6 @@ dependencies:
     - paragraphs.paragraphs_type.image_grid
     - paragraphs.paragraphs_type.standalone_image_paragraph
     - paragraphs.paragraphs_type.text_only
-    - paragraphs.paragraphs_type.wysiwyg_layouts
   module:
     - entity_reference_revisions
 _core:
@@ -29,23 +28,22 @@ settings:
     negate: 0
     target_bundles:
       text_only: text_only
-      image_grid: image_grid
       standalone_image_paragraph: standalone_image_paragraph
-      wysiwyg_layouts: wysiwyg_layouts
+      image_grid: image_grid
     target_bundles_drag_drop:
       from_library:
-        weight: 5
+        weight: -11
         enabled: false
       text_only:
         enabled: true
-        weight: 6
-      image_grid:
-        enabled: true
-        weight: 6
+        weight: -10
       standalone_image_paragraph:
         enabled: true
-        weight: 7
+        weight: -9
       wysiwyg_layouts:
+        weight: -8
+        enabled: false
+      image_grid:
         enabled: true
-        weight: 8
+        weight: -7
 field_type: entity_reference_revisions
