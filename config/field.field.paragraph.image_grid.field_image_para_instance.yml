@@ -1,0 +1,46 @@
+uuid: d6d6fc97-ca22-439c-8837-81243fc6331a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_para_instance
+    - paragraphs.paragraphs_type.image_grid
+    - paragraphs.paragraphs_type.image_grid_instance
+  module:
+    - entity_reference_revisions
+id: paragraph.image_grid.field_image_para_instance
+field_name: field_image_para_instance
+entity_type: paragraph
+bundle: image_grid
+label: 'Image Instance'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      image_grid_instance: image_grid_instance
+    target_bundles_drag_drop:
+      image_grid_instance:
+        enabled: true
+        weight: 7
+      from_library:
+        weight: 8
+        enabled: false
+      image_grid:
+        weight: 9
+        enabled: false
+      standalone_image_paragraph:
+        weight: 10
+        enabled: false
+      text_only:
+        weight: 11
+        enabled: false
+      wysiwyg_layouts:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

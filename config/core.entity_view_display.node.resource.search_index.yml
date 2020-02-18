@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.resource.field_downloads
     - field.field.node.resource.field_links
     - field.field.node.resource.field_media_image
+    - field.field.node.resource.field_meta_tags
     - field.field.node.resource.field_paragraphs
     - field.field.node.resource.field_tags
     - field.field.node.resource.field_video
@@ -102,6 +103,7 @@ hidden:
   field_category: true
   field_downloads: true
   field_links: true
+  field_meta_tags: true
   field_tags: true
   field_video: true
   links: true

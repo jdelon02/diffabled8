@@ -8,11 +8,11 @@ dependencies:
   module:
     - search_api
 id: stories_category_facet
-name: 'Stories Category Facet'
+name: Category
 url_alias: stories_category_facet
 weight: 0
 min_count: 1
-show_only_one_result: false
+show_only_one_result: true
 field_identifier: category
 facet_source_id: 'search_api:views_page__search_content__search_stories'
 widget:
@@ -44,4 +44,4 @@ processor_configs:
     settings: {  }
 empty_behavior:
   behavior: none
-show_title: false
+show_title: true
