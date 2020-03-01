@@ -1,0 +1,19 @@
+uuid: eadd210b-fdde-4161-8ec9-86a8a72dafea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_title
+    - paragraphs.paragraphs_type.image_grid_instance
+id: paragraph.image_grid_instance.field_image_title
+field_name: field_image_title
+entity_type: paragraph
+bundle: image_grid_instance
+label: 'Image Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
