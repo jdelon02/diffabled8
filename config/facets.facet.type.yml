@@ -8,11 +8,11 @@ dependencies:
   module:
     - search_api
 id: type
-name: 'Resources - Content Type'
+name: Type
 url_alias: type
 weight: 0
 min_count: 1
-show_only_one_result: true
+show_only_one_result: false
 field_identifier: type
 facet_source_id: 'search_api:views_page__search_content__search_resources'
 widget:
@@ -44,4 +44,4 @@ processor_configs:
     settings: {  }
 empty_behavior:
   behavior: none
-show_title: false
+show_title: true

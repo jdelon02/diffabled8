@@ -13,7 +13,7 @@ id: paragraph.wysiwyg_layouts.field_media_view_mode
 field_name: field_media_view_mode
 entity_type: paragraph
 bundle: wysiwyg_layouts
-label: 'Media View Mode'
+label: Format
 description: ''
 required: false
 translatable: false
