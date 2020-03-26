@@ -16,13 +16,13 @@ skin: default
 breakpoints: 1
 optimized: false
 options:
-  options__active_tab: edit-options-responsives
+  options__active_tab: edit-options-settings
   settings:
     mobileFirst: false
     asNavFor: ''
     accessibility: true
     adaptiveHeight: true
-    autoplay: false
+    autoplay: true
     autoplaySpeed: 3000
     pauseOnHover: true
     pauseOnDotsHover: false
@@ -33,15 +33,15 @@ options:
     downArrow: false
     downArrowTarget: ''
     downArrowOffset: 0
-    centerMode: true
-    centerPadding: 20%
+    centerMode: false
+    centerPadding: 50%
     dots: false
     dotsClass: slick-dots
     appendDots: $(element)
     draggable: true
     fade: false
     focusOnSelect: false
-    infinite: false
+    infinite: true
     initialSlide: 0
     lazyLoad: ondemand
     mouseWheel: false
@@ -49,7 +49,7 @@ options:
     respondTo: window
     rtl: false
     rows: 1
-    slidesPerRow: 3
+    slidesPerRow: 1
     slide: ''
     slidesToShow: 1
     slidesToScroll: 1

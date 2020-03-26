@@ -17,7 +17,7 @@ disabled: false
 conditions:
   request_path:
     id: request_path
-    pages: /search/resources
+    pages: /resources
     negate: 0
     uuid: 43eb5af1-e4b7-4bb9-ba43-6b88f7bc7cbf
     context_mapping: {  }
@@ -126,4 +126,8 @@ reactions:
     saved: false
     uuid: 9fb67fdf-56f0-4605-b7c2-3b1967500dcc
     include_default_blocks: 1
+  body_class:
+    id: body_class
+    body_class: path-search
+    saved: false
 weight: 0
