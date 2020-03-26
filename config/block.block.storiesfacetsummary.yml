@@ -1,0 +1,28 @@
+uuid: af11cf27-afad-42d5-8133-f9b784a0b6b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets_summary.facets_summary.stories_facet_summary
+  module:
+    - facets_summary
+    - system
+  theme:
+    - bot_custom
+id: storiesfacetsummary
+theme: bot_custom
+region: content
+weight: 0
+provider: null
+plugin: 'facets_summary_block:stories_facet_summary'
+settings:
+  id: 'facets_summary_block:stories_facet_summary'
+  label: 'Stories Facet Summary'
+  provider: facets_summary
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: "/stories\r\n/stories/*"
+    negate: false
+    context_mapping: {  }
