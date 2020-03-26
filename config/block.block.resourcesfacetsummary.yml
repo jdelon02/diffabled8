@@ -1,0 +1,28 @@
+uuid: 7479061d-d931-454f-81cc-eb5b3920cee0
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets_summary.facets_summary.resources_facet_summary
+  module:
+    - facets_summary
+    - system
+  theme:
+    - bot_custom
+id: resourcesfacetsummary
+theme: bot_custom
+region: content
+weight: 0
+provider: null
+plugin: 'facets_summary_block:resources_facet_summary'
+settings:
+  id: 'facets_summary_block:resources_facet_summary'
+  label: 'Resources Facet Summary'
+  provider: facets_summary
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: "/resources\r\n/resources/*"
+    negate: false
+    context_mapping: {  }

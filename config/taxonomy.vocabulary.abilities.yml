@@ -1,0 +1,8 @@
+uuid: da51eb68-3c0a-4ef9-9db3-9bf706331b15
+langcode: en
+status: true
+dependencies: {  }
+name: Abilities
+vid: abilities
+description: ''
+weight: 0
