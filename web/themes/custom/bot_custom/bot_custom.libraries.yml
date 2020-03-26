@@ -6,6 +6,7 @@ framework:
       css/header.css: {}
       css/footer.css: {}
       css/style.css: {}
+      css/admin.css: {}
   js:
     '//kit.fontawesome.com/a8f06ff502.js': { type: external, minified: true }
 search-popup:
