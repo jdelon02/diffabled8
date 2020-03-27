@@ -1,0 +1,8 @@
+uuid: 62650adb-640b-4b8f-a762-73b89f6d24ad
+langcode: en
+status: true
+dependencies: {  }
+id: node__article
+label: 'Content: News'
+tags:
+  description: '[node:field_paragraphs]'
