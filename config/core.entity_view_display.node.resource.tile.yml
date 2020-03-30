@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.tile
     - field.field.node.resource.body
+    - field.field.node.resource.field_ability
     - field.field.node.resource.field_age
     - field.field.node.resource.field_audio
     - field.field.node.resource.field_audio_text
@@ -12,6 +13,7 @@ dependencies:
     - field.field.node.resource.field_downloads
     - field.field.node.resource.field_links
     - field.field.node.resource.field_media_image
+    - field.field.node.resource.field_meta_tags
     - field.field.node.resource.field_paragraphs
     - field.field.node.resource.field_tags
     - field.field.node.resource.field_video
@@ -48,11 +50,12 @@ third_party_settings:
         - 'bundle_field:node'
         - field_media_image
         - field_category
+        - field_ability
         - node_title
     fields:
       node_title:
         plugin_id: node_title
-        weight: 4
+        weight: 5
         label: hidden
         formatter: default
       'bundle_field:node':
@@ -66,6 +69,7 @@ third_party_settings:
         - 'bundle_field:node'
         - field_media_image
         - field_category
+        - field_ability
         - node_title
       parent_name: ''
       weight: 0
@@ -87,6 +91,22 @@ targetEntityType: node
 bundle: resource
 mode: tile
 content:
+  field_ability:
+    type: entity_reference_label
+    weight: 4
+    region: main
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
   field_category:
     type: entity_reference_label
     weight: 3
@@ -126,6 +146,7 @@ hidden:
   field_audio_text: true
   field_downloads: true
   field_links: true
+  field_meta_tags: true
   field_paragraphs: true
   field_tags: true
   field_video: true

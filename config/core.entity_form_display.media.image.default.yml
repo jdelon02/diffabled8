@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.media.image.field_caption
+    - field.field.media.image.field_image_title_for_grid
     - field.field.media.image.field_media_image
+    - field.field.media.image.field_subheading_for_grid
     - image.style.thumbnail
     - media.type.image
   module:
@@ -26,12 +28,12 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   field_caption:
-    weight: 101
+    weight: 1
     settings:
       size: 60
       placeholder: ''
@@ -48,7 +50,7 @@ content:
     region: content
   path:
     type: path
-    weight: 30
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -56,12 +58,12 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 100
+    weight: 5
     region: content
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 2
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -70,4 +72,6 @@ content:
     region: content
     third_party_settings: {  }
 hidden:
+  field_image_title_for_grid: true
+  field_subheading_for_grid: true
   name: true
