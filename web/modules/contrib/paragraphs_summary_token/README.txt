@@ -1,0 +1,1 @@
+Paragraphs Summary Token
