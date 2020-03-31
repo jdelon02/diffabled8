@@ -1,0 +1,29 @@
+uuid: cd684ef3-c8cb-407b-be5d-e816747bee7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ability
+    - node.type.article
+    - taxonomy.vocabulary.abilities
+id: node.article.field_ability
+field_name: field_ability
+entity_type: node
+bundle: article
+label: Ability
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      abilities: abilities
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

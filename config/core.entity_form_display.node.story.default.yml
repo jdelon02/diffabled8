@@ -4,20 +4,24 @@ status: true
 dependencies:
   config:
     - field.field.node.story.body
+    - field.field.node.story.field_ability
     - field.field.node.story.field_age
     - field.field.node.story.field_author_info
     - field.field.node.story.field_category
     - field.field.node.story.field_featured_item
     - field.field.node.story.field_media_image
+    - field.field.node.story.field_meta_tags
     - field.field.node.story.field_paragraphs
     - field.field.node.story.field_tags
     - node.type.story
   module:
     - entity_browser_entity_form
+    - field_group
     - field_layout
     - inline_entity_form
     - layout_discovery
     - media_library
+    - metatag
     - paragraphs
     - path
     - select2
@@ -26,13 +30,44 @@ third_party_settings:
     id: layout_onecol
     settings:
       label: ''
+  field_group:
+    group_story_settings:
+      children:
+        - field_author_info
+        - field_featured_item
+        - field_media_image
+        - field_category
+        - field_age
+        - field_tags
+      parent_name: ''
+      weight: 1
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        effect: none
+        description: ''
+        required_fields: true
+        open: false
+      label: 'Story Settings'
 id: node.story.default
 targetEntityType: node
 bundle: story
 mode: default
 content:
+  field_ability:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_age:
-    weight: 5
+    weight: 6
     settings:
       match_operator: CONTAINS
       autocomplete: false
@@ -41,7 +76,7 @@ content:
     type: select2_entity_reference
     region: content
   field_author_info:
-    weight: 1
+    weight: 2
     settings:
       form_mode: default
       label_singular: ''
@@ -59,7 +94,7 @@ content:
     type: inline_entity_form_complex
     region: content
   field_category:
-    weight: 4
+    weight: 5
     settings:
       autocomplete: false
       match_operator: CONTAINS
@@ -68,21 +103,27 @@ content:
     type: select2_entity_reference
     region: content
   field_featured_item:
-    weight: 2
+    weight: 3
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_media_image:
-    weight: 3
+    weight: 4
     settings:
       media_types: {  }
     third_party_settings: {  }
     type: media_library_widget
     region: content
-  field_paragraphs:
+  field_meta_tags:
     weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_paragraphs:
+    weight: 2
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -100,7 +141,7 @@ content:
     type: paragraphs
     region: content
   field_tags:
-    weight: 6
+    weight: 7
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -111,7 +152,7 @@ content:
     region: content
   path:
     type: path
-    weight: 9
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -119,15 +160,22 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 3
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 11
+    weight: 6
     region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 8
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -138,12 +186,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 10
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   body: true
   created: true
-  sticky: true
   uid: true

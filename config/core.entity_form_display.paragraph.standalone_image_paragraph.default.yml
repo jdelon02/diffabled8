@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.standalone_image_paragraph.field_media
     - field.field.paragraph.standalone_image_paragraph.field_media_view_mode
     - field.field.paragraph.standalone_image_paragraph.field_style
+    - field.field.paragraph.standalone_image_paragraph.field_text_overlay
     - paragraphs.paragraphs_type.standalone_image_paragraph
   module:
     - field_layout
@@ -27,15 +28,15 @@ bundle: standalone_image_paragraph
 mode: default
 content:
   field_caption:
-    weight: 2
+    weight: 3
     settings:
-      rows: 5
+      rows: 2
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
     region: content
   field_media:
-    weight: 1
+    weight: 2
     settings:
       media_types:
         - image
@@ -46,16 +47,24 @@ content:
     type: media_library_widget
     region: content
   field_media_view_mode:
-    weight: 0
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_style:
-    weight: 3
+    weight: 0
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_text_overlay:
+    weight: 4
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
     region: content
 hidden:
   created: true
