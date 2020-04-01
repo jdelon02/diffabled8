@@ -1,0 +1,63 @@
+uuid: f83a019d-a6fc-439f-bb58-c26bcb790f60
+langcode: en
+status: true
+dependencies:
+  module:
+    - context_layout
+    - system
+third_party_settings:
+  context_layout:
+    layout: null
+name: user_profile
+label: 'User Profile'
+group: Admin
+description: ''
+requireAllConditions: true
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: 0
+    uuid: 4edb6cea-08d8-48a1-b5c0-a2a9fc656c15
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      e118188e-43ed-42c9-a71c-e56a4a60bcb6:
+        id: 'views_block:content-block_1'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: content
+        weight: '0'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: user_profile
+        uuid: e118188e-43ed-42c9-a71c-e56a4a60bcb6
+        override: {  }
+      182190ba-4174-445d-b572-083f71bc6c8b:
+        id: 'views_block:admin_components-block_1'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: content
+        weight: '1'
+        context_mapping: {  }
+        theme: bot_custom
+        css_class: ''
+        unique: 0
+        context_id: user_profile
+        uuid: 182190ba-4174-445d-b572-083f71bc6c8b
+        override: {  }
+    id: blocks
+    saved: false
+    uuid: df427d2d-1cf6-43be-8708-a4665fb4006a
+    include_default_blocks: 1
+weight: 0

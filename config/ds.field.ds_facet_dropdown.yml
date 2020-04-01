@@ -1,5 +1,5 @@
 id: ds_facet_dropdown
-label: 'DS Facet Dropdown'
+label: 'DS Disability Dropdown'
 ui_limit: split_screen_header_block|default
 properties:
   block: 'facet_block:category'
