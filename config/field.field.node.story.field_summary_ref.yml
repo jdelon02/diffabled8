@@ -1,0 +1,66 @@
+uuid: ba7d9fd2-3327-4250-9a6a-aa2a88010fa0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary_ref
+    - node.type.story
+    - views.view.paragraph_summary
+  module:
+    - viewfield
+id: node.story.field_summary_ref
+field_name: field_summary_ref
+entity_type: node
+bundle: story
+label: 'Summary Ref'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    token_help: ''
+    display_id: para_summ_blck
+    arguments: '[node:nid]'
+    items_to_display: ''
+    target_uuid: 5a6fad82-2023-4dfc-bbcd-c68d094debf8
+default_value_callback: ''
+settings:
+  force_default: true
+  allowed_views:
+    paragraph_summary: paragraph_summary
+    admin_components: '0'
+    comment: '0'
+    content: '0'
+    block_content: '0'
+    featured_content: '0'
+    files: '0'
+    frontpage: '0'
+    header_view: '0'
+    media: '0'
+    media_library: '0'
+    paragraphs_library: '0'
+    paragraphs_library_browser: '0'
+    user_admin_people: '0'
+    previous_next: '0'
+    comments_recent: '0'
+    content_recent: '0'
+    redirect: '0'
+    redirect_404: '0'
+    related_views: '0'
+    search_content: '0'
+    story_author: '0'
+    taxonomy_term: '0'
+    watchdog: '0'
+    webform_submissions: '0'
+    who_s_new: '0'
+    who_s_online: '0'
+  allowed_display_types:
+    block: block
+    embed: '0'
+    entity_browser: '0'
+    feed: '0'
+    default: '0'
+    page: '0'
+  handler: 'default:view'
+  handler_settings: {  }
+field_type: viewfield
