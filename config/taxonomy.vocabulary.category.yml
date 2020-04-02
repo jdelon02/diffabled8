@@ -2,7 +2,7 @@ uuid: 02bc9bd4-8433-42d4-b2e4-fbdbcf1cfb9e
 langcode: en
 status: true
 dependencies: {  }
-name: Category
+name: Disabilities
 vid: category
 description: ''
 weight: 0
