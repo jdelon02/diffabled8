@@ -10,7 +10,7 @@ id: node.story.field_category
 field_name: field_category
 entity_type: node
 bundle: story
-label: Category
+label: Disability
 description: ''
 required: false
 translatable: true

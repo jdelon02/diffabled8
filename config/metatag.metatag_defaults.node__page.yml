@@ -1,0 +1,8 @@
+uuid: 58d8088b-be6d-4f8e-aad2-88afc35474fe
+langcode: en
+status: true
+dependencies: {  }
+id: node__page
+label: 'Content: Basic page'
+tags:
+  description: '[node:field_paragraphs]'

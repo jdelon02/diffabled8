@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.landing.field_body
+    - field.field.node.landing.field_meta_tags
     - node.type.landing
   module:
     - ds
@@ -50,5 +51,6 @@ content:
     type: entity_reference_entity_view
     region: main
 hidden:
+  field_meta_tags: true
   links: true
   search_api_excerpt: true

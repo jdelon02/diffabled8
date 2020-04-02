@@ -1,0 +1,21 @@
+uuid: 5857eb2f-04ad-463c-8ad1-1411052ccb30
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_overlay
+    - paragraphs.paragraphs_type.standalone_image_paragraph
+  module:
+    - text
+id: paragraph.standalone_image_paragraph.field_text_overlay
+field_name: field_text_overlay
+entity_type: paragraph
+bundle: standalone_image_paragraph
+label: 'Text Overlay'
+description: 'This text will display on top of the image. Keep the text short.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
