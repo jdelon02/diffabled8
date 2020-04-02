@@ -65,7 +65,7 @@ display:
       pager:
         type: infinite_scroll
         options:
-          items_per_page: 3
+          items_per_page: 12
           offset: 0
           id: 0
           total_pages: null
@@ -140,7 +140,19 @@ display:
           min_length: 3
           fields: {  }
           plugin_id: search_api_fulltext
-      sorts: {  }
+      sorts:
+        sticky:
+          id: sticky
+          table: search_api_index_default_index
+          field: sticky
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
       title: 'Search Content'
       header:
         result:
@@ -193,6 +205,8 @@ display:
         row: false
         filters: false
         filter_groups: false
+        title: false
+        css_class: false
       row:
         type: search_api
         options:
@@ -250,6 +264,8 @@ display:
         groups:
           1: AND
       display_description: ''
+      title: News
+      css_class: news-listing
     cache_metadata:
       max-age: -1
       contexts:
@@ -319,6 +335,7 @@ display:
         use_ajax: false
         style: false
         row: false
+        css_class: false
       filter_groups:
         operator: AND
         groups:
@@ -364,6 +381,7 @@ display:
               page: search_index
               resource: search_index
               story: search_index
+      css_class: 'sitewide-search news-listing'
     cache_metadata:
       contexts:
         - 'languages:language_interface'
@@ -380,7 +398,7 @@ display:
     display_options:
       display_extenders:
         metatag_display_extender: {  }
-      path: search/resources
+      path: resources
       display_description: ''
       filters:
         type:
@@ -477,6 +495,7 @@ display:
         style: false
         row: false
         use_ajax: false
+        css_class: false
       filter_groups:
         operator: AND
         groups:
@@ -500,7 +519,8 @@ display:
               page: default
               resource: tile
               story: tile
-      use_ajax: true
+      use_ajax: false
+      css_class: resources-listing-view
     cache_metadata:
       max-age: -1
       contexts:
@@ -516,7 +536,7 @@ display:
     display_options:
       display_extenders:
         metatag_display_extender: {  }
-      path: search/stories
+      path: stories
       display_description: ''
       filters:
         type:
