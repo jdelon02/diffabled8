@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.resource.body
+    - field.field.node.resource.field_ability
     - field.field.node.resource.field_age
     - field.field.node.resource.field_audio
     - field.field.node.resource.field_audio_text
@@ -11,6 +12,7 @@ dependencies:
     - field.field.node.resource.field_downloads
     - field.field.node.resource.field_links
     - field.field.node.resource.field_media_image
+    - field.field.node.resource.field_meta_tags
     - field.field.node.resource.field_paragraphs
     - field.field.node.resource.field_tags
     - field.field.node.resource.field_video
@@ -20,6 +22,7 @@ dependencies:
     - layout_discovery
     - link
     - media_library
+    - metatag
     - paragraphs
     - path
     - select2
@@ -39,8 +42,17 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_ability:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      autocomplete: false
+      width: 100%
+    third_party_settings: {  }
+    type: select2_entity_reference
+    region: content
   field_age:
-    weight: 6
+    weight: 3
     settings:
       match_operator: CONTAINS
       autocomplete: false
@@ -50,13 +62,13 @@ content:
     region: content
   field_audio:
     type: media_library_widget
-    weight: 4
+    weight: 7
     settings:
       media_types: {  }
     third_party_settings: {  }
     region: content
   field_audio_text:
-    weight: 3
+    weight: 6
     settings:
       size: 60
       placeholder: ''
@@ -64,7 +76,7 @@ content:
     type: string_textfield
     region: content
   field_category:
-    weight: 5
+    weight: 1
     settings:
       match_operator: CONTAINS
       autocomplete: false
@@ -89,10 +101,16 @@ content:
     region: content
   field_media_image:
     type: media_library_widget
-    weight: 1
+    weight: 4
     settings:
       media_types: {  }
     third_party_settings: {  }
+    region: content
+  field_meta_tags:
+    weight: 18
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   field_paragraphs:
     weight: 8
@@ -112,19 +130,9 @@ content:
     third_party_settings: {  }
     type: paragraphs
     region: content
-  field_tags:
-    weight: 7
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete_tags
-    region: content
   field_video:
     type: media_library_widget
-    weight: 2
+    weight: 5
     settings:
       media_types: {  }
     third_party_settings: {  }
@@ -181,3 +189,4 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  field_tags: true

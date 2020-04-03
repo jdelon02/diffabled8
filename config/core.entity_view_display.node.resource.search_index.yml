@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.search_index
     - field.field.node.resource.body
+    - field.field.node.resource.field_ability
     - field.field.node.resource.field_age
     - field.field.node.resource.field_audio
     - field.field.node.resource.field_audio_text
@@ -12,6 +13,7 @@ dependencies:
     - field.field.node.resource.field_downloads
     - field.field.node.resource.field_links
     - field.field.node.resource.field_media_image
+    - field.field.node.resource.field_meta_tags
     - field.field.node.resource.field_paragraphs
     - field.field.node.resource.field_tags
     - field.field.node.resource.field_video
@@ -96,12 +98,14 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  field_ability: true
   field_age: true
   field_audio: true
   field_audio_text: true
   field_category: true
   field_downloads: true
   field_links: true
+  field_meta_tags: true
   field_tags: true
   field_video: true
   links: true
