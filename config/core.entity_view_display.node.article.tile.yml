@@ -6,10 +6,12 @@ dependencies:
     - core.entity_view_mode.node.tile
     - field.field.node.article.body
     - field.field.node.article.comment
+    - field.field.node.article.field_ability
     - field.field.node.article.field_age
     - field.field.node.article.field_category
     - field.field.node.article.field_featured_item
     - field.field.node.article.field_media_image
+    - field.field.node.article.field_meta_tags
     - field.field.node.article.field_paragraphs
     - field.field.node.article.field_tags
     - node.type.article
@@ -49,14 +51,26 @@ third_party_settings:
         - group_wrapper
         - 'bundle_field:node'
         - field_media_image
+        - group_category_resource
         - field_category
+        - field_ability
         - node_title
     fields:
       node_title:
         plugin_id: node_title
-        weight: 4
+        weight: 6
         label: hidden
         formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
       'bundle_field:node':
         plugin_id: 'bundle_field:node'
         weight: 1
@@ -67,7 +81,7 @@ third_party_settings:
       children:
         - 'bundle_field:node'
         - field_media_image
-        - field_category
+        - group_category_resource
         - node_title
       parent_name: ''
       weight: 0
@@ -84,6 +98,25 @@ third_party_settings:
         effect: none
         speed: fast
       label: wrapper
+    group_category_resource:
+      children:
+        - field_category
+        - field_ability
+      parent_name: group_wrapper
+      weight: 3
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: category-resource
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: category-resource
 _core:
   default_config_hash: ChmU3AVqDKU32A_fyChG0W9dTRKmVBR58B6OClCLvZI
 id: node.article.tile
@@ -96,14 +129,38 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_category:
+  field_ability:
     type: entity_reference_label
-    weight: 3
+    weight: 5
     region: main
     label: hidden
     settings:
-      link: true
-    third_party_settings: {  }
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_category:
+    type: entity_reference_label
+    weight: 4
+    region: main
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
   field_media_image:
     type: entity_reference_entity_view
     weight: 2
@@ -125,6 +182,7 @@ hidden:
   comment: true
   field_age: true
   field_featured_item: true
+  field_meta_tags: true
   field_paragraphs: true
   field_tags: true
   links: true
