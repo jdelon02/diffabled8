@@ -1,0 +1,13 @@
+name: 'Paragraphs Summary Token'
+type: 'module'
+description: 'Provides a paragraph summary token.'
+core_version_requirement: ^8.8 || ^9
+package: Paragraphs
+dependencies:
+  - paragraphs:paragraphs
+  - token:token
+
+# Information added by Drupal.org packaging script on 2020-03-10
+version: '8.x-1.0-beta2'
+project: 'paragraphs_summary_token'
+datestamp: 1583846134

@@ -6,6 +6,7 @@ dependencies:
     - block_content.type.split_screen_header_block
     - field.field.block_content.split_screen_header_block.field_background_image
     - field.field.block_content.split_screen_header_block.field_left_side_title
+    - field.field.block_content.split_screen_header_block.field_left_text
     - field.field.block_content.split_screen_header_block.field_right_side_body
     - field.field.block_content.split_screen_header_block.field_right_side_link
   module:
@@ -46,20 +47,29 @@ third_party_settings:
         - field_background_image
         - group_text
         - field_left_side_title
+        - field_left_text
+        - 'dynamic_block_field:block_content-ds_ability_dropdown'
         - 'dynamic_block_field:block_content-ds_facet_dropdown'
       right:
         - field_right_side_body
         - field_right_side_link
     fields:
+      'dynamic_block_field:block_content-ds_ability_dropdown':
+        plugin_id: 'dynamic_block_field:block_content-ds_ability_dropdown'
+        weight: 4
+        label: hidden
+        formatter: default
       'dynamic_block_field:block_content-ds_facet_dropdown':
         plugin_id: 'dynamic_block_field:block_content-ds_facet_dropdown'
-        weight: 3
+        weight: 5
         label: hidden
         formatter: default
   field_group:
     group_text:
       children:
         - field_left_side_title
+        - field_left_text
+        - 'dynamic_block_field:block_content-ds_ability_dropdown'
         - 'dynamic_block_field:block_content-ds_facet_dropdown'
       parent_name: ''
       weight: 1
@@ -132,6 +142,13 @@ content:
             fis-def-at: false
             fi-def-at: false
     type: string
+    region: left
+  field_left_text:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: left
   field_right_side_body:
     weight: 4

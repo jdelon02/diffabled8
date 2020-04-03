@@ -11,7 +11,7 @@ third_party_settings:
 _core:
   default_config_hash: ljkzkdU2QPmYZQ288kOKVtr0bqoo8MyPGoPTPtE2W4A
 id: standalone_image_paragraph
-label: 'Standalone Image Paragraph'
+label: 'Single Image or Video'
 icon_uuid: null
 description: 'Allows for creating media (image and remote video) paragraphs that can be rendered in different ways.'
 behavior_plugins:
