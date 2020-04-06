@@ -5,16 +5,20 @@ dependencies:
   config:
     - core.entity_view_mode.node.previous
     - field.field.node.story.body
+    - field.field.node.story.field_ability
     - field.field.node.story.field_age
     - field.field.node.story.field_author_info
     - field.field.node.story.field_category
     - field.field.node.story.field_featured_item
     - field.field.node.story.field_media_image
+    - field.field.node.story.field_meta_tags
     - field.field.node.story.field_paragraphs
+    - field.field.node.story.field_summary_ref
     - field.field.node.story.field_tags
     - node.type.story
   module:
     - ds
+    - field_group
     - user
 third_party_settings:
   ds:
@@ -41,6 +45,7 @@ third_party_settings:
     regions:
       main:
         - 'dynamic_token_field:node-ds_previous'
+        - group_background_wrapper
         - field_media_image
         - node_title
         - 'bundle_field:node'
@@ -52,14 +57,53 @@ third_party_settings:
         formatter: default
       node_title:
         plugin_id: node_title
-        weight: 2
+        weight: 4
         label: hidden
         formatter: default
       'bundle_field:node':
         plugin_id: 'bundle_field:node'
-        weight: 3
+        weight: 5
         label: hidden
         formatter: default
+  field_group:
+    group_background_wrapper:
+      children:
+        - field_media_image
+        - group_text_wrapper
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      region: main
+      format_settings:
+        id: ''
+        classes: background-wrapper
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'background wrapper'
+    group_text_wrapper:
+      children:
+        - node_title
+        - 'bundle_field:node'
+      parent_name: group_background_wrapper
+      weight: 3
+      format_type: html_element
+      region: hidden
+      format_settings:
+        id: ''
+        classes: text-wrapper
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'text wrapper'
 id: node.story.previous
 targetEntityType: node
 bundle: story
@@ -67,7 +111,7 @@ mode: previous
 content:
   field_media_image:
     type: entity_reference_entity_view
-    weight: 1
+    weight: 2
     region: main
     label: hidden
     settings:
@@ -83,11 +127,14 @@ content:
             classes: {  }
 hidden:
   body: true
+  field_ability: true
   field_age: true
   field_author_info: true
   field_category: true
   field_featured_item: true
+  field_meta_tags: true
   field_paragraphs: true
+  field_summary_ref: true
   field_tags: true
   links: true
   search_api_excerpt: true
