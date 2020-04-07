@@ -10,7 +10,7 @@ id: node.resource.field_downloads
 field_name: field_downloads
 entity_type: node
 bundle: resource
-label: Downloads
+label: 'Resource Downloads'
 description: ''
 required: false
 translatable: false
