@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_ability
     - field.storage.node.field_age
     - field.storage.node.field_author_info
     - field.storage.node.field_category
@@ -20,6 +21,17 @@ name: 'Default content index'
 description: 'Default content index created by the Database Search Defaults module'
 read_only: false
 field_settings:
+  ability:
+    label: 'Ability » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_ability:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_ability
+      module:
+        - taxonomy
+        - taxonomy
   age:
     label: 'Age » Taxonomy term » Name'
     datasource_id: 'entity:node'

@@ -329,7 +329,7 @@ class DefaultFacetManager {
             '#type' => 'container',
             '#attributes' => [
               'data-drupal-facet-id' => $facet->id(),
-              'class' => ['facet-empty'],
+              'class' => ['facet-empty', 'facet-hidden'],
             ],
             'empty_text' => [
               // @codingStandardsIgnoreStart
