@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.search_index
     - field.field.node.page.body
+    - field.field.node.page.field_meta_tags
     - field.field.node.page.field_paragraphs
     - node.type.page
   module:
@@ -72,5 +73,6 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  field_meta_tags: true
   links: true
   search_api_excerpt: true

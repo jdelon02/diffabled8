@@ -11,7 +11,7 @@ third_party_settings:
 _core:
   default_config_hash: fzWVjxmt6FEzfjOhPrFAOxSOEs7e5JqzJXDA54g5NzQ
 id: wysiwyg_layouts
-label: 'Image with Text Paragraph'
+label: 'Image Float'
 icon_uuid: null
 description: 'Paragraphs that allow for Image and Text to be displayed together.'
 behavior_plugins:
@@ -19,10 +19,10 @@ behavior_plugins:
     enabled: true
     override_mode: default
     override_available:
-      default: default
       image_25_left: image_25_left
       image_25_right: image_25_right
       image_50_left: image_50_left
       image_50_right: image_50_right
+      default: '0'
       preview: '0'
     override_default: image_50_left

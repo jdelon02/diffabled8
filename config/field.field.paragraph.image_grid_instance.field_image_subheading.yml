@@ -1,0 +1,21 @@
+uuid: 2f29d979-39a7-4462-9187-8033cc8143a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_subheading
+    - paragraphs.paragraphs_type.image_grid_instance
+  module:
+    - text
+id: paragraph.image_grid_instance.field_image_subheading
+field_name: field_image_subheading
+entity_type: paragraph
+bundle: image_grid_instance
+label: 'Image Subheading'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text
