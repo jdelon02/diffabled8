@@ -6,6 +6,7 @@
 
 /**********header********/
 /*region navigation*/
+
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
     color:#277cde
 }
@@ -28,7 +29,19 @@ header {
 header * {
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-weight: 500;
+    font-weight: 400;
+}
+.navbar{border-radius: 0}
+.navbar-default{
+	border: none;
+	border-bottom: 2px solid #f6efe9;
+}
+.page-node-type-landing .navbar-default{
+	border: none;
+}
+.page-node-type-landing .navbar,
+.page-node-type-story .navbar {
+    margin: 0;
 }
 .navbar-nav {
     margin: 0;
@@ -39,17 +52,34 @@ header * {
 .navbar-nav > li {
     border-bottom: 1px solid #f5efe8;
 }
+.navbar-collapse{
+	padding-right: 0;
+}
 @media screen and (min-width:768px) {
+    .navbar-header {
+        /* padding-left: 20px; */
+    }
+    #navbar-collapse {
+        /* padding-right: 20px; */
+    }
     header .logo img {
         margin: 20px 0;
     }
-    a.donate {
-        background:#2d80db;
+    a.donate,
+    a.donate:hover {
+        background: #2d80db !important;
         border-radius: 5px;
         color: #fff !important;
         padding-left: 20px !important;
         padding-right: 20px !important;
     }
+    a.donate:before{
+    	display: none;
+    }
+    a.donate:hover{
+    	background: #0d60bb !important
+    }
+
     .navbar-nav > li > a {
         line-height: 40px;
     }
@@ -75,9 +105,13 @@ header * {
         padding-right: 0;
         padding-top: 10px;
         padding-bottom: 10px;
+        font-size: 15px;
     }
+    #block-searchcontainer {
+		font-size: 15px;
+	}
     .navbar-nav > li {
-        margin: 0 20px;
+        margin: 0 12px;
         border: none;
     }
     header nav a {
@@ -125,6 +159,12 @@ header * {
         align-items: center;
         justify-content: center;
         color: #000;
+    }
+    .search-trigger a:hover{
+    	color: #2d80db;
+    }
+    .search-trigger a:before{
+    	display: none;
     }
     .search-trigger a svg {
         margin-right: 5px;
@@ -256,6 +296,20 @@ header * {
     .toolbar-horizontal #block-exposedformsearch-contentsearch-content:target {
         top:42px;
     }
+    .navbar-nav {
+		margin-right: 15px;
+	}
+}
+
+@media screen and (max-width:1023px){
+	.navbar-nav > li {
+		margin: 0 10px;
+		font-size: 13px;
+	}
+	a.donate, a.donate:hover {
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+	}
 }
 
 
@@ -272,12 +326,26 @@ header * {
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
     background:none;
     color: #000;
+    color: #2d80db;
+}
+.form-control{
+	text-transform: initial !important;
+	letter-spacing: 0;
 }
 @media screen and (max-width:768px) {
     .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
     background-color:#f5efe8;
     color: #000;
     }
+}
+@media screen and (max-width: 767px){
+	.close-btn,
+	#views-exposed-form-search-content-search-content label {
+		display: none;
+	}
+	#views-exposed-form-search-content-search-content .form-group{
+		margin-bottom: 10px;
+	}
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus,
 .navbar-default .navbar-toggle {
@@ -315,10 +383,17 @@ header * {
     border: none;
     color: #000;
 }
+.region-header .field--name-field-back-link a {
+    padding-left: 0;
+    padding-right: 0;
+}
 .region-header .field--name-field-back-link a:before {
     font-family: fontAwesome;
     content: '\f104';
     display: inline-block;   
+}
+.page-node-type-story .region-content-top .contextual-region {
+    position: unset;
 }
 .region-header .addtoany_list.a2a_kit_size_32 > a img {
     display: none;
@@ -339,9 +414,11 @@ header * {
     transition-property: color, background-color;
     color: #000;
     font-weight: 500;
+    font-family: niveau-grotesk, sans-serif;
 }
 .region-header .addtoany_list.a2a_kit_size_32 > a:before {
-    content: 'SHARE';
+    content: 'Share';
+    margin-right: 5px;
 }
 .region-header .addtoany_list.a2a_kit_size_32 > a:after {
     font-family: fontAwesome;

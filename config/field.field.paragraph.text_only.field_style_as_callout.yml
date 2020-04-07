@@ -9,7 +9,7 @@ id: paragraph.text_only.field_style_as_callout
 field_name: field_style_as_callout
 entity_type: paragraph
 bundle: text_only
-label: 'Style as callout'
+label: 'Display as Callout'
 description: ''
 required: false
 translatable: false

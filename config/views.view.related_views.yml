@@ -210,6 +210,7 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      css_class: ''
     cache_metadata:
       max-age: -1
       contexts:
@@ -288,6 +289,7 @@ display:
         title: false
         style: false
         row: false
+        css_class: false
       filter_groups:
         operator: AND
         groups:
@@ -306,6 +308,7 @@ display:
         options:
           relationship: none
           view_mode: text_tile
+      css_class: resources-listing-view
     cache_metadata:
       max-age: -1
       contexts:
@@ -328,6 +331,7 @@ display:
         title: false
         style: false
         row: false
+        css_class: false
       block_description: 'Latest Resources Block'
       style:
         type: default
@@ -340,6 +344,7 @@ display:
         options:
           relationship: none
           view_mode: tile
+      css_class: resources-listing-view
     cache_metadata:
       max-age: -1
       contexts:
@@ -368,6 +373,7 @@ display:
         style: false
         row: false
         header: false
+        css_class: false
       row:
         type: 'entity:node'
         options:
@@ -387,6 +393,7 @@ display:
             value: '<h2>You may also like these resources</h2>'
             format: basic_html
           plugin_id: text
+      css_class: resources-listing-view
     cache_metadata:
       max-age: -1
       contexts:

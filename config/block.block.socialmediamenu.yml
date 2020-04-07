@@ -19,9 +19,11 @@ settings:
   label: 'Social Media Menu'
   provider: menu_block
   label_display: '0'
+  follow: false
+  follow_parent: child
   level: 1
   depth: 0
-  expand: 0
+  expand: false
   parent: 'social-media-menu:'
   suggestion: social_media_menu
 visibility: {  }

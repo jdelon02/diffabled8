@@ -1,0 +1,21 @@
+uuid: cd97615b-6b63-46eb-a8f4-66795d701df2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.split_screen_header_block
+    - field.storage.block_content.field_left_text
+  module:
+    - text
+id: block_content.split_screen_header_block.field_left_text
+field_name: field_left_text
+entity_type: block_content
+bundle: split_screen_header_block
+label: 'Left Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
