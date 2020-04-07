@@ -1,0 +1,8 @@
+uuid: 86af53be-c5ed-473f-961b-7b374e9d6691
+langcode: en
+status: true
+dependencies: {  }
+id: node__resource
+label: 'Content: Resource'
+tags:
+  description: '[node:field_paragraphs]'

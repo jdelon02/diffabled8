@@ -1,0 +1,25 @@
+uuid: a08d96b5-bb99-4529-bdb4-c152423b904a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:0414971a-cbb7-4c64-8350-ea0f23cc3262'
+  module:
+    - block_content
+  theme:
+    - bot_custom
+id: flodeskemailform
+theme: bot_custom
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:0414971a-cbb7-4c64-8350-ea0f23cc3262'
+settings:
+  id: 'block_content:0414971a-cbb7-4c64-8350-ea0f23cc3262'
+  label: 'Flodesk Email Form'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
