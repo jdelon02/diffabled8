@@ -1,0 +1,8 @@
+uuid: 127a2719-e43d-4d43-90f0-74a1dab9500f
+langcode: en
+status: true
+dependencies: {  }
+id: node__story
+label: 'Content: Story'
+tags:
+  description: '[node:field_paragraphs:summary]'
