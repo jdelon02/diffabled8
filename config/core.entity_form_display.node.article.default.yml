@@ -5,10 +5,12 @@ dependencies:
   config:
     - field.field.node.article.body
     - field.field.node.article.comment
+    - field.field.node.article.field_ability
     - field.field.node.article.field_age
     - field.field.node.article.field_category
     - field.field.node.article.field_featured_item
     - field.field.node.article.field_media_image
+    - field.field.node.article.field_meta_tags
     - field.field.node.article.field_paragraphs
     - field.field.node.article.field_tags
     - node.type.article
@@ -17,6 +19,7 @@ dependencies:
     - field_layout
     - layout_discovery
     - media_library
+    - metatag
     - paragraphs
     - path
     - select2
@@ -34,18 +37,27 @@ mode: default
 content:
   comment:
     type: comment_default
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_age:
+  field_ability:
     weight: 4
+    settings:
+      match_operator: CONTAINS
+      autocomplete: false
+      width: 100%
+    third_party_settings: {  }
+    type: select2_entity_reference
+    region: content
+  field_age:
+    weight: 5
     settings:
       match_operator: CONTAINS
       autocomplete: false
@@ -63,7 +75,7 @@ content:
     type: select2_entity_reference
     region: content
   field_featured_item:
-    weight: 26
+    weight: 15
     settings:
       display_label: true
     third_party_settings: {  }
@@ -75,6 +87,12 @@ content:
       media_types: {  }
     third_party_settings: {  }
     type: media_library_widget
+    region: content
+  field_meta_tags:
+    weight: 16
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   field_paragraphs:
     weight: 2
@@ -96,7 +114,7 @@ content:
     region: content
   field_tags:
     type: entity_reference_autocomplete_tags
-    weight: 5
+    weight: 6
     region: content
     settings:
       match_operator: CONTAINS
@@ -106,7 +124,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -114,21 +132,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 9
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 13
+    weight: 14
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 10
     region: content
     third_party_settings: {  }
   title:
@@ -141,7 +159,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 6
+    weight: 7
     region: content
     settings:
       match_operator: CONTAINS
@@ -150,7 +168,7 @@ content:
       match_limit: 10
     third_party_settings: {  }
   url_redirects:
-    weight: 12
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }

@@ -7,11 +7,52 @@ dependencies:
     - field.field.paragraph.standalone_image_paragraph.field_media
     - field.field.paragraph.standalone_image_paragraph.field_media_view_mode
     - field.field.paragraph.standalone_image_paragraph.field_style
+    - field.field.paragraph.standalone_image_paragraph.field_text_overlay
     - paragraphs.paragraphs_type.standalone_image_paragraph
   module:
     - entity_class_formatter
+    - field_group
     - options
     - text
+third_party_settings:
+  field_group:
+    group_text_overlay:
+      children:
+        - field_text_overlay
+      parent_name: group_media_wrapper
+      weight: 2
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: text-overlay
+      label: 'Text Overlay'
+    group_media_wrapper:
+      children:
+        - field_media
+        - group_text_overlay
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: media-wrapper
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Media Wrapper'
 _core:
   default_config_hash: RyoG8qh_USeqnDKsPqY7uyz3lEltG3KCK7iFvZtSpYo
 id: paragraph.standalone_image_paragraph.default
@@ -20,14 +61,14 @@ bundle: standalone_image_paragraph
 mode: default
 content:
   field_caption:
-    weight: 1
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_media:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       link: true
@@ -36,14 +77,14 @@ content:
     type: entity_reference_entity_view
     region: content
   field_media_view_mode:
-    weight: 2
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_style:
-    weight: 3
+    weight: 4
     label: hidden
     settings:
       prefix: ''
@@ -51,6 +92,13 @@ content:
       attr: ''
     third_party_settings: {  }
     type: entity_class_formatter
+    region: content
+  field_text_overlay:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
 hidden:
   search_api_excerpt: true

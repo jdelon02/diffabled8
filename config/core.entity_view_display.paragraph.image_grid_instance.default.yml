@@ -1,0 +1,92 @@
+uuid: 42c0cf46-3ab0-416a-9f61-f79df79965cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_grid_instance.field_image_instance
+    - field.field.paragraph.image_grid_instance.field_image_subheading
+    - field.field.paragraph.image_grid_instance.field_image_title
+    - field.field.paragraph.image_grid_instance.field_link
+    - paragraphs.paragraphs_type.image_grid_instance
+  module:
+    - ds
+    - link
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - field_image_instance
+        - field_image_title
+        - field_image_subheading
+        - field_link
+id: paragraph.image_grid_instance.default
+targetEntityType: paragraph
+bundle: image_grid_instance
+mode: default
+content:
+  field_image_instance:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: grid_display
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    region: main
+  field_image_subheading:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: main
+  field_image_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: main
+  field_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: main
+hidden:
+  search_api_excerpt: true
