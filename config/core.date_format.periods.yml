@@ -5,4 +5,4 @@ dependencies: {  }
 id: periods
 label: Periods
 locked: false
-pattern: d.m.y
+pattern: m.d.y

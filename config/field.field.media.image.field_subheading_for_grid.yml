@@ -1,0 +1,19 @@
+uuid: 997944b7-e2bb-4e4d-a7d0-e35f2da3d5a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_subheading_for_grid
+    - media.type.image
+id: media.image.field_subheading_for_grid
+field_name: field_subheading_for_grid
+entity_type: media
+bundle: image
+label: 'Subheading for Grid'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
