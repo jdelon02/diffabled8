@@ -1,0 +1,12 @@
+apikey: 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
+test_defaults:
+  to: chefjeremy@delongaz.com
+  subject: 'Test Email from SendGrid Module'
+  body:
+    value: 'Test Message for SendGrid.'
+    format: plain_text
+  from_name: 'Different And Able'
+  to_name: Jeremy
+  reply_to: ''
+_core:
+  default_config_hash: g4qz7cPnloXFwtnLYfIKI2VS0gf_UFOz_I2uQiiulC8
