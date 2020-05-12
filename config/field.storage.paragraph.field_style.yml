@@ -13,10 +13,10 @@ settings:
   allowed_values:
     -
       value: wide
-      label: wide
+      label: Wide
     -
       value: narrow
-      label: narrow
+      label: Narrow
   allowed_values_function: ''
 module: options
 locked: false

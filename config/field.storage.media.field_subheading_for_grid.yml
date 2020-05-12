@@ -1,0 +1,21 @@
+uuid: b5a2e85f-75e4-4472-925c-bd030e5e3bfe
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.field_subheading_for_grid
+field_name: field_subheading_for_grid
+entity_type: media
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

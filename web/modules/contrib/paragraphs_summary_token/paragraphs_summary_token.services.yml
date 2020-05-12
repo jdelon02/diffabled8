@@ -1,0 +1,4 @@
+services:
+  paragraphs_summary_token.summary_builder:
+    class: Drupal\paragraphs_summary_token\Service\SummaryBuilder
+    arguments: ['@entity_type.manager']
