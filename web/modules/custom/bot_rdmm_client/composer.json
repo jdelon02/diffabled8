@@ -1,0 +1,21 @@
+{
+    "name": "jdelong/bot_rdmm_client",
+    "description": "Bot Custom Module for Remote Monitoring Client",
+    "keywords": ["Drupal","RDMM","Remote","Monitor","Client"],
+    "type": "drupal-custom-module",
+    "license": "No clue",
+    "authors": [
+        {
+            "name": "Hassan Farooq",
+            "email": "hfarooq@backofficethinking.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Andrew Yoon",
+            "email": "ayoon@backofficethinking.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}

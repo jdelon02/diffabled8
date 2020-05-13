@@ -5,7 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.media.widescreen_16_9
     - field.field.media.image.field_caption
+    - field.field.media.image.field_image_title_for_grid
     - field.field.media.image.field_media_image
+    - field.field.media.image.field_subheading_for_grid
     - media.type.image
     - responsive_image.styles.widescreen_16_9
   module:
@@ -69,11 +71,13 @@ content:
       grid_small: 0
     third_party_settings: {  }
     type: blazy
-    weight: 1
+    weight: 0
     region: content
 hidden:
   created: true
   field_caption: true
+  field_image_title_for_grid: true
+  field_subheading_for_grid: true
   name: true
   search_api_excerpt: true
   thumbnail: true

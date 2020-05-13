@@ -1,0 +1,5 @@
+name: BOT - Remote Drupal Module Monitor Client
+description: BOT - Remote Drupal Module Monitor Client
+package: BackOffice Thinking, LLC
+type: module
+core: 8.x
