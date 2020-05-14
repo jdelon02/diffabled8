@@ -104,9 +104,9 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: url_message
+  confirmation_type: inline
   confirmation_title: ''
-  confirmation_message: 'Your message has been sent.'
+  confirmation_message: 'Thank you for contacting us! We have received your message.'
   confirmation_url: '<front>'
   confirmation_attributes: {  }
   confirmation_back: true
@@ -228,7 +228,7 @@ handlers:
         - completed
       to_mail: _default
       to_options: {  }
-      cc_mail: ''
+      cc_mail: bdelperdang@backofficethinking.com
       cc_options: {  }
       bcc_mail: ''
       bcc_options: {  }

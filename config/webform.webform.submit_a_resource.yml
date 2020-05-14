@@ -12,7 +12,7 @@ id: submit_a_resource
 title: 'Submit a Resource'
 description: ''
 category: ''
-elements: "flexbox:\n  '#type': container\n  title_for_your_resource:\n    '#type': textfield\n    '#title': 'Title for your resource'\n  your_email:\n    '#type': email\n    '#title': 'Your Email'\n  your_photo_:\n    '#type': webform_image_file\n    '#title': 'Your photo?'\n    '#help_title': 'Max file size 10MB.'\n    '#title_display': before\n    '#description_display': invisible\n    '#file_help': help\n    '#sanitize': true\n    '#button': true\n    '#button__title': 'Upload File'\n    '#button__attributes':\n      class:\n        - 'upload btn button'\n  quote_or_caption_to_accompany_the_story:\n    '#type': textarea\n    '#title': 'Quote or caption to accompany the story'\n  describe_the_condition:\n    '#type': textarea\n    '#title': 'Describe the condition (i.e. medical, technical)'\n  impact_on_life_:\n    '#type': checkboxes\n    '#title': 'Impact on life?'\n    '#options':\n      impairment: 'impairment -- Deficit (Loss or abnormality of psychological, physiological and anatomical structure/function)'\n      Disability: 'Disability -- Activity (Restriction on activities of daily living)'\n      Handicap: 'Handicap -- Society (Disadvantage in society that restricts them from performing a role or function that a normal person could do)'\n  what_type_of_professionals:\n    '#type': textarea\n    '#title': 'What type of professionals? i.e. doctors, occupational therapist, physical therapist, speech therapist, psychologist?'\n  alternative_therapy:\n    '#type': textarea\n    '#title': 'Alternative therapy​: (i.e. holistic care, acupuncture, osteopathy)'\n  name_of_the_organization:\n    '#type': textarea\n    '#title': 'Organizations: What is the name of the organization?'\n  organizations_description:\n    '#type': textarea\n    '#title': 'Organizations: Please provide a description of the organization'\nflexbox_01:\n  '#type': container\n  your_name_if_you_wish_:\n    '#type': webform_name\n    '#title': 'Your name (if you wish)'\n    '#flexbox': '1'\n  your_instagram_handle_:\n    '#type': textfield\n    '#title': 'Your Instagram handle @'\n  additional_photo_if_you_wish_:\n    '#type': webform_image_file\n    '#title': 'Additional photo if you wish!'\n    '#help_title': 'Max file size 10MB.'\n    '#title_display': before\n    '#description_display': invisible\n    '#file_help': help\n    '#sanitize': true\n    '#button': true\n    '#button__title': 'Upload File'\n    '#button__attributes':\n      class:\n        - 'upload btn button'\n  what_is_your_difference:\n    '#type': textarea\n    '#title': 'What is your ​difference​? Your “diagnosis” if you have one, and the specific areas of difference; i.e. physical issues, social issues, behavior issues and/or emotional issues'\n  analogy_to_help_lay_people:\n    '#type': textarea\n    '#title': 'Whats an analogy to help lay people understand the condition'\n  treatment_options:\n    '#type': textarea\n    '#title': 'What are ​treatment options​?'\n  traditional_therapy:\n    '#type': textarea\n    '#title': 'Traditional therapy​: What is the treatment for the disease?'\n  advocacy_accommodations:\n    '#type': textarea\n    '#title': 'Advocacy/Accommodations: How does one make the individual successful?'\n  organizations_disabilities_conditions:\n    '#type': textarea\n    '#title': 'Organizations: What types of disabilities or medical conditions does the organization serve?'\n  organizations_services_activities:\n    '#type': textarea\n    '#title': 'Organizations: What (if any) are the services/activities you provide?'"
+elements: "flexbox:\n  '#type': container\n  title_for_your_resource:\n    '#type': textfield\n    '#title': 'Title for your resource'\n  your_email:\n    '#type': email\n    '#title': 'Your Email'\n    '#required': true\n  your_name_if_you_wish_:\n    '#type': webform_name\n    '#title': 'Your name (if you wish)'\n    '#flexbox': '1'\n  your_instagram_handle_:\n    '#type': textfield\n    '#title': 'Your Instagram handle @'\n  your_photo_:\n    '#type': webform_image_file\n    '#title': 'Your photo?'\n    '#help_title': 'Max file size 10MB.'\n    '#title_display': before\n    '#description_display': invisible\n    '#file_help': help\n    '#sanitize': true\n    '#button': true\n    '#button__title': 'Upload File'\n    '#button__attributes':\n      class:\n        - 'upload btn button'\n  additional_photo_if_you_wish_:\n    '#type': webform_image_file\n    '#title': 'Additional photo if you wish!'\n    '#help_title': 'Max file size 10MB.'\n    '#title_display': before\n    '#description_display': invisible\n    '#file_help': help\n    '#sanitize': true\n    '#button': true\n    '#button__title': 'Upload File'\n    '#button__attributes':\n      class:\n        - 'upload btn button'\n  quote_or_caption_to_accompany_the_story:\n    '#type': textarea\n    '#title': 'Quote or caption to accompany the submission'\n    '#format_items': comma\n  what_is_your_difference:\n    '#type': textarea\n    '#title': 'What is the diagnosis or diagnoses that your resource addresses?'\n    '#format_items': comma\n  describe_the_condition:\n    '#type': textarea\n    '#title': 'Describe in lay terms the nature of the condition or difference'\n    '#format_items': comma\n  analogy_to_help_lay_people:\n    '#type': textarea\n    '#title': 'Whats an analogy to help lay people understand the condition'\n  impact_on_life_:\n    '#type': checkboxes\n    '#title': 'One model that you might chose to discuss the particular difference is as follows:'\n    '#options':\n      \"a.\\tImpairment:  i.e., a loss or abnormality of psychological, physiological and anatomical structure/function?\": \"a.\\tImpairment:  i.e., a loss or abnormality of psychological, physiological and anatomical structure/function? -- Deficit (Loss or abnormality of psychological, physiological and anatomical structure/function)\"\n      \"b.\\tDisability: i.e., a condition in the person that requires accommodation in order to perform certain activities \": \"b.\\tDisability: i.e., a condition in the person that requires accommodation in order to perform certain activities  -- Activity (Restriction on activities of daily living)\"\n      \"c.\\tHandicap: Disadvantage in society that limits the performance of a role or function that a typical person could do; for instance, taking a bus ride, accessing a second floor classroom, taking timed examinations, dealing with groups of people, calculati\": \"c.\\tHandicap: Disadvantage in society that limits the performance of a role or function that a typical person could do; for instance, taking a bus ride, accessing a second floor classroom, taking timed examinations, dealing with groups of people, calculati -- Society (Disadvantage in society that restricts them from performing a role or function that a normal person could do)\"\n    '#options__properties': ''\n  treatment_options:\n    '#type': textarea\n    '#title': 'What are ​some of the treatment options​ for the differences?'\n    '#format_items': comma\n  what_type_of_professionals:\n    '#type': textarea\n    '#title': 'What type of professionals provide the threatments? i.e. doctors, occupational therapist, physical therapist, speech therapist, psychologist?'\n    '#format_items': comma\n  traditional_therapy:\n    '#type': textarea\n    '#title': 'What are the traditional therapy​: What is the treatment for the disease?'\n    '#format_items': comma\n  alternative_therapy:\n    '#type': textarea\n    '#title': 'Are there alternative therapies? (i.e. holistic care, acupuncture, osteopathy)'\n    '#format_items': comma\n  name_of_the_organization:\n    '#type': textarea\n    '#title': 'Organizations: What is the name of the organization?'\n  organizations_disabilities_conditions:\n    '#type': textarea\n    '#title': 'Organizations: What types of disabilities or medical conditions does the organization serve?'\n  organizations_description:\n    '#type': textarea\n    '#title': 'Organizations: Please provide a description of the organization'\n  organizations_services_activities:\n    '#type': textarea\n    '#title': 'Organizations: What (if any) are the services/activities you provide?'\n  advocacy_accommodations:\n    '#type': textarea\n    '#title': 'Advocacy/Accommodations: How does one make the individual successful?'\n  advocacy_accommodations_a_if_relevant_you_may_want_to_describe_f:\n    '#type': textarea\n    '#title': \"Advocacy/Accommodations: a.\\tIf relevant, you may want to describe federal, state/city laws, resources, accommodations and/or programs that may be relevant to people with differences.\"\n    '#format_items': comma\nflexbox_01:\n  '#type': container"
 css: ''
 javascript: ''
 settings:
@@ -99,9 +99,9 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: page
+  confirmation_type: inline
   confirmation_title: ''
-  confirmation_message: ''
+  confirmation_message: 'Thank you for submitting a resource! We will contact you with any questions. Thank you.'
   confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true
@@ -175,4 +175,39 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  email:
+    id: email
+    label: 'Admin Notification'
+    handler_id: email
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: _default
+      to_options: {  }
+      cc_mail: bdelperdang@backofficethinking.com
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      subject: _default
+      body: "<p>Submitted on [webform_submission:created]</p>\r\n\r\n<p>Submitted by: [webform_submission:user]</p>\r\n\r\n<p>Link to submission: [webform_submission:current-page]</p>\r\n\r\n<p>Submitted values are:</p>\r\n[webform_submission:values]"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      theme_name: ''
+      parameters: {  }

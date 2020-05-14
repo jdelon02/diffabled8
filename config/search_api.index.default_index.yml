@@ -3,10 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_ability
     - field.storage.node.field_age
     - field.storage.node.field_author_info
     - field.storage.node.field_category
+    - field.storage.node.field_paragraphs
+    - field.storage.node.field_tags
     - search_api.server.default_server
+    - core.entity_view_mode.node.story_tile
     - core.entity_view_mode.node.tile
   module:
     - taxonomy
@@ -20,6 +24,17 @@ name: 'Default content index'
 description: 'Default content index created by the Database Search Defaults module'
 read_only: false
 field_settings:
+  ability:
+    label: 'Ability » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_ability:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_ability
+      module:
+        - taxonomy
+        - taxonomy
   age:
     label: 'Age » Taxonomy term » Name'
     datasource_id: 'entity:node'
@@ -76,6 +91,23 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_author_info
+  field_paragraphs:
+    label: Paragraphs
+    datasource_id: 'entity:node'
+    property_path: field_paragraphs
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+  field_tags:
+    label: Tags
+    datasource_id: 'entity:node'
+    property_path: field_tags
+    type: text
+    boost: !!float 13
+    dependencies:
+      config:
+        - field.storage.node.field_tags
   node_grants:
     label: 'Node access information'
     property_path: search_api_node_grants
@@ -87,6 +119,7 @@ field_settings:
     label: 'Rendered item'
     property_path: rendered_item
     type: text
+    boost: !!float 5
     configuration:
       roles:
         anonymous: anonymous
@@ -96,7 +129,8 @@ field_settings:
           landing: ''
           page: ''
           resource: tile
-          story: tile
+          story: story_tile
+          webform: ''
   status:
     label: 'Publishing status'
     datasource_id: 'entity:node'

@@ -5,12 +5,15 @@ dependencies:
   config:
     - core.entity_view_mode.node.tile
     - field.field.node.story.body
+    - field.field.node.story.field_ability
     - field.field.node.story.field_age
     - field.field.node.story.field_author_info
     - field.field.node.story.field_category
     - field.field.node.story.field_featured_item
     - field.field.node.story.field_media_image
+    - field.field.node.story.field_meta_tags
     - field.field.node.story.field_paragraphs
+    - field.field.node.story.field_summary_ref
     - field.field.node.story.field_tags
     - node.type.story
   module:
@@ -39,17 +42,26 @@ third_party_settings:
               col-sm-12: col-sm-12
             add_region_classes: 1
             attributes: ''
+          ds_hidden:
+            wrapper: div
+            classes: {  }
+            add_region_classes: 1
+            attributes: ''
     regions:
       main:
         - group_wrapper
         - 'bundle_field:node'
         - field_media_image
+        - group_category_resource
         - field_category
+        - field_ability
         - node_title
+      ds_hidden:
+        - field_tags
     fields:
       node_title:
         plugin_id: node_title
-        weight: 4
+        weight: 6
         label: hidden
         formatter: default
         settings:
@@ -72,7 +84,7 @@ third_party_settings:
       children:
         - 'bundle_field:node'
         - field_media_image
-        - field_category
+        - group_category_resource
         - node_title
       parent_name: ''
       weight: 0
@@ -89,19 +101,62 @@ third_party_settings:
         effect: none
         speed: fast
       label: wrapper
+    group_category_resource:
+      children:
+        - field_category
+        - field_ability
+      parent_name: group_wrapper
+      weight: 3
+      format_type: html_element
+      region: main
+      format_settings:
+        id: ''
+        classes: category-resource
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'category resource'
 id: node.story.tile
 targetEntityType: node
 bundle: story
 mode: tile
 content:
-  field_category:
+  field_ability:
     type: entity_reference_label
-    weight: 3
+    weight: 5
     region: main
     label: hidden
     settings:
-      link: true
-    third_party_settings: {  }
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_category:
+    type: entity_reference_label
+    weight: 4
+    region: main
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
   field_media_image:
     type: entity_reference_entity_view
     weight: 2
@@ -118,12 +173,29 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
+  field_tags:
+    type: entity_reference_label
+    weight: 1
+    region: ds_hidden
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
 hidden:
   body: true
   field_age: true
   field_author_info: true
   field_featured_item: true
+  field_meta_tags: true
   field_paragraphs: true
-  field_tags: true
+  field_summary_ref: true
   links: true
   search_api_excerpt: true

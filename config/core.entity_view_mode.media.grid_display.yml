@@ -1,0 +1,10 @@
+uuid: 9c134c4b-d291-48e2-b203-4711fe742a55
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.grid_display
+label: 'Grid Display'
+targetEntityType: media
+cache: true
