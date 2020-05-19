@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.image_grid.field_image
+    - field.field.paragraph.image_grid.field_image_para_instance
     - paragraphs.paragraphs_type.image_grid
   module:
     - ds
+    - entity_reference_revisions
 third_party_settings:
   ds:
     layout:
@@ -15,6 +17,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
+        label: ''
         layout:
           wrapper: div
           classes:
@@ -30,7 +33,7 @@ third_party_settings:
             attributes: ''
     regions:
       main:
-        - field_image
+        - field_image_para_instance
 _core:
   default_config_hash: uCGJOxH9mVdZmpe3HkLA1rAqBZeSQ0M4fvOKG24szRU
 id: paragraph.image_grid.default
@@ -38,15 +41,15 @@ targetEntityType: paragraph
 bundle: image_grid
 mode: default
 content:
-  field_image:
-    type: entity_reference_entity_view
+  field_image_para_instance:
+    type: entity_reference_revisions_entity_view
     weight: 0
     label: hidden
     settings:
-      view_mode: landscape_4_3
-      link: false
-    third_party_settings:
-      ds:
-        ds_limit: ''
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
     region: main
-hidden: {  }
+hidden:
+  field_image: true
+  search_api_excerpt: true

@@ -1,0 +1,34 @@
+<?php
+
+function bot_rdmm_client_cron() {
+
+  //One week interval
+  $interval = \Drupal::state()->get('bot_rdmm_client_cron_interval');
+  if(!isset($interval)){
+  	\Drupal::state()->set('bot_rdmm_client_cron_interval', 7 * 24 * 60 * 60);
+  	$interval = \Drupal::state()->get('bot_rdmm_client_cron_interval');
+  }
+
+  //0000
+  $midnight = mktime(0,0);
+  //0600
+  $later = $midnight + 6 * 60 * 60;
+
+  //Run if interval time has passed and time is between 0000 and 0600 or if interval has been set to -1 (manual forced run)
+  $next_execution = \Drupal::state()->get('bot_rdmm_client_cron_next_execution');
+  if(!isset($next_execution)){
+  	\Drupal::state()->set('bot_rdmm_client_cron_next_execution', 0);
+  	$next_execution = \Drupal::state()->get('bot_rdmm_client_cron_next_execution');
+  }
+
+  if ((time() >= $next_execution && time() >= $midnight && time() <= $later) || $interval == -1) {
+    $status = \Drupal\bot_rdmm_client\Controller\BotRdmmController::_bot_rdmm_client_send_modules_statuses();
+
+    //Failure, set interval to try again in an hour
+    if (!$status) {
+      $interval = 60 * 60;
+    }
+
+    \Drupal::state()->set('bot_rdmm_client_cron_next_execution', time() + $interval);
+  }
+}

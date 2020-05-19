@@ -1,0 +1,5 @@
+bot_rdmm_client.getcontact:
+  title: 'BOT RDMM Client'
+  description: 'Manage Client CiviCRM contact ID on Backoffice site'
+  parent: system.admin_config_services
+  route_name: bot_rdmm_client.getcontact
