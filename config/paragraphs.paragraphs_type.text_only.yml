@@ -5,7 +5,7 @@ dependencies:
   module:
     - paragraphs_viewmode
 id: text_only
-label: 'Text Only'
+label: Text
 icon_uuid: null
 description: ''
 behavior_plugins:

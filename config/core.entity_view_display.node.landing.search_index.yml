@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.search_index
     - field.field.node.landing.field_body
+    - field.field.node.landing.field_meta_tags
     - node.type.landing
   module:
     - ds
@@ -62,5 +63,6 @@ mode: search_index
 content: {  }
 hidden:
   field_body: true
+  field_meta_tags: true
   links: true
   search_api_excerpt: true

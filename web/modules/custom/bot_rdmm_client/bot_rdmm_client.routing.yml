@@ -1,0 +1,15 @@
+bot_rdmm_client.sendupdates:
+    path: /admin/bot_rdmm_client_manual_update
+    defaults:
+        _controller: Drupal\bot_rdmm_client\Controller\BotRdmmController::bot_rdmm_client_test
+        _title: 'BOT RDMM Client Manual Process'
+    requirements:
+        _permission: 'administer site configuration'
+bot_rdmm_client.getcontact:
+    path: /admin/config/services/bot_rdmm_client
+    defaults:
+        #_controller: Drupal\bot_rdmm_client\Controller\BotRdmmController::bot_rdmm_client_form
+        _form: '\Drupal\bot_rdmm_client\Controller\BotRdmmController'
+        _title: 'BOT RDMM Client'
+    requirements:
+        _permission: 'administer site configuration'
