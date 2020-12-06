@@ -3,6 +3,7 @@
 namespace Drupal\fontawesome\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
+use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Component\Utility\UrlHelper;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -18,14 +19,16 @@ class SettingsForm extends ConfigFormBase {
   /**
    * Drupal LibraryDiscovery service container.
    *
-   * @var Drupal\Core\Asset\LibraryDiscovery
+   * @var \Drupal\Core\Asset\LibraryDiscovery
    */
   protected $libraryDiscovery;
 
   /**
    * {@inheritdoc}
    */
-  public function __construct(LibraryDiscovery $library_discovery) {
+  public function __construct(ConfigFactoryInterface $config_factory, LibraryDiscovery $library_discovery) {
+    parent::__construct($config_factory);
+
     $this->libraryDiscovery = $library_discovery;
   }
 
@@ -34,6 +37,7 @@ class SettingsForm extends ConfigFormBase {
    */
   public static function create(ContainerInterface $container) {
     return new static(
+      $container->get('config.factory'),
       $container->get('library.discovery')
     );
   }
@@ -172,6 +176,12 @@ class SettingsForm extends ConfigFormBase {
         '#description' => $this->t('Checking this box will cause the Font Awesome library to load the file containing the brands icon declarations (<i>brands.js/brands.css</i>)'),
         '#default_value' => is_null($fontawesome_config->get('use_brands_file')) === TRUE ? TRUE : $fontawesome_config->get('use_brands_file'),
       ],
+      'use_duotone_file' => [
+        '#type' => 'checkbox',
+        '#title' => $this->t('Load duotone icons'),
+        '#description' => $this->t('Checking this box will cause the Font Awesome library to load the file containing the duotone icon declarations (<i>duotone.js/duotone.css</i>)'),
+        '#default_value' => is_null($fontawesome_config->get('use_duotone_file')) === TRUE ? TRUE : $fontawesome_config->get('use_duotone_file'),
+      ],
     ];
 
     $form['shim'] = [
@@ -266,6 +276,7 @@ class SettingsForm extends ConfigFormBase {
       ->set('use_regular_file', $values['use_regular_file'])
       ->set('use_light_file', $values['use_light_file'])
       ->set('use_brands_file', $values['use_brands_file'])
+      ->set('use_duotone_file', $values['use_duotone_file'])
       ->save();
 
     parent::submitForm($form, $form_state);
