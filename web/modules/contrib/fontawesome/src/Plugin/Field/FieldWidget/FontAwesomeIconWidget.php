@@ -28,7 +28,7 @@ class FontAwesomeIconWidget extends WidgetBase implements ContainerFactoryPlugin
   /**
    * Drupal configuration service container.
    *
-   * @var Drupal\Core\Config\ConfigFactory
+   * @var \Drupal\Core\Config\ConfigFactory
    */
   protected $configFactory;
 
@@ -115,6 +115,9 @@ class FontAwesomeIconWidget extends WidgetBase implements ContainerFactoryPlugin
     if (is_bool($configuration_settings->get('use_light_file')) && !$configuration_settings->get('use_light_file')) {
       unset($element['settings']['style']['#options']['fal']);
     }
+    if (is_bool($configuration_settings->get('use_duotone_file')) && !$configuration_settings->get('use_duotone_file')) {
+      unset($element['settings']['style']['#options']['fad']);
+    }
 
     // Allow user to determine size.
     $element['settings']['size'] = [
@@ -190,7 +193,7 @@ class FontAwesomeIconWidget extends WidgetBase implements ContainerFactoryPlugin
       '#default_value' => isset($iconSettings['pull']) ? $iconSettings['pull'] : '',
     ];
 
-    // Allow to use CSS Classes for any purpose eg background color
+    // Allow to use CSS Classes for any purpose eg background color.
     $element['settings']['additional_classes'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Additional Classes'),
