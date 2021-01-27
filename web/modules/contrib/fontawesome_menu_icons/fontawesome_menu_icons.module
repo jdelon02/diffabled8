@@ -324,7 +324,7 @@ function fontawesome_menu_icons_link_alter(&$variables) {
 
       case "before":
       default:
-        $variables['text'] = new FormattableMarkup('<' . $tag . ' class="' . $prefix . ' ' . $class . '" aria-hidden="true"></' . $tag . '> @title', [
+        $variables['text'] = new FormattableMarkup('<' . $tag . ' class="' . $prefix . ' ' . $class . '" aria-hidden="true"></' . $tag . '> <span class="link-text">@title</span>', [
           '@title' => $variables['text'],
         ]);
         break;
@@ -389,14 +389,14 @@ function _fontawesome_menu_icons_preprocess_menu_item(&$item) {
         break;
 
       case "after":
-        $item['title'] = new FormattableMarkup('@title <' . $tag . ' class="' . $prefix . ' ' . $class . '" aria-hidden="true"></' . $tag . '>', [
+        $item['title'] = new FormattableMarkup('<span class="link-text">@title</span> <' . $tag . ' class="' . $prefix . ' ' . $class . '" aria-hidden="true"></' . $tag . '>', [
           '@title' => $item['title'],
         ]);
         break;
 
       case "before":
       default:
-        $item['title'] = new FormattableMarkup('<' . $tag . ' class="' . $prefix . ' ' . $class . '" aria-hidden="true"></' . $tag . '> @title', [
+        $item['title'] = new FormattableMarkup('<' . $tag . ' class="' . $prefix . ' ' . $class . '" aria-hidden="true"></' . $tag . '> <span class="link-text">@title</span>', [
           '@title' => $item['title'],
         ]);
         break;
