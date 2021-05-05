@@ -72,10 +72,10 @@ function media_library_edit_field_widget_form_alter(&$element, FormStateInterfac
     $settings = $context['widget']->getThirdPartySettings('media_library_edit');
     if (isset($settings['show_edit']) && $settings['show_edit']) {
       if (isset($context['items'])) {
-        // Gets the first referenced entity. 
+        // Gets the first referenced entity.
         // Doesn't matter which one, we just need the media edit template.
         if ($media = $context['items']->entity) {
-          if ($edit_template = $media->getEntityType()->getLinkTemplate('edit-form')) {
+          if ($media->access('update') && $edit_template = $media->getEntityType()->getLinkTemplate('edit-form')) {
             foreach (Element::children($element['selection']) as $key) {
               $edit_url = Url::fromUserInput(str_replace('{media}', $element['selection'][$key]['target_id']['#value'], $edit_template));
               $element['selection'][$key]['media_edit'] = [
@@ -83,8 +83,10 @@ function media_library_edit_field_widget_form_alter(&$element, FormStateInterfac
                 '#title' => t('Edit media item'),
                 '#url' => $edit_url,
                 '#attributes' => [
-                  'class' => ['media-library-edit__link'],
-                  'target' => '_blank'
+                  'class' => [
+                    'media-library-edit__link',
+                  ],
+                  'target' => '_blank',
                 ],
                 '#attached' => [
                   'library' => [
