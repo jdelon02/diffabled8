@@ -23,6 +23,9 @@ addtoany.settings:
     universal_button_placement:
       type: string
       label: 'Universal Button Placement'
-    no_3p:
-      type: boolean
-      label: 'Disable 3rd Party Cookies'
+    entities:
+      type: sequence
+      label: 'Entities'
+      sequence:
+        type: integer
+        label: 'Status'
