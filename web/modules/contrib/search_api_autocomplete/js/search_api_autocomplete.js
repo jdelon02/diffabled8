@@ -56,7 +56,7 @@
    */
   Drupal.behaviors.searchApiAutocomplete = {
     attach: function (context, settings) {
-      // Find all our fields with autocomplete settings
+      // Find all our fields with autocomplete settings.
       $(context)
         .find('.ui-autocomplete-input[data-search-api-autocomplete-search]')
         .once('search-api-autocomplete')
@@ -66,6 +66,7 @@
             return;
           }
           var $element = uiAutocomplete.menu.element;
+          $element.data('search-api-autocomplete-input-id', this.id);
           $element.addClass('search-api-autocomplete-search');
           var elementSettings = autocomplete.getSettings(this, settings);
           if (elementSettings['delay']) {
