@@ -88,6 +88,11 @@ function addtoany_entity_extra_field_info() {
  * Implements hook_ENTITY_TYPE_view().
  */
 function addtoany_entity_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  // Prevent error on preview of an unpublished node.
+  if ($entity->id() === NULL) {
+    return;
+  }
+
   if ($display->getComponent('addtoany')) {
     $config = Drupal::config('addtoany.settings');
     $isAllowed = $config->get("entities.{$entity->getEntityTypeId()}");
@@ -133,7 +138,6 @@ function addtoany_page_attachments(&$page) {
   $javascript_header = 'window.a2a_config=window.a2a_config||{};'
     . 'a2a_config.callbacks=[];a2a_config.overlays=[];'
     . 'a2a_config.templates={};'
-    . (($config->get('no_3p')) ? 'a2a_config.no_3p=1;' : '')
     . $additional_js;
 
   // Add AddToAny initial JS config.
@@ -172,7 +176,11 @@ function addtoany_page_attachments(&$page) {
 
   // Add module's main library, which includes external AddToAny core JS,
   // and the module's CSS.
-  $page['#attached']['library'][] = 'addtoany/addtoany';
+  // Enable the libraries if the current route is not an admin page.
+  $route = \Drupal::routeMatch()->getRouteObject();
+  if (!\Drupal::service('router.admin_context')->isAdminRoute($route)) {
+    $page['#attached']['library'][] = 'addtoany/addtoany';
+  }
 }
 
 /**
@@ -188,7 +196,7 @@ function addtoany_page_attachments(&$page) {
  *   The array with url, title, additional_html that will be send to Twig.
  */
 function addtoany_create_entity_data($node, $config = NULL) {
-  $url = isset($node) ? $node->url('canonical', ['absolute' => TRUE]) : NULL;
+  $url = isset($node) ? $node->toUrl('canonical', ['absolute' => TRUE])->toString() : NULL;
   $title = isset($node) ? $node->label() : NULL;
   return addtoany_create_data($url, $title, $config);
 }
@@ -219,7 +227,7 @@ function addtoany_create_data($url = NULL, $title = NULL, $config = NULL) {
   $is_front = \Drupal::service('path.matcher')->isFrontPage();
 
   // Default to <front> or the current path.
-  if (!isset($url)) {
+  if (!isset($url) || $is_front) {
     // Use <front> for the front page to avoid '/node' as the final URL,
     // otherwise use current path.
     $url = ($is_front) ? Url::fromRoute('<front>')
@@ -241,8 +249,13 @@ function addtoany_create_data($url = NULL, $title = NULL, $config = NULL) {
     else {
       $request = \Drupal::request();
       $route_match = \Drupal::routeMatch();
-      $title = \Drupal::service('title_resolver')
-        ->getTitle($request, $route_match->getRouteObject());
+      $route_object = $route_match->getRouteObject();
+
+      if ($route_object !== NULL) {
+        $title = \Drupal::service('title_resolver')
+          ->getTitle($request, $route_object);
+      }
+
       // Expecting array|string|null from getTitle.
       if (is_array($title)) {
         $title['#allowed_tags'] = [];
